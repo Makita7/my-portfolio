@@ -16,9 +16,12 @@
 
 #app {
   margin: 0 auto;
-  padding: 2rem 5rem;
   font-weight: normal;
   background-color: var(--almostWhite);
+}
+
+.myCont{
+  padding: 2rem 5rem;
 }
 
 h1, h2, h3, h4, h5, h6{
