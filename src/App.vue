@@ -6,13 +6,11 @@ import NavbarComp from './components/NavbarComp.vue';
 </script>
 
 <template>
-  <header>
-    <div class="wrapper">
-      <NavbarComp />
-    </div>
-  </header>
+  <NavbarComp />
 
-  <RouterView />
+  <Transition name="fade" mode="out-in">
+    <RouterView />
+  </Transition>
 </template>
 
 <style scoped></style>
