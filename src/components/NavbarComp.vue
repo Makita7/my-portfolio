@@ -53,7 +53,7 @@ import { RouterLink } from 'vue-router';
 }
 
 .cv:hover {
-  color: #0069a2;
+  color: var(--blue);
   font-weight: bold;
   transition: all ease-in-out 0.2s;
 }
