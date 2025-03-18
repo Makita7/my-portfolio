@@ -31,6 +31,10 @@ h1, h2, h3, h4, h5, h6{
   text-transform: capitalize;
 }
 
+h2{
+  font-size: 32px;
+}
+
 p {
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
@@ -47,5 +51,15 @@ p {
 
 .fade-enter-from,
 .fade-leave-to {
+  opacity: 0;
+}
+
+.pageFade-enter-active,
+.pageFade-leave-active {
+  transition: opacity 3s ease-in-out;
+}
+
+.pageFade-enter-from,
+.pageFade-leave-to {
   opacity: 0;
 }

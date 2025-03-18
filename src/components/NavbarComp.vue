@@ -5,7 +5,7 @@ import { RouterLink } from 'vue-router';
 </script>
 
 <template>
-  <nav class="d-flex justify-space-between mb-4">
+  <nav class="navCont d-flex justify-space-between mb-4">
     <img src="@/assets/makita-logo.png" alt="portfolio logo" class="logo" />
     <div class="d-flex">
       <TransitionGroup name="fade" mode="in-out">
@@ -19,6 +19,10 @@ import { RouterLink } from 'vue-router';
 </template>
 
 <style lang="scss" scoped>
+.navCont {
+  padding: 2rem 5rem 0 5rem;
+}
+
 .logo {
   height: 1.5rem;
 }
