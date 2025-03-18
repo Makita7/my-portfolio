@@ -1,10 +1,11 @@
 <template>
   <div class="about d-flex align-center">
-    <v-col>
-      <img src="@/assets/doodle1.png" alt="doodle image" class="doodle1">
-      <div class="namePill">Hi, I'm Sofi</div>
-      <img src="@/assets/mockImage.png" alt="my profile picture" class="myPhoto" />
-      <img src="@/assets/doodle2.png" alt="doodle image" class="doodle2">
+    <v-col class="d-flex justify-center">
+      <img src="@/assets/doodle1.png" alt="doodle image" class="doodle1 late-fade-in">
+      <div class="namePill late-fade-in">Hi, I'm Sofi</div>
+      <img src="@/assets/mockImage.png" alt="my profile picture" class="myPhoto"
+        style="animation: fadeScale 0.8s ease-in-out;" />
+      <img src="@/assets/doodle2.png" alt="doodle image" class="doodle2" style="animation: fadeScale 1.3s ease-in-out;">
     </v-col>
     <v-col class="fadeInLeft">
       <h2>About Me</h2>
@@ -75,24 +76,32 @@
   font-weight: bold;
   font-family: 'Nunito';
   top: 8rem;
-  left: 8rem;
+  left: 19rem;
 }
 
 .doodle1 {
   height: 10rem;
   position: absolute;
-  left: 5rem;
+  left: 17rem;
   bottom: 30rem;
 }
 
 .doodle2 {
   height: 12rem;
   position: absolute;
-  left: 28rem;
+  left: 40rem;
   bottom: 3rem;
 }
 
 .fadeInLeft {
   animation: fadeInLeft 2s ease-in-out;
+}
+
+.late-fade-in {
+  opacity: 0;
+  /* Initially hidden */
+  animation: fadeScale 2s ease-in-out forwards;
+  animation-delay: 1s;
+  /* Delay before animation starts */
 }
 </style>

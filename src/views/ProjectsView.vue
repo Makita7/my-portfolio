@@ -6,6 +6,7 @@ let projectType = ref(true)
 const toggleType = () => projectType.value = !projectType.value;
 
 const colors = ref(["#F55D3E", "#F6AC42", "#7EBC89", "#0069a2",]);
+const colorsFront = ref(["#FF9883", "#C1DBB3", "#F2C078", "#a5dfff",]);
 
 let cardColors = ref([]);
 let amountCards = ref(6)
@@ -60,7 +61,7 @@ onMounted(() => {
       </v-col>
     </div>
     <div>
-      <ProjectCard v-for="i in 6" :key="i" :color="cardColors[i]" :style="getDelay(i)" />
+      <ProjectCard v-for="i in 6" :key="i" :color="cardColors[i]" class="card" :style="getDelay(i)" />
     </div>
   </main>
 </template>
@@ -79,7 +80,16 @@ onMounted(() => {
 }
 
 .arrow:hover {
-  transform: scale(1.1);
+  transform: scale(1.08);
+}
+
+.card {
+  transition: all ease-in-out 0.3s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.02);
 }
 
 .title {
