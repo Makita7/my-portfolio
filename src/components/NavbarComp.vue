@@ -11,8 +11,8 @@ import { RouterLink } from 'vue-router';
       <TransitionGroup name="fade" mode="in-out">
         <RouterLink to="/" class="link pl-4 home" activeClass="active" id="Home">Home</RouterLink>
         <RouterLink to="/about" class="link pl-4 about" activeClass="active" id="About">About</RouterLink>
-        <RouterLink to="/about" class="link pl-4 project" activeClass="active" id="About">Projects</RouterLink>
-        <RouterLink to="/about" class="link pl-4 cv" activeClass="active" id="About">CV</RouterLink>
+        <RouterLink to="/projects" class="link pl-4 project" activeClass="active" id="About">Projects</RouterLink>
+        <RouterLink to="/cv" class="link pl-4 cv" activeClass="active" id="About">CV</RouterLink>
       </TransitionGroup>
     </div>
   </nav>

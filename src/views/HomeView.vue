@@ -2,13 +2,17 @@
 </script>
 
 <template>
-  <main class="pad5">
-    <h1>main</h1>
+  <main class="home d-flex justify-center">
+    <img src="@/assets/flower-girl-old-Disney 1.png" alt="doodle of sofi" />
   </main>
 </template>
 
 <style lang="scss" scoped>
-.pad5 {
+.home {
+  position: relative;
   padding: 0 5rem;
+  margin: 1.5rem 1rem;
+  border-radius: 1rem;
+  height: 80vh;
 }
 </style>
