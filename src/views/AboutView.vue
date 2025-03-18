@@ -6,7 +6,7 @@
       <img src="@/assets/mockImage.png" alt="my profile picture" class="myPhoto" />
       <img src="@/assets/doodle2.png" alt="doodle image" class="doodle2">
     </v-col>
-    <v-col>
+    <v-col class="fadeInLeft">
       <h2>About Me</h2>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis consequat odio, quis venenatis ligula
         semper mattis. Aliquam tristique ante sed elit posuere, et pretium urna interdum. Duis et nisi erat. Phasellus
@@ -90,5 +90,9 @@
   position: absolute;
   left: 28rem;
   bottom: 3rem;
+}
+
+.fadeInLeft {
+  animation: fadeInLeft 2s ease-in-out;
 }
 </style>

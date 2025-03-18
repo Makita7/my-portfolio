@@ -7,11 +7,13 @@ import FooterComp from './components/FooterComp.vue';
 </script>
 
 <template>
-  <NavbarComp />
-  <Transition name="fade" mode="out-in">
-    <RouterView />
-  </Transition>
-  <FooterComp />
+  <NavbarComp class="fade" />
+  <RouterView />
+  <FooterComp class="fade" />
 </template>
 
-<style scoped></style>
+<style scoped>
+.fade {
+  animation: fadeIn 1s ease-in-out;
+}
+</style>

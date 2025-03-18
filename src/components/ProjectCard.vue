@@ -22,7 +22,7 @@ const props = defineProps({
 
 <style lang="scss" scoped>
 .card {
-  border: solid red 2px;
+  border: solid red 3px;
   max-width: 55rem;
   border-radius: 1rem;
   margin: 1rem auto;

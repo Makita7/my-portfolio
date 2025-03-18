@@ -45,22 +45,36 @@ p {
 
 /* ANIMATIONS */
 
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 1s ease-in-out;
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.pageFade-enter-active,
-.pageFade-leave-active {
-  transition: opacity 3s ease-in-out;
-}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
 
-.pageFade-enter-from,
-.pageFade-leave-to {
-  opacity: 0;
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
