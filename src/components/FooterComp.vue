@@ -20,8 +20,9 @@
 footer {
   bottom: 0;
   right: 0;
-  position: absolute;
-  padding: 1rem 5rem;
+  position: sticky;
+  padding: 1rem 1rem;
+  background-color: var(--almostWhite);
 }
 
 .talk {
@@ -44,4 +45,15 @@ footer {
 .behance:hover img {
   filter: invert(22%) sepia(79%) saturate(6545%) hue-rotate(220deg) brightness(104%) contrast(103%);
 }
+
+@media (min-width: 600px) {
+  footer {
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    padding: 1rem 5rem;
+  }
+}
+
+@media (min-width: 960px) {}
 </style>

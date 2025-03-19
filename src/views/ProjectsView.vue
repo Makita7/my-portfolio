@@ -1,12 +1,14 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import ProjectCard from '@/components/ProjectCard.vue';
+import { useDisplay } from 'vuetify';
 
 let projectType = ref(true)
 const toggleType = () => projectType.value = !projectType.value;
 
 const colors = ref(["#F55D3E", "#F6AC42", "#7EBC89", "#0069a2",]);
 const colorsFront = ref(["#FF9883", "#C1DBB3", "#F2C078", "#a5dfff",]);
+const display = useDisplay();
 
 let cardColors = ref([]);
 let amountCards = ref(6)
@@ -37,7 +39,7 @@ onMounted(() => {
 <template>
   <div style="position: relative; height: 92vh;">
     <div class="projects">
-      <div class="d-flex align-center justify-space-between fade">
+      <div v-if="!display.xs" class="d-flex align-center justify-space-between fade">
         <v-col class=" pa-0" id="ux-ui-arrow">
           <div v-if="!projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
             <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="mr-2"
@@ -62,6 +64,36 @@ onMounted(() => {
           </div>
         </v-col>
       </div>
+
+
+      <div v-if="display.xs" class="d-flex align-center justify-center fade">
+        <div v-if="projectType" id="ux-ui-title" class="d-flex fadeTitles">
+          <img src="@/assets/icons/line-md_pencil.svg" alt="ux ui icon for title" class="mr-2 icon" />
+          <h2 class="title text-center">UX/UI Design</h2>
+        </div>
+        <div v-if="!projectType" id="ux-ui-title" class="d-flex fadeTitles">
+          <img src="@/assets/icons/frontend.svg" alt="ux ui icon for title" class="mr-2 icon" />
+          <h2 class="title text-center">Frontend</h2>
+        </div>
+      </div>
+
+      <div v-if="display.xs" class="d-flex align-center justify-space-between fade mt-2">
+        <v-col class=" pa-0" id="ux-ui-arrow">
+          <div v-if="!projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
+            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="mr-2"
+              style="transform: rotate(180deg);" />
+            <p class="goto">UX/UI Design</p>
+          </div>
+        </v-col>
+        <v-col class="d-flex justify-end pa-0" id="front-arrow">
+          <div v-if="projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
+            <p class="goto">Frontend</p>
+            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="ml-2" />
+          </div>
+        </v-col>
+      </div>
+
+
       <div>
         <ProjectCard v-for="i in 6" :key="i" :color="cardColors[i]" class="card" :style="getDelay(i)" />
       </div>
@@ -73,7 +105,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .projects {
   position: relative;
-  padding: 0 5rem;
+  padding: 0 1rem;
   height: 80vh;
   overflow-y: scroll;
 }
@@ -98,10 +130,11 @@ onMounted(() => {
 
 .title {
   font-weight: normal;
+  font-size: 24px;
 }
 
 .goto {
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .fadeTitles {
@@ -116,4 +149,31 @@ onMounted(() => {
   height: auto;
   z-index: -1;
 }
+
+.icon {
+  width: 1.8rem;
+}
+
+@media (min-width: 600px) {
+  .projects {
+    position: relative;
+    padding: 0 5rem;
+    height: 80vh;
+    overflow-y: scroll;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .goto {
+    font-size: 24px;
+  }
+
+  .icon {
+    width: 2rem;
+  }
+}
+
+@media (min-width: 960px) {}
 </style>

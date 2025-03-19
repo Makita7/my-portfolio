@@ -1,5 +1,5 @@
 <template>
-  <div class="about d-flex align-center fade">
+  <div class="about d-md-flex align-center fade">
     <v-col class="d-flex justify-center">
       <img src="@/assets/doodle1.png" alt="doodle image" class="doodle1 late-fade-in">
       <div class="namePill late-fade-in">Hi, I'm Sofi</div>
@@ -9,13 +9,14 @@
     </v-col>
     <v-col class="fadeInLeft">
       <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis consequat odio, quis venenatis ligula
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis consequat odio,
+        quis venenatis ligula
         semper mattis. Aliquam tristique ante sed elit posuere, et pretium urna interdum. Duis et nisi erat. Phasellus
         tincidunt quis ligula nec lobortis. Aenean bibendum tristique dui, eget dapibus eros ullamcorper ut. Nullam at
         pharetra libero. Integer ac augue velit. Pellentesque placerat eu massa sed malesuada. Aliquam a porttitor
         lectus, sit amet faucibus lorem. Sed ac posuere tellus. Etiam non malesuada ligula.</p>
       <h2 class="mt-4">Tech</h2>
-      <div class="d-flex">
+      <div class="d-flex justify-sm-center flex-wrap">
         <div class="icon">
           <img src="@/assets/icons/photoshop.svg" alt="photoshop icon" class="pr-4" />
         </div>
@@ -50,9 +51,8 @@
   position: relative;
   background-color: var(--orange);
   margin: 1.5rem 1rem;
-  padding: 5rem;
+  padding: 1rem;
   border-radius: 1rem;
-  height: 80vh;
 }
 
 .icon img {
@@ -64,6 +64,7 @@
 }
 
 .myPhoto {
+  width: 100%;
   max-width: 30rem;
 }
 
@@ -72,25 +73,25 @@
   background-color: white;
   padding: 0.2rem 1rem;
   border-radius: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  font-family: 'Nunito';
-  top: 8rem;
-  left: 19rem;
+  font-family: "Nunito";
+  top: 0.5rem;
+  left: 3rem;
 }
 
 .doodle1 {
-  height: 10rem;
+  height: 5rem;
   position: absolute;
-  left: 17rem;
-  bottom: 30rem;
+  left: 3rem;
+  bottom: 50rem;
 }
 
 .doodle2 {
-  height: 12rem;
+  height: 6rem;
   position: absolute;
-  left: 40rem;
-  bottom: 3rem;
+  left: 16rem;
+  bottom: 33rem;
 }
 
 .fadeInLeft {
@@ -101,5 +102,67 @@
   opacity: 0;
   animation: fadeScale 2s ease-in-out forwards;
   animation-delay: 1s;
+}
+
+@media (min-width: 600px) {
+  .about {
+    padding: 5rem;
+    height: 80vh;
+  }
+
+  .myPhoto {
+    max-width: 30rem;
+  }
+
+  .namePill {
+    padding: 0.2rem 1rem;
+    font-size: 2rem;
+    top: 8rem;
+    left: 19rem;
+  }
+
+  .doodle1 {
+    height: 10rem;
+    left: 17rem;
+    bottom: 30rem;
+  }
+
+  .doodle2 {
+    height: 12rem;
+    left: 40rem;
+    bottom: 3rem;
+  }
+}
+
+@media (min-width: 960px) {
+  .myPhoto {
+    max-width: 30rem;
+  }
+
+  .namePill {
+    position: absolute;
+    background-color: white;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Nunito';
+    top: 8rem;
+    left: 19rem;
+  }
+
+  .doodle1 {
+    height: 10rem;
+    position: absolute;
+    left: 17rem;
+    bottom: 30rem;
+  }
+
+  .doodle2 {
+    height: 12rem;
+    position: absolute;
+    left: 40rem;
+    bottom: 3rem;
+  }
 }
 </style>

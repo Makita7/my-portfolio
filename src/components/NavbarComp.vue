@@ -20,7 +20,7 @@ import { RouterLink } from 'vue-router';
 
 <style lang="scss" scoped>
 .navCont {
-  padding: 2rem 5rem 0 5rem;
+  padding: 2rem 1rem 0 1rem;
 }
 
 .logo {
@@ -80,4 +80,12 @@ import { RouterLink } from 'vue-router';
 .active {
   text-decoration: underline;
 }
+
+@media (min-width: 600px) {
+  .navCont {
+    padding: 2rem 5rem 0 5rem;
+  }
+}
+
+@media (min-width: 960px) {}
 </style>

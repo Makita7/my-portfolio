@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="d-flex card align-center" :style="`border-color: ${props.color};`">
+  <div class="d-md-flex card align-center" :style="`border-color: ${props.color};`">
     <v-col class="pa-0 ma-0">
       <img src="@/assets/mockImageCard.png" alt="project cover" class="cover" />
     </v-col>
@@ -29,13 +29,23 @@ const props = defineProps({
 }
 
 .cover {
-  height: 15rem;
-  border-radius: 1rem 0 0 1rem;
-  margin-bottom: -0.4rem;
+  height: auto;
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .title {
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
 }
+
+@media (min-width: 600px) {
+  .cover {
+    height: 15rem;
+    border-radius: 1rem 0 0 1rem;
+    margin-bottom: -0.4rem;
+  }
+}
+
+@media (min-width: 960px) {}
 </style>
