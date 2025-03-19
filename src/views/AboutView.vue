@@ -1,5 +1,5 @@
 <template>
-  <div class="about d-flex align-center">
+  <div class="about d-flex align-center fade">
     <v-col class="d-flex justify-center">
       <img src="@/assets/doodle1.png" alt="doodle image" class="doodle1 late-fade-in">
       <div class="namePill late-fade-in">Hi, I'm Sofi</div>
@@ -99,9 +99,7 @@
 
 .late-fade-in {
   opacity: 0;
-  /* Initially hidden */
   animation: fadeScale 2s ease-in-out forwards;
   animation-delay: 1s;
-  /* Delay before animation starts */
 }
 </style>

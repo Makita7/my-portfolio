@@ -35,35 +35,39 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="projects">
-    <div class="d-flex align-center justify-space-between fade">
-      <v-col class=" pa-0" id="ux-ui-arrow">
-        <div v-if="!projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
-          <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="mr-2" style="transform: rotate(180deg);" />
-          <p class="goto">UX/UI Design</p>
-        </div>
-      </v-col>
-      <v-col class="d-flex justify-center pa-0">
-        <div v-if="projectType" id="ux-ui-title" class="d-flex fadeTitles">
-          <img src="@/assets/icons/line-md_pencil.svg" alt="ux ui icon for title" class="mr-2" />
-          <h2 class="title text-center">UX/UI Design</h2>
-        </div>
-        <div v-if="!projectType" id="ux-ui-title" class="d-flex fadeTitles">
-          <img src="@/assets/icons/frontend.svg" alt="ux ui icon for title" class="mr-2" />
-          <h2 class="title text-center">Frontend</h2>
-        </div>
-      </v-col>
-      <v-col class="d-flex justify-end pa-0" id="front-arrow">
-        <div v-if="projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
-          <p class="goto">Frontend</p>
-          <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="ml-2" />
-        </div>
-      </v-col>
+  <div style="position: relative; height: 92vh;">
+    <div class="projects">
+      <div class="d-flex align-center justify-space-between fade">
+        <v-col class=" pa-0" id="ux-ui-arrow">
+          <div v-if="!projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
+            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="mr-2"
+              style="transform: rotate(180deg);" />
+            <p class="goto">UX/UI Design</p>
+          </div>
+        </v-col>
+        <v-col class="d-flex justify-center pa-0">
+          <div v-if="projectType" id="ux-ui-title" class="d-flex fadeTitles">
+            <img src="@/assets/icons/line-md_pencil.svg" alt="ux ui icon for title" class="mr-2" />
+            <h2 class="title text-center">UX/UI Design</h2>
+          </div>
+          <div v-if="!projectType" id="ux-ui-title" class="d-flex fadeTitles">
+            <img src="@/assets/icons/frontend.svg" alt="ux ui icon for title" class="mr-2" />
+            <h2 class="title text-center">Frontend</h2>
+          </div>
+        </v-col>
+        <v-col class="d-flex justify-end pa-0" id="front-arrow">
+          <div v-if="projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
+            <p class="goto">Frontend</p>
+            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="ml-2" />
+          </div>
+        </v-col>
+      </div>
+      <div>
+        <ProjectCard v-for="i in 6" :key="i" :color="cardColors[i]" class="card" :style="getDelay(i)" />
+      </div>
     </div>
-    <div>
-      <ProjectCard v-for="i in 6" :key="i" :color="cardColors[i]" class="card" :style="getDelay(i)" />
-    </div>
-  </main>
+    <img src="@/assets/project-bg.png" alt="pattern background" class="img-bg fade" />
+  </div>
 </template>
 
 <style lang="scss" scoped>
@@ -100,11 +104,16 @@ onMounted(() => {
   font-size: 24px;
 }
 
-.fade {
-  animation: fadeIn 2s ease-in-out;
-}
-
 .fadeTitles {
   animation: fadeIn 1s ease-in-out;
+}
+
+.img-bg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: -1;
 }
 </style>

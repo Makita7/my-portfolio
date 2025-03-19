@@ -1,13 +1,14 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router';
+import { RouterView, useRoute } from 'vue-router';
 import NavbarComp from './components/NavbarComp.vue';
 import FooterComp from './components/FooterComp.vue';
 
+const route = useRoute();
 
 </script>
 
 <template>
-  <NavbarComp class="fade" />
+  <NavbarComp class=" fade" />
   <RouterView />
   <FooterComp class="fade" />
 </template>
