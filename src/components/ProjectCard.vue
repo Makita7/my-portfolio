@@ -48,6 +48,7 @@ const props = defineProps({
   height: auto;
   width: 100%;
   border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
 }
 
 .title {
