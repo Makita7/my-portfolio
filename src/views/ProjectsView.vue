@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import ProjectCard from '@/components/ProjectCard.vue';
-import { useDisplay } from 'vuetify';
+import { ref, onMounted } from "vue";
+import ProjectCard from "@/components/ProjectCard.vue";
+import { useDisplay } from "vuetify";
 
-let projectType = ref(true)
-const toggleType = () => projectType.value = !projectType.value;
+let projectType = ref(false);
+const toggleType = () => (projectType.value = !projectType.value);
 
-const colors = ref(["#F55D3E", "#F6AC42", "#7EBC89", "#0069a2",]);
-const colorsFront = ref(["#FF9883", "#C1DBB3", "#F2C078", "#a5dfff",]);
+const colors = ref(["#F55D3E", "#F6AC42", "#7EBC89", "#0069a2"]);
+const colorsFront = ref(["#FF9883", "#C1DBB3", "#F2C078", "#a5dfff"]);
 const display = useDisplay();
 
 let cardColors = ref([]);
-let amountCards = ref(6)
+let amountCards = ref(6);
 
 function selectNum() {
-  let num = ref(-1)
+  let num = ref(-1);
   for (let i = 0; i < amountCards.value; i++) {
     if (num.value < 3) {
-      num.value += 1
+      num.value += 1;
       cardColors.value.push(colors.value[num.value]);
     } else {
       num.value = 0;
@@ -32,18 +32,72 @@ const getDelay = (index: number) => {
 
 onMounted(() => {
   selectNum();
-})
+});
 
+import SpaceImg from "@/assets/project-previews/space-tourism.jpg";
+import StepFormImg from "@/assets/project-previews/step-form.jpg";
+import TipCalculatorImg from "@/assets/project-previews/tip-calculator.jpg";
+import TomaatImg from "@/assets/project-previews/tomaat.jpg";
+
+// Date format: YYYY-MM-DD
+const listProjectsFront = ref([
+  {
+    title: "Space Tourism",
+    description: "Landing page for a fictional page about space tourism",
+    link: "https://makita7.github.io/space-tourism-site/",
+    type: "front",
+    program: "vue",
+    img: SpaceImg,
+    year: "2023-08-12",
+    frontendMentor: true,
+    tech: ["html", "css", "vue"],
+  },
+  {
+    title: "Step Form",
+    description: "Sign Up form for with steps and diferent preferences for user",
+    link: "https://makita7.github.io/stepForm/",
+    type: "front",
+    program: "vue",
+    img: StepFormImg,
+    year: "2024-02-17",
+    frontendMentor: true,
+    tech: ["html", "css", "vue"],
+  },
+  {
+    title: "Tip Calculator",
+    description:
+      "Calculator to help split tips depending on percentage of bill that wants to be given",
+    link: "https://makita7.github.io/Tip-Calculator/",
+    type: "front",
+    program: "vue",
+    img: TipCalculatorImg,
+    year: "2023-06-30",
+    frontendMentor: true,
+    tech: ["html", "css", "vue"],
+  },
+]);
+
+const listProjectsUxUi = ref([
+  {
+    title: "Tomaat.",
+    description: "Pomodoro method study app with accomodations for ADHD and Autism",
+    link: "",
+    type: "ux",
+    program: "figma",
+    img: TomaatImg,
+    year: "2025-05-12",
+    frontendMentor: false,
+  },
+]);
 </script>
 
 <template>
-  <div style="position: relative; height: 92vh;">
+  <div style="position: relative; height: 92vh">
     <div class="projects">
       <div v-if="!display.xs" class="d-flex align-center justify-space-between fade">
-        <v-col class=" pa-0" id="ux-ui-arrow">
+        <v-col class="pa-0" id="ux-ui-arrow">
           <div v-if="!projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
-            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="mr-2"
-              style="transform: rotate(180deg);" />
+            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="mr-2" style="transform: rotate(180deg)" />
             <p class="goto">UX/UI Design</p>
           </div>
         </v-col>
@@ -65,7 +119,6 @@ onMounted(() => {
         </v-col>
       </div>
 
-
       <div v-if="display.xs" class="d-flex align-center justify-center fade">
         <div v-if="projectType" id="ux-ui-title" class="d-flex fadeTitles">
           <img src="@/assets/icons/line-md_pencil.svg" alt="ux ui icon for title" class="mr-2 icon" />
@@ -78,10 +131,9 @@ onMounted(() => {
       </div>
 
       <div v-if="display.xs" class="d-flex align-center justify-space-between fade mt-2">
-        <v-col class=" pa-0" id="ux-ui-arrow">
+        <v-col class="pa-0" id="ux-ui-arrow">
           <div v-if="!projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
-            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="mr-2"
-              style="transform: rotate(180deg);" />
+            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="mr-2" style="transform: rotate(180deg)" />
             <p class="goto">UX/UI Design</p>
           </div>
         </v-col>
@@ -93,12 +145,15 @@ onMounted(() => {
         </v-col>
       </div>
 
-
       <div>
-        <ProjectCard v-for="i in 6" :key="i" :color="cardColors[i]" class="card" :style="getDelay(i)" />
+        <ProjectCard v-if="!projectType" v-for="(i, index) in listProjectsFront" :data="i" :key="index"
+          :color="cardColors[index]" class="card" :style="getDelay(index)" />
+
+        <ProjectCard v-if="projectType" v-for="(i, index) in listProjectsUxUi" :data="i" :key="index"
+          :color="cardColors[index]" class="card" :style="getDelay(index)" />
       </div>
     </div>
-    <img src="@/assets/project-bg.png" alt="pattern background" class="img-bg fade" />
+    <img src="@/assets/project-bg.png" alt="pattern background" class="img-bg fade" v-if="display.mdAndUp.value" />
   </div>
 </template>
 
@@ -157,8 +212,7 @@ onMounted(() => {
 @media (min-width: 600px) {
   .projects {
     position: relative;
-    padding: 0 5rem;
-    height: 80vh;
+    padding: 5rem 5rem 0 5rem;
     overflow-y: scroll;
   }
 
@@ -175,5 +229,9 @@ onMounted(() => {
   }
 }
 
-@media (min-width: 960px) {}
+@media (min-width: 960px) {
+  .projects {
+    height: 92vh;
+  }
+}
 </style>

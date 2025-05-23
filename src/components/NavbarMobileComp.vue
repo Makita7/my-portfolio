@@ -1,10 +1,15 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import SvgIcon from '@jamescoyle/vue-icon';
-import { mdiMenu } from '@mdi/js';
+import { mdiMenu, mdiWindowClose, mdiHomeOutline, mdiAccountHeartOutline, mdiGridLarge, mdiNoteOutline } from '@mdi/js';
 
 const drawer = ref(false);
-const path = mdiMenu;
+const menuIconPath = mdiMenu;
+const iconCross = mdiWindowClose;
+const iconHome = mdiHomeOutline;
+const iconAbout = mdiAccountHeartOutline;
+const iconProjects = mdiGridLarge;
+const iconCV = mdiNoteOutline;
 
 </script>
 
@@ -14,11 +19,25 @@ const path = mdiMenu;
 
       <v-col style="display: grid;">
         <TransitionGroup name="fade" mode="in-out">
-          <RouterLink to="/" class="link pl-4 mt-2 home" activeClass="active" id="Home">Home</RouterLink>
-          <RouterLink to="/about" class="link pl-4 mt-2 about" activeClass="active" id="About">About</RouterLink>
-          <RouterLink to="/projects" class="link pl-4 mt-2 project" activeClass="active" id="About">Projects
+          <RouterLink to="/" class="link pl-4 mt-4 pt-2 pb-2 mb-1 home d-flex align-center" activeClass="active"
+            id="Home">
+            <svg-icon type="mdi" width="32" height="32" :path="iconHome" class="mr-2" />
+            Home
           </RouterLink>
-          <RouterLink to="/cv" class="link pl-4 mt-2 cv" activeClass="active" id="About">CV</RouterLink>
+          <RouterLink to="/about" class="link pl-4 pt-2 pb-2 mb-1 about d-flex align-center" activeClass="active"
+            id="About">
+            <svg-icon type="mdi" width="32" height="32" :path="iconAbout" class="mr-2" />
+            About
+          </RouterLink>
+          <RouterLink to="/projects" class="link pl-4 pt-2 pb-2 mb-1 project d-flex align-center" activeClass="active"
+            id="About">
+            <svg-icon type="mdi" width="32" height="32" :path="iconProjects" class="mr-2" />
+            Projects
+          </RouterLink>
+          <RouterLink to="/cv" class="link pl-4 pt-2 pb-2 mb-1 cv d-flex align-center" activeClass="active" id="About">
+            <svg-icon type="mdi" width="32" height="32" :path="iconCV" class="mr-2" />
+            CV
+          </RouterLink>
         </TransitionGroup>
       </v-col>
 
@@ -27,7 +46,7 @@ const path = mdiMenu;
       <nav class="navCont d-flex justify-space-between align-center">
         <img src="@/assets/makita-logo.png" alt="portfolio logo" class="logo" />
         <v-btn @click.stop="drawer = !drawer" icon="mdi-menu" variant="text">
-          <svg-icon type="mdi" :path="path" @click.stop="drawer = !drawer" />
+          <svg-icon type="mdi" width="32" height="32" :path="menuIconPath" @click.stop="drawer = !drawer" />
         </v-btn>
       </nav>
     </v-main>
@@ -36,7 +55,7 @@ const path = mdiMenu;
 
 <style lang="scss" scoped>
 .navCont {
-  padding: 2rem 1rem 0 1rem;
+  padding: 1rem 1rem 0 1rem;
 }
 
 .logo {
@@ -47,36 +66,30 @@ const path = mdiMenu;
   text-decoration: none;
   font-size: 24px;
   color: var(--blackish);
-
-}
-
-.home:hover {
-  color: var(--red);
-  font-weight: bold;
-  transition: all ease-in-out 0.2s;
-}
-
-.about:hover {
-  color: var(--green);
-  font-weight: bold;
-  transition: all ease-in-out 0.2s;
-}
-
-.project:hover {
-  color: var(--orange2);
-  font-weight: bold;
-  transition: all ease-in-out 0.2s;
-}
-
-.cv:hover {
-  color: var(--blue);
-  font-weight: bold;
-  transition: all ease-in-out 0.2s;
+  border-radius: 8px;
 }
 
 .active {
   text-decoration: underline;
+  font-weight: bold;
 }
+
+.active.home {
+  background-color: var(--lightRed);
+}
+
+.active.about {
+  background-color: var(--lightGreen);
+}
+
+.active.project {
+  background-color: var(--orange);
+}
+
+.active.cv {
+  background-color: var(--lightBlue);
+}
+
 
 @media (min-width: 600px) {
   .navCont {

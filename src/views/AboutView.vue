@@ -1,11 +1,14 @@
 <template>
   <div class="about d-md-flex align-center fade">
     <v-col class="d-flex justify-center">
-      <img src="@/assets/doodle1.png" alt="doodle image" class="doodle1 late-fade-in">
-      <div class="namePill late-fade-in">Hi, I'm Sofi</div>
-      <img src="@/assets/mockImage.png" alt="my profile picture" class="myPhoto"
-        style="animation: fadeScale 0.8s ease-in-out;" />
-      <img src="@/assets/doodle2.png" alt="doodle image" class="doodle2" style="animation: fadeScale 1.3s ease-in-out;">
+      <div>
+        <img src="@/assets/doodle1.png" alt="doodle image" class="doodle1 late-fade-in">
+        <div class="namePill late-fade-in">Hi, I'm Sofi</div>
+        <img src="@/assets/mockImage.png" alt="my profile picture" class="myPhoto"
+          style="animation: fadeScale 0.8s ease-in-out;" />
+        <img src="@/assets/doodle2.png" alt="doodle image" class="doodle2"
+          style="animation: fadeScale 1.3s ease-in-out;">
+      </div>
     </v-col>
     <v-col class="fadeInLeft">
       <h2>About Me</h2>
@@ -90,8 +93,8 @@
 .doodle2 {
   height: 6rem;
   position: absolute;
-  left: 16rem;
-  bottom: 33rem;
+  left: 19rem;
+  bottom: 31rem;
 }
 
 .fadeInLeft {
@@ -107,7 +110,7 @@
 @media (min-width: 600px) {
   .about {
     padding: 5rem;
-    height: 80vh;
+    margin: 1.5rem 5rem;
   }
 
   .myPhoto {
@@ -135,6 +138,46 @@
 }
 
 @media (min-width: 960px) {
+  .about {
+    height: 80vh;
+  }
+
+  .myPhoto {
+    max-width: 30rem;
+  }
+
+  .namePill {
+    position: absolute;
+    background-color: white;
+    padding: 0.2rem 1rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Nunito';
+    top: 3rem;
+    left: 10rem;
+  }
+
+  .doodle1 {
+    height: 7rem;
+    position: absolute;
+    left: 11rem;
+    bottom: 27rem;
+  }
+
+  .doodle2 {
+    height: 10rem;
+    position: absolute;
+    left: 32rem;
+    bottom: 0rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  .about {
+    height: 80vh;
+  }
+
   .myPhoto {
     max-width: 30rem;
   }
@@ -148,21 +191,21 @@
     font-weight: bold;
     font-family: 'Nunito';
     top: 8rem;
-    left: 19rem;
+    left: 16rem;
   }
 
   .doodle1 {
-    height: 10rem;
+    height: 8rem;
     position: absolute;
-    left: 17rem;
-    bottom: 30rem;
+    left: 16rem;
+    bottom: 32rem;
   }
 
   .doodle2 {
-    height: 12rem;
+    height: 10rem;
     position: absolute;
-    left: 40rem;
-    bottom: 3rem;
+    left: 38rem;
+    bottom: 6rem;
   }
 }
 </style>

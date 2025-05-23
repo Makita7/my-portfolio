@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <footer class="d-flex justify-end mt-4">
+  <v-footer padless class="footer d-flex justify-end" style="position: fixed;">
     <p class="talk mb-0">Let's Talk</p>
     <a href="https://www.behance.net/sophiamak" class="filter behance">
       <img src="@/assets/icons/behance.svg" alt="behance link" class="pl-4" />
@@ -13,15 +13,16 @@
     <a href="https://dribbble.com/SofiMakita" class="filter dribble">
       <img type="svg" src="@/assets/icons/dribble.svg" alt="dribble link" class="pl-4" />
     </a>
-  </footer>
+  </v-footer>
 </template>
 
 <style lang="scss" scoped>
 footer {
   bottom: 0;
   right: 0;
-  position: sticky;
+  position: fixed;
   padding: 1rem 1rem;
+  width: 100%;
   background-color: var(--almostWhite);
 }
 

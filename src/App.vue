@@ -11,14 +11,20 @@ const display = useDisplay();
 </script>
 
 <template>
-  <NavbarComp v-if="display.mdAndUp && !display.xs" class="fade" />
+  <NavbarComp v-if="display.mdAndUp.value" class="fade" />
   <NavbarMobileComp v-else />
-  <RouterView />
+  <div class="spacingMargin">
+    <RouterView />
+  </div>
   <FooterComp class="fade" />
 </template>
 
 <style scoped>
 .fade {
   animation: fadeIn 1s ease-in-out;
+}
+
+.spacingMargin {
+  margin-bottom: 5rem;
 }
 </style>

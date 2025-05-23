@@ -1,21 +1,37 @@
 <script setup lang="ts">
-import { defineProps } from 'vue';
+import { defineProps } from "vue";
 
 const props = defineProps({
   color: String,
-})
-
+  data: Object,
+});
 </script>
 
 <template>
   <div class="d-md-flex card align-center" :style="`border-color: ${props.color};`">
     <v-col class="pa-0 ma-0">
-      <img src="@/assets/mockImageCard.png" alt="project cover" class="cover" />
+      <img :src="props.data.img" alt="project cover" class="cover" />
     </v-col>
     <v-col>
-      <p class="title">Title of the Project</p>
-      <p>Whereas disregard and contempt for human rights have resulted</p>
-      <p class="font-weight-bold mt-4">Type:</p>
+      <p class="title">{{ props.data.title }}</p>
+      <p>{{ props.data.description }}</p>
+      <div class="d-flex">
+        <p class="font-weight-bold mt-4 d-flex">
+          Link:
+          <a :href="props.data.link">
+            <g v-if="props.data.type === 'front'" href="https://github.com/Makita7" class="filter github">
+              <img src="@/assets/icons/github.svg" alt="github link" class="pl-4" />
+            </g>
+            <img v-else src="@/assets/icons/figma.svg" alt="figma icon" class="pl-4" style="height: 32px" />
+          </a>
+        </p>
+        <p class="font-weight-bold mt-4 d-flex ml-8">
+          Tech:
+          <img v-for="(t, index) in props.data.tech" :key="index" :src="`@/assets/icons/${t}.svg`" :alt="`${t} icon`"
+            class="pl-4" style="height: 32px" />
+        <p v-for="t in props.data.tech" :key="t">{{ t }}</p>
+        </p>
+      </div>
     </v-col>
   </div>
 </template>
