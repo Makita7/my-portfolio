@@ -12,26 +12,34 @@ const props = defineProps({
     <v-col class="pa-0 ma-0">
       <img :src="props.data.img" alt="project cover" class="cover" />
     </v-col>
-    <v-col>
+    <v-col cols="7">
       <p class="title">{{ props.data.title }}</p>
       <p>{{ props.data.description }}</p>
-      <div class="d-flex">
-        <p class="font-weight-bold mt-4 d-flex">
-          Link:
-          <a :href="props.data.link">
+      <div class="d-flex flex-wrap mt-1">
+        <div class="font-weight-bold d-flex align-center">
+          <p>
+            Link:
+          </p>
+          <a :href="props.data.link" class="d-flex align-center">
             <g v-if="props.data.type === 'front'" href="https://github.com/Makita7" class="filter github">
-              <img src="@/assets/icons/github.svg" alt="github link" class="pl-4" />
+              <img src="@/assets/icons/github.svg" alt="github link" class="ml-2 pt-1" />
             </g>
-            <img v-else src="@/assets/icons/figma.svg" alt="figma icon" class="pl-4" style="height: 32px" />
+            <img v-else src="@/assets/icons/figma.svg" alt="figma icon" class="ml-2" style="height: 32px" />
           </a>
-        </p>
-        <p class="font-weight-bold mt-4 d-flex ml-8">
-          Tech:
-          <img v-for="(t, index) in props.data.tech" :key="index" :src="`@/assets/icons/${t}.svg`" :alt="`${t} icon`"
-            class="pl-4" style="height: 32px" />
-          <p v-for="t in props.data.tech" :key="t">{{ t }}</p>
-        </p>
-      <img v-if="props.data.tech.filter(i => i === "html")" src="@/assets/icons/html.svg" alt="tech illustrator icon" />
+        </div>
+        <div v-if="Array.isArray(props.data?.tech)" class="d-flex flex-wrap ml-4 align-center">
+          <p class="font-weight-bold d-flex mr-1">
+            Tech:
+          </p>
+          <img v-if="props.data?.tech.includes('html')" src="@/assets/icons/html.svg" alt="tech html icon"  class="px-1"/>
+          <img v-if="props.data?.tech.includes('css')" src="@/assets/icons/css.svg" alt="tech css icon"  class="px-1"/>
+          <img v-if="props.data?.tech.includes('vue')" src="@/assets/icons/vue.svg" alt="tech vue icon"  class="px-1"/>
+          <img v-if="props.data?.tech.includes('react')" src="@/assets/icons/react.svg" alt="tech react icon" class="px-1"/>
+          <img v-if="props.data?.tech.includes('figma')" src="@/assets/icons/figma.svg" alt="tech figma icon"  class="px-1" style="height: 32px" />
+          <img v-if="props.data?.tech.includes('photoshop')" src="@/assets/icons/photoshop.svg" alt="tech photoshop icon"  class="px-1" style="height: 32px" />
+          <img v-if="props.data?.tech.includes('illustrator')" src="@/assets/icons/illustrator.svg" alt="tech illustrator icon"  class="px-1" style="height: 32px" />
+          <img v-if="props.data?.tech.includes('after-effects')" src="@/assets/icons/after-effects.svg" alt="tech after-effects icon"  class="px-1" />
+        </div>
       </div>
     </v-col>
   </div>

@@ -87,6 +87,7 @@ const listProjectsUxUi = ref([
     img: TomaatImg,
     year: "2025-05-12",
     frontendMentor: false,
+    tech: ["figma", "photoshop", "illustrator"],
   },
 ]);
 </script>
