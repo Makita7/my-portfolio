@@ -34,9 +34,10 @@ const iconCV = mdiNoteOutline;
             <svg-icon type="mdi" width="32" height="32" :path="iconProjects" class="mr-2" />
             Projects
           </RouterLink>
-          <RouterLink to="/cv" class="link pl-4 pt-2 pb-2 mb-1 cv d-flex align-center" activeClass="active" id="About">
-            <svg-icon type="mdi" width="32" height="32" :path="iconCV" class="mr-2" />
-            CV
+          <RouterLink to="/" class="link pl-4 cv" custom id="About" >
+            <a href="https://drive.google.com/file/d/1iLtU5IxS_CUN3kUcqlU8XIJ4j06jUVNn/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              CV
+            </a>
           </RouterLink>
         </TransitionGroup>
       </v-col>
@@ -44,7 +45,9 @@ const iconCV = mdiNoteOutline;
     </v-navigation-drawer>
     <v-main>
       <nav class="navCont d-flex justify-space-between align-center">
-        <img src="@/assets/makita-logo.png" alt="portfolio logo" class="logo" />
+        <RouterLink to="/" class="link pl-4 home" activeClass="active" id="Home">
+          <img src="@/assets/makita-logo.png" alt="portfolio logo" class="logo" />
+        </RouterLink>
         <v-btn @click.stop="drawer = !drawer" icon="mdi-menu" variant="text">
           <svg-icon type="mdi" width="32" height="32" :path="menuIconPath" @click.stop="drawer = !drawer" />
         </v-btn>
