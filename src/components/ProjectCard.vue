@@ -20,7 +20,7 @@ const props = defineProps({
           <p>
             Link:
           </p>
-          <a :href="props.data.link" class="d-flex align-center">
+          <a :href="props.data.link" target="_blank" class="d-flex align-center">
             <g v-if="props.data.type === 'front'" href="https://github.com/Makita7" class="filter github">
               <img src="@/assets/icons/github.svg" alt="github link" class="ml-2 pt-1" />
             </g>
