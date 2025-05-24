@@ -3,7 +3,7 @@
 
 <template>
   <main class="home d-flex justify-center">
-    <img src="@/assets/flower-girl-old-Disney 1.png" alt="doodle of sofi" class="me-doodle" />
+    <img src="@/assets/flower-girl-old-Disney01.png" alt="doodle of sofi" class="me-doodle" />
   </main>
 </template>
 

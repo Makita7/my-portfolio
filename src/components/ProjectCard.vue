@@ -29,8 +29,9 @@ const props = defineProps({
           Tech:
           <img v-for="(t, index) in props.data.tech" :key="index" :src="`@/assets/icons/${t}.svg`" :alt="`${t} icon`"
             class="pl-4" style="height: 32px" />
-        <p v-for="t in props.data.tech" :key="t">{{ t }}</p>
+          <p v-for="t in props.data.tech" :key="t">{{ t }}</p>
         </p>
+      <img v-if="props.data.tech.filter(i => i === "html")" src="@/assets/icons/html.svg" alt="tech illustrator icon" />
       </div>
     </v-col>
   </div>
