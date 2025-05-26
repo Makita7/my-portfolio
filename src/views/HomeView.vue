@@ -1,39 +1,28 @@
 <script setup lang="ts">
+import img from "@/assets/flower-girl-old-Disney01.png";
 </script>
 
 <template>
   <main class="home d-flex justify-center">
-    <img src="@/assets/flower-girl-old-Disney01.png" alt="doodle of sofi" class="me-doodle" />
+    <img src="@/assets/flower-girl-old-Disney01.png" alt="doodle of sofi" class="landing-img" />
   </main>
 </template>
 
 <style lang="scss" scoped>
 .home {
-  position: relative;
-  padding: 0 1rem;
-  margin: 1.5rem 1rem;
-  min-height: 80vh;
+  height: 80vh;
+  overflow: hidden;
 }
 
-.me-doodle {
-  width: 100%;
-  height: fit-content;
+.landing-img {
+  max-height: 100vh;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
-@media (min-width: 600px) {
-  .home {
-    position: relative;
-    padding: 0 5rem;
-    margin: 1.5rem 1rem;
-    border-radius: 1rem;
-  }
-
-  .me-doodle {
-    width: 100%;
-    max-width: 40rem;
-    height: auto;
-  }
-}
+@media (min-width: 600px) {}
 
 @media (min-width: 960px) {}
 </style>

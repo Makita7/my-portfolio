@@ -1,7 +1,13 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-import SvgIcon from '@jamescoyle/vue-icon';
-import { mdiMenu, mdiWindowClose, mdiHomeOutline, mdiAccountHeartOutline, mdiGridLarge, mdiNoteOutline } from '@mdi/js';
+import { ref } from "vue";
+import {
+  mdiMenu,
+  mdiWindowClose,
+  mdiHomeOutline,
+  mdiAccountHeartOutline,
+  mdiGridLarge,
+  mdiNoteOutline,
+} from "@mdi/js";
 
 const drawer = ref(false);
 const menuIconPath = mdiMenu;
@@ -10,14 +16,12 @@ const iconHome = mdiHomeOutline;
 const iconAbout = mdiAccountHeartOutline;
 const iconProjects = mdiGridLarge;
 const iconCV = mdiNoteOutline;
-
 </script>
 
 <template>
   <v-layout class="fade">
     <v-navigation-drawer v-model="drawer" temporary location="right">
-
-      <v-col style="display: grid;">
+      <v-col style="display: grid">
         <TransitionGroup name="fade" mode="in-out">
           <RouterLink to="/" class="link pl-4 mt-4 pt-2 pb-2 mb-1 home d-flex align-center" activeClass="active"
             id="Home">
@@ -34,14 +38,14 @@ const iconCV = mdiNoteOutline;
             <svg-icon type="mdi" width="32" height="32" :path="iconProjects" class="mr-2" />
             Projects
           </RouterLink>
-          <RouterLink to="/" class="link pl-4 cv" custom id="About" >
-            <a href="https://drive.google.com/file/d/1iLtU5IxS_CUN3kUcqlU8XIJ4j06jUVNn/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+          <RouterLink to="/" class="link pl-4 cv" custom id="About">
+            <a href="https://drive.google.com/file/d/1iLtU5IxS_CUN3kUcqlU8XIJ4j06jUVNn/view?usp=sharing" target="_blank"
+              rel="noopener noreferrer">
               CV
             </a>
           </RouterLink>
         </TransitionGroup>
       </v-col>
-
     </v-navigation-drawer>
     <v-main>
       <nav class="navCont d-flex justify-space-between align-center">
@@ -92,7 +96,6 @@ const iconCV = mdiNoteOutline;
 .active.cv {
   background-color: var(--lightBlue);
 }
-
 
 @media (min-width: 600px) {
   .navCont {
