@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref } from "vue";
+import SvgIcon from "@jamescoyle/vue-icon";
 import {
   mdiMenu,
   mdiWindowClose,
@@ -49,7 +50,7 @@ const iconCV = mdiNoteOutline;
     </v-navigation-drawer>
     <v-main>
       <nav class="navCont d-flex justify-space-between align-center">
-        <RouterLink to="/" class="link pl-4 home" activeClass="active" id="Home">
+        <RouterLink to="/" class="link pl-4 home" activeClass="active" id="Home" style="padding: 0.5rem 0.5rem 0 0">
           <img src="@/assets/makita-logo.png" alt="portfolio logo" class="logo" />
         </RouterLink>
         <v-btn @click.stop="drawer = !drawer" icon="mdi-menu" variant="text">
