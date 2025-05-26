@@ -8,7 +8,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="d-md-flex card align-center" :style="`border-color: ${props.color};`">
+  <div v-if="props.data" class="d-md-flex card align-center" :style="`border-color: ${props.color};`">
     <v-col class="pa-0 ma-0">
       <img :src="props.data.img" alt="project cover" class="cover" />
     </v-col>
