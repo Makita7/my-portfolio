@@ -38,6 +38,7 @@ import SpaceImg from "@/assets/project-previews/space-tourism.jpg";
 import StepFormImg from "@/assets/project-previews/step-form.jpg";
 import TipCalculatorImg from "@/assets/project-previews/tip-calculator.jpg";
 import TomaatImg from "@/assets/project-previews/tomaat.jpg";
+import ShoeECommerce from "@/assets/project-previews/shoe-e-commerce.jpg";
 
 // Date format: YYYY-MM-DD
 const listProjectsFront = ref([
@@ -74,6 +75,18 @@ const listProjectsFront = ref([
     year: "2023-06-30",
     frontendMentor: true,
     tech: ["html", "css", "vue"],
+  },
+  {
+    title: "Shoe E-Commerce",
+    description:
+      "basic e-commerce site for a fictional shoe store, with cart and checkout functionality",
+    link: "https://makita7.github.io/ecommerce-product-react/",
+    type: "front",
+    program: "react",
+    img: ShoeECommerce,
+    year: "2025-05-27",
+    frontendMentor: true,
+    tech: ["html", "css", "react"],
   },
 ]);
 
