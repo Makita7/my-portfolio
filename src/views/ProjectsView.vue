@@ -43,15 +43,16 @@ import ShoeECommerce from "@/assets/project-previews/shoe-e-commerce.jpg";
 // Date format: YYYY-MM-DD
 const listProjectsFront = ref([
   {
-    title: "Space Tourism",
-    description: "Landing page for a fictional page about space tourism",
-    link: "https://makita7.github.io/space-tourism-site/",
+    title: "Shoe E-Commerce",
+    description:
+      "basic e-commerce site for a fictional shoe store, with cart and checkout functionality",
+    link: "https://makita7.github.io/ecommerce-product-react/",
     type: "front",
-    program: "vue",
-    img: SpaceImg,
-    year: "2023-08-12",
+    program: "react",
+    img: ShoeECommerce,
+    year: "2025-05-27",
     frontendMentor: true,
-    tech: ["html", "css", "vue"],
+    tech: ["html", "css", "react"],
   },
   {
     title: "Step Form",
@@ -65,6 +66,18 @@ const listProjectsFront = ref([
     tech: ["html", "css", "vue"],
   },
   {
+    title: "Space Tourism",
+    description: "Landing page for a fictional page about space tourism",
+    link: "https://makita7.github.io/space-tourism-site/",
+    type: "front",
+    program: "vue",
+    img: SpaceImg,
+    year: "2023-08-12",
+    frontendMentor: true,
+    tech: ["html", "css", "vue"],
+  },
+
+  {
     title: "Tip Calculator",
     description:
       "Calculator to help split tips depending on percentage of bill that wants to be given",
@@ -75,18 +88,6 @@ const listProjectsFront = ref([
     year: "2023-06-30",
     frontendMentor: true,
     tech: ["html", "css", "vue"],
-  },
-  {
-    title: "Shoe E-Commerce",
-    description:
-      "basic e-commerce site for a fictional shoe store, with cart and checkout functionality",
-    link: "https://makita7.github.io/ecommerce-product-react/",
-    type: "front",
-    program: "react",
-    img: ShoeECommerce,
-    year: "2025-05-27",
-    frontendMentor: true,
-    tech: ["html", "css", "react"],
   },
 ]);
 
