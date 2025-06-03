@@ -110,3 +110,11 @@ p {
   50%  { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
+
+
+.shrink-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.shrink-hover:hover {
+  transform: scale(0.95);
+}

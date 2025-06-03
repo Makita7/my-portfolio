@@ -1,29 +1,49 @@
 <script setup lang="ts">
 import { useDisplay } from "vuetify";
+import { onMounted, ref } from "vue";
 
 const showFoatingImg = useDisplay().lgAndUp;
+
+let floatingAnimation = ref(false);
+
+const AnimateIn = () => {
+  setTimeout(() => {
+    floatingAnimation.value = true;
+  }, 2000);
+};
+
+onMounted(() => {
+  AnimateIn();
+});
 </script>
 
 <template>
   <main class="home d-flex justify-center">
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Brush.png" alt="" class="brush fade floating" />
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_stars.png" alt="" class="stars fade floating" />
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Coffee.png" alt="" class="coffee fade floating" />
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Folder.png" alt="" class="folder fade floating" />
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Vue.png" alt="" class="vueImg fade floating" />
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Laptop.png" alt="" class="laptop fade floating" />
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Tailwind.png" alt=""
-      class="tailwind fade floating" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Brush.png" alt="" class="brush"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_stars.png" alt="" class="stars"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Coffee.png" alt="" class="coffee"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Folder.png" alt="" class="folder"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Vue.png" alt="" class="vueImg"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Laptop.png" alt="" class="laptop"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Tailwind.png" alt="" class="tailwind"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
     <img src="@/assets/girl-animated.gif" alt="doodle of sofi" class="landing-img fade" />
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Headphones.png" alt=""
-      class="headphones fade floating" />
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_croissant.png" alt=""
-      class="croissant fade floating" />
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Puzzles.png" alt="" class="puzzles fade floating" />
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Lightbulb.png" alt=""
-      class="lightbulb fade floating" />
-    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Pantones.png" alt=""
-      class="pantones fade floating" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Headphones.png" alt="" class="headphones"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_croissant.png" alt="" class="croissant"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Puzzles.png" alt="" class="puzzles"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Lightbulb.png" alt="" class="lightbulb"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
+    <img v-if="showFoatingImg" src="@/assets/elements for portfolio_Pantones.png" alt="" class="pantones"
+      :class="!floatingAnimation ? 'fade' : 'floating'" />
   </main>
 </template>
 
@@ -52,6 +72,10 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 8rem;
   left: 20%;
   top: 15%;
+
+  @media (max-width: 1600px) {
+    width: 6rem !important;
+  }
 }
 
 .stars {
@@ -59,6 +83,10 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 11rem;
   left: 8%;
   top: 21%;
+
+  @media (max-width: 1600px) {
+    width: 9rem;
+  }
 }
 
 .coffee {
@@ -66,6 +94,10 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 8rem;
   left: 24%;
   top: 44%;
+
+  @media (max-width: 1600px) {
+    width: 6rem;
+  }
 }
 
 .folder {
@@ -73,6 +105,10 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 10rem;
   left: 13%;
   bottom: 25%;
+
+  @media (max-width: 1600px) {
+    width: 8rem;
+  }
 }
 
 .vueImg {
@@ -80,6 +116,10 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 7rem;
   left: 5%;
   top: 50%;
+
+  @media (max-width: 1600px) {
+    width: 5rem;
+  }
 }
 
 .laptop {
@@ -87,6 +127,10 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 16rem;
   left: 24%;
   bottom: 13%;
+
+  @media (max-width: 1600px) {
+    width: 13rem;
+  }
 }
 
 .tailwind {
@@ -94,6 +138,10 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 8rem;
   left: 12%;
   bottom: 9%;
+
+  @media (max-width: 1600px) {
+    width: 6rem;
+  }
 }
 
 .headphones {
@@ -101,6 +149,10 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 11rem;
   right: 20%;
   top: 15%;
+
+  @media (max-width: 1600px) {
+    width: 9rem;
+  }
 }
 
 .croissant {
@@ -108,6 +160,10 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 10rem;
   right: 17%;
   bottom: 13%;
+
+  @media (max-width: 1600px) {
+    width: 8rem;
+  }
 }
 
 .puzzles {
@@ -115,6 +171,10 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 11rem;
   right: 3%;
   top: 60%;
+
+  @media (max-width: 1600px) {
+    width: 9rem;
+  }
 }
 
 .lightbulb {
@@ -122,6 +182,10 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 6rem;
   right: 12%;
   top: 35%;
+
+  @media (max-width: 1600px) {
+    width: 5rem;
+  }
 }
 
 .pantones {
@@ -129,9 +193,9 @@ const showFoatingImg = useDisplay().lgAndUp;
   width: 9rem;
   right: 27%;
   top: 43%;
+
+  @media (max-width: 1600px) {
+    width: 7rem;
+  }
 }
-
-@media (min-width: 600px) {}
-
-@media (min-width: 960px) {}
 </style>
