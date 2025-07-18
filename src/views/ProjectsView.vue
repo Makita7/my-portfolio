@@ -39,9 +39,22 @@ import StepFormImg from "@/assets/project-previews/step-form.jpg";
 import TipCalculatorImg from "@/assets/project-previews/tip-calculator.jpg";
 import TomaatImg from "@/assets/project-previews/tomaat.jpg";
 import ShoeECommerce from "@/assets/project-previews/shoe-e-commerce.jpg";
+import CountdownDate from "@/assets/project-previews/countdownDate.jpg";
 
 // Date format: YYYY-MM-DD
 const listProjectsFront = ref([
+  {
+    title: "Date Countdown App",
+    description:
+      "It's a basic countdown app where you can add, edit or delete the dates you want to countdown, I also used VueUse and custom vue Directives",
+    link: "https://makita7.github.io/date-countdown/new-year",
+    type: "front",
+    program: "vue",
+    img: CountdownDate,
+    year: "2025-07-18",
+    frontendMentor: false,
+    tech: ["html", "css", "vue"],
+  },
   {
     title: "Shoe E-Commerce",
     description:
