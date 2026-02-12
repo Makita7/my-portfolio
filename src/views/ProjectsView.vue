@@ -47,7 +47,7 @@ const listProjectsFront = ref([
     title: "Date Countdown App",
     description:
       "It's a basic countdown app where you can add, edit or delete the dates you want to countdown, I also used VueUse and custom vue Directives",
-    link: "https://makita7.github.io/date-countdown/new-year",
+    link: "https://makita7.github.io/date-countdown/",
     type: "front",
     program: "vue",
     img: CountdownDate,
