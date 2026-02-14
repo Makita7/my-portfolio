@@ -18,17 +18,22 @@ onMounted(() => {
 </script>
 
 <template>
-  <main class="home d-flex justify-center">
-    <v-col class="d-flex flex-column">
-      <h2 class="name ml-auto mt-auto">Hi I'm Sofi,</h2>
-      <p class="description ml-auto mb-auto">
+  <main class="home d-flex align-md-center flex-column flex-sm-row justify-center">
+    <div class="d-flex flex-column justify-center justify-md-start">
+      <h2 class="name ml-0 ml-md-auto mt-0 mt-sm-auto text-center text-md-right">
+        Hi I'm Sofi,
+      </h2>
+      <p class="description mb-auto ml-0 ml-md-auto text-sm-right text-center">
         UX/UI Designer building thoughtful, <br />
         accessible digital experiences
       </p>
-    </v-col>
-    <v-col>
-      <img src="@/assets/girl-animated.gif" alt="doodle of sofi" class="landing-img fade" />
-    </v-col>
+    </div>
+    <div v-if="!useDisplay().xs" class="d-flex flex-column justify-center justify-md-start">
+      <img src="@/assets/girl-animated.gif" alt="doodle of sofi" class="landing-img fade mt-auto mb-auto" />
+    </div>
+    <div v-else class="d-flex align-center">
+      <img src="@/assets/girl-animated.gif" alt="doodle of sofi" class="landing-img2 fade ml-auto mr-auto" />
+    </div>
   </main>
 </template>
 
@@ -57,5 +62,46 @@ onMounted(() => {
   max-height: 75vh;
   object-fit: contain;
   pointer-events: none;
+  max-width: 50vw;
+}
+
+.landing-img2 {
+  max-height: 75vh;
+  object-fit: contain;
+  pointer-events: none;
+  max-width: 50vw;
+  position: relative;
+}
+
+.smImg {
+  top: -9rem;
+  position: relative;
+}
+
+@media (max-width: 960px) {
+  .name {
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .name {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .landing-img2 {
+    max-height: 80vh;
+    max-width: 65vw;
+  }
 }
 </style>
