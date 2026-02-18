@@ -3,7 +3,7 @@ import { ref, onMounted } from "vue";
 import ProjectCard from "@/components/ProjectCard.vue";
 import { useDisplay } from "vuetify";
 
-let projectType = ref(false);
+let projectType = ref(true);
 const toggleType = () => (projectType.value = !projectType.value);
 
 const colors = ref(["#F55D3E", "#F6AC42", "#7EBC89", "#0069a2"]);
@@ -37,9 +37,11 @@ onMounted(() => {
 import SpaceImg from "@/assets/project-previews/space-tourism.jpg";
 import StepFormImg from "@/assets/project-previews/step-form.jpg";
 import TipCalculatorImg from "@/assets/project-previews/tip-calculator.jpg";
-import TomaatImg from "@/assets/project-previews/tomaat.jpg";
 import ShoeECommerce from "@/assets/project-previews/shoe-e-commerce.jpg";
 import CountdownDate from "@/assets/project-previews/countdownDate.jpg";
+import TomaatImg from "@/assets/project-previews/tomaat.jpg";
+import MoodGardenImg from "@/assets/project-previews/mood-garden.png";
+import DailyGroundImg from "@/assets/project-previews/daily-ground.png";
 
 // Date format: YYYY-MM-DD
 const listProjectsFront = ref([
@@ -108,10 +110,39 @@ const listProjectsUxUi = ref([
   {
     title: "Tomaat.",
     description: "Pomodoro method study app with accomodations for ADHD and Autism",
-    link: "",
+    links: {
+      mobile: "sdfsdf",
+    },
     type: "ux",
     program: "figma",
     img: TomaatImg,
+    year: "2025-05-12",
+    frontendMentor: false,
+    tech: ["figma", "photoshop", "illustrator"],
+  },
+  {
+    title: "MoodGarden",
+    description: "Pomodoro method study app with accomodations for ADHD and Autism",
+    links: {
+      mobile: "sdfsdf",
+    },
+    type: "ux",
+    program: "figma",
+    img: MoodGardenImg,
+    year: "2025-05-12",
+    frontendMentor: false,
+    tech: ["figma", "photoshop", "illustrator"],
+  },
+  {
+    title: "DailyGround.",
+    description: "Pomodoro method study app with accomodations for ADHD and Autism",
+    links: {
+      web: "sdfsdf",
+      mobile: "sdfsdf",
+    },
+    type: "ux",
+    program: "figma",
+    img: DailyGroundImg,
     year: "2025-05-12",
     frontendMentor: false,
     tech: ["figma", "photoshop", "illustrator"],

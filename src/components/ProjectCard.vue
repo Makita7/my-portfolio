@@ -15,15 +15,31 @@ const props = defineProps({
     <v-col class="cols-md-7">
       <p class="title">{{ props.data.title }}</p>
       <p>{{ props.data.description }}</p>
-      <div class="d-flex flex-wrap mt-1">
+      <div class="d-flex align-center flex-wrap mt-1">
         <div class="font-weight-bold d-flex align-center">
-          <p>Link:</p>
-          <a :href="props.data.link" target="_blank" class="d-flex align-center">
-            <g v-if="props.data.type === 'front'" href="https://github.com/Makita7" class="filter github">
+          <p v-if="props.data.type === 'front'" class="mr-2">Link:</p>
+          <a v-if="props.data.type === 'front'" :href="props.data.link" target="_blank" class="d-flex align-center">
+            <g href="https://github.com/Makita7" class="filter github">
               <img src="@/assets/icons/github.svg" alt="github link" class="ml-2 pt-1" />
             </g>
-            <img v-else src="@/assets/icons/figma.svg" alt="figma icon" class="ml-2" style="height: 32px" />
           </a>
+          <div v-else class="d-flex align-center mb-2 mt-2">
+            <p class="mr-4">Link:</p>
+            <p v-if="props.data.links.web" class="link-sub">Web:</p>
+            <a v-if="props.data.links.web" :href="props.data.links.web" target="_blank" class="d-flex align-center">
+              <img src="@/assets/icons/figma.svg" alt="figma icon" class="ml-2 mr-2" style="height: 32px" />
+            </a>
+            <p v-if="props.data.links.tablet" class="link-sub">Tablet:</p>
+            <a v-if="props.data.links.tablet" :href="props.data.links.tablet" target="_blank"
+              class="d-flex align-center">
+              <img src="@/assets/icons/figma.svg" alt="figma icon" class="ml-2 mr-2" style="height: 32px" />
+            </a>
+            <p v-if="props.data.links.mobile" class="link-sub">Mobile:</p>
+            <a v-if="props.data.links.mobile" :href="props.data.links.mobile" target="_blank"
+              class="d-flex align-center">
+              <img src="@/assets/icons/figma.svg" alt="figma icon" class="ml-2 mr-2" style="height: 32px" />
+            </a>
+          </div>
         </div>
         <div v-if="Array.isArray(props.data?.tech)" class="d-flex flex-wrap ml-4 align-center">
           <p class="font-weight-bold d-flex mr-1">Tech:</p>
@@ -65,6 +81,10 @@ const props = defineProps({
 .title {
   font-family: "Nunito", sans-serif;
   font-size: 2rem;
+}
+
+.link-sub {
+  font-weight: 400;
 }
 
 @media (min-width: 600px) {
