@@ -23,7 +23,7 @@ onMounted(() => {
       <h2 class="name ml-0 ml-md-auto mt-0 mt-sm-auto text-center text-md-right">
         Hi I'm Sofi,
       </h2>
-      <p class="description mb-auto ml-0 ml-md-auto text-sm-right text-center">
+      <p class="description mb-auto ml-0 ml-md-auto text-sm-right text-center text-capitalize">
         UX/UI Designer building thoughtful, <br />
         accessible digital experiences
       </p>
