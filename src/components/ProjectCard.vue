@@ -58,6 +58,12 @@ const props = defineProps({
           <img v-if="props.data?.tech.includes('after-effects')" src="@/assets/icons/after-effects.svg"
             alt="tech after-effects icon" class="px-1" />
         </div>
+        <div v-if="props.data.caseStudy" class="d-flex align-center mt-1">
+          <p class="font-weight-bold">Case Study:</p>
+          <a :href="props.data.caseStudy" target="_blank" class="d-flex align-center">
+            <img src="@/assets/icons/document.svg" alt="figma icon" class="ml-2 mr-2 icon" style="height: 32px" />
+          </a>
+        </div>
       </div>
     </v-col>
   </div>

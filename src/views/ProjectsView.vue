@@ -60,7 +60,7 @@ const listProjectsFront = ref([
   {
     title: "Shoe E-Commerce",
     description:
-      "basic e-commerce site for a fictional shoe store, with cart and checkout functionality",
+      "Basic e-commerce site for a fictional shoe store, with cart and checkout functionality",
     link: "https://makita7.github.io/ecommerce-product-react/",
     type: "front",
     program: "react",
@@ -107,22 +107,24 @@ const listProjectsFront = ref([
 ]);
 
 const listProjectsUxUi = ref([
-  {
-    title: "Tomaat.",
-    description: "Pomodoro method study app with accomodations for ADHD and Autism",
-    links: {
-      mobile: "sdfsdf",
-    },
-    type: "ux",
-    program: "figma",
-    img: TomaatImg,
-    year: "2025-05-12",
-    frontendMentor: false,
-    tech: ["figma", "photoshop", "illustrator"],
-  },
+  // {
+  //   title: "Tomaat.",
+  //   description: "Pomodoro method study app with accomodations for ADHD and Autism",
+  //   links: {
+  //     mobile: "sdfsdf",
+  //   },
+  //   type: "ux",
+  //   program: "figma",
+  //   img: TomaatImg,
+  //   year: "2025-05-12",
+  //   frontendMentor: false,
+  //   tech: ["figma", "photoshop", "illustrator"],
+  //   caseStudy: "sasa",
+  // },
   {
     title: "MoodGarden",
-    description: "Pomodoro method study app with accomodations for ADHD and Autism",
+    description:
+      "Colorful app for tracking emotions, triggers and glimmers. Using small animations to lighten users interactions",
     links: {
       mobile: "sdfsdf",
     },
@@ -132,10 +134,13 @@ const listProjectsUxUi = ref([
     year: "2025-05-12",
     frontendMentor: false,
     tech: ["figma", "photoshop", "illustrator"],
+    caseStudy:
+      "https://docs.google.com/document/d/1s2UR2-gRqk0CPmRPLaOBuz2Qk3kZpemmAzTvQouyElI/edit?usp=sharing",
   },
   {
     title: "DailyGround.",
-    description: "Pomodoro method study app with accomodations for ADHD and Autism",
+    description:
+      "App for booking or ordering from coffee shops and choosing how to get order. Similar to UberEats or PedidosYa",
     links: {
       web: "sdfsdf",
       mobile: "sdfsdf",
@@ -146,6 +151,8 @@ const listProjectsUxUi = ref([
     year: "2025-05-12",
     frontendMentor: false,
     tech: ["figma", "photoshop", "illustrator"],
+    caseStudy:
+      "https://docs.google.com/document/d/1x8RcqWXGkLA2D9070pZotmHrXXgNQzHhf0D-WOGhCQ8/edit?usp=sharing",
   },
 ]);
 </script>
