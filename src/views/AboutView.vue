@@ -1,5 +1,12 @@
 <script lang="ts">
-import { useDisplay } from "vuetify";
+import PhotoshopImg from "@/assets/icons/photoshop.svg";
+
+const TechList = [
+  {
+    name: "Photoshop",
+    img: PhotoshopImg,
+  },
+];
 </script>
 
 <template>
@@ -22,28 +29,60 @@ import { useDisplay } from "vuetify";
       <h2 class="mt-4">Tech</h2>
       <div class="d-flex justify-md-start justify-sm-center flex-wrap">
         <div class="icon">
-          <img src="@/assets/icons/photoshop.svg" alt="photoshop icon" class="pr-4" />
+          <v-tooltip text="Photoshop" location="bottom">
+            <template v-slot:activator="{ props }">
+              <img v-bind="props" src="@/assets/icons/photoshop.svg" alt="photoshop icon" class="pr-4" />
+            </template>
+          </v-tooltip>
         </div>
         <div class="icon">
-          <img src="@/assets/icons/illustrator.svg" alt="illustrator icon" class="pr-4" />
+          <v-tooltip text="Illustrator" location="bottom">
+            <template v-slot:activator="{ props }">
+              <img v-bind="props" src="@/assets/icons/illustrator.svg" alt="illustrator icon" class="pr-4" />
+            </template>
+          </v-tooltip>
         </div>
         <div class="icon">
-          <img src="@/assets/icons/after-effects.svg" alt="after effects icon" class="pr-4" />
+          <v-tooltip text="After Effects" location="bottom">
+            <template v-slot:activator="{ props }">
+              <img v-bind="props" src="@/assets/icons/after-effects.svg" alt="after effects icon" class="pr-4" />
+            </template>
+          </v-tooltip>
         </div>
         <div class="icon">
-          <img src="@/assets/icons/figma.svg" alt="figma icon" class="pr-4" style="height: 32px" />
+          <v-tooltip text="Figma" location="bottom">
+            <template v-slot:activator="{ props }">
+              <img v-bind="props" src="@/assets/icons/figma.svg" alt="figma icon" class="pr-4" style="height: 32px" />
+            </template>
+          </v-tooltip>
         </div>
         <div class="icon">
-          <img src="@/assets/icons/css.svg" alt="css icon" class="pr-4" />
+          <v-tooltip text="CSS" location="bottom">
+            <template v-slot:activator="{ props }">
+              <img v-bind="props" src="@/assets/icons/css.svg" alt="css icon" class="pr-4" />
+            </template>
+          </v-tooltip>
         </div>
         <div class="icon">
-          <img src="@/assets/icons/html.svg" alt="html icon" class="pr-4" />
+          <v-tooltip text="HTML" location="bottom">
+            <template v-slot:activator="{ props }">
+              <img v-bind="props" src="@/assets/icons/html.svg" alt="HTML icon" class="pr-4" />
+            </template>
+          </v-tooltip>
         </div>
         <div class="icon">
-          <img src="@/assets/icons/git.svg" alt="git icon" class="pr-4" />
+          <v-tooltip text="Git" location="bottom">
+            <template v-slot:activator="{ props }">
+              <img v-bind="props" src="@/assets/icons/git.svg" alt="git icon" class="pr-4" />
+            </template>
+          </v-tooltip>
         </div>
         <div class="icon">
-          <img src="@/assets/icons/vue.svg" alt="vue icon" class="pr-4" />
+          <v-tooltip text="Vue" location="bottom">
+            <template v-slot:activator="{ props }">
+              <img v-bind="props" src="@/assets/icons/vue.svg" alt="Vue icon" class="pr-4" />
+            </template>
+          </v-tooltip>
         </div>
       </div>
     </v-col>
