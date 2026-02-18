@@ -1,16 +1,15 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <v-footer padless class="footer d-flex justify-end" style="position: fixed;">
+  <v-footer padless class="footer d-flex justify-end" style="position: fixed">
     <p class="talk mb-0">Let's Talk</p>
-    <a href="https://www.behance.net/sophiamak" class="filter behance">
+    <a href="https://www.behance.net/sophiamak" class="filter behance" target="_blank">
       <img src="@/assets/icons/behance.svg" alt="behance link" class="pl-4" />
     </a>
-    <a href="https://github.com/Makita7" class="filter github">
+    <a href="https://github.com/Makita7" class="filter github" target="_blank">
       <img src="@/assets/icons/github.svg" alt="github link" class="pl-4" />
     </a>
-    <a href="https://dribbble.com/SofiMakita" class="filter dribble">
+    <a href="https://dribbble.com/SofiMakita" class="filter dribble" target="_blank">
       <img type="svg" src="@/assets/icons/dribble.svg" alt="dribble link" class="pl-4" />
     </a>
   </v-footer>
