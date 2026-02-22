@@ -12,9 +12,9 @@ export const caseStudyContent = {
   "mood-garden": {
     title: "Mood Garden",
     color: '#B80016',
-    links: [
-      {mobile: '', tablet: '', web: ''},
-    ],
+    links: {
+      mobile: 'https://www.figma.com/proto/yD9JmMrtMHLTVK6LogI0Q3/Mood-Garden?node-id=78-1499&p=f&viewport=268%2C356%2C0.07&t=q4m3oi0pNAuyzREH-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=341%3A3657',
+    },
     sections: {
       overview: {
         subtitle: 'Mood Tracking App for Mobile',
@@ -179,9 +179,10 @@ Instead of relying on traditional mood-tracking charts, the experience transform
   "daily-ground": {
     title: "DailyGround.",
     color: '#1D70C4',
-    links: [
-      {mobile: 'fdgdfg', tablet: '', web: ''},
-    ],
+    links: {
+      mobile: 'https://www.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=66-477&p=f&viewport=3364%2C640%2C0.19&t=5PXRrZGuiBvFjJ2H-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=66%3A717',
+      web: 'https://www.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=783-16999&p=f&viewport=3064%2C680%2C0.19&t=5PXRrZGuiBvFjJ2H-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=783%3A17738'
+    },
     sections: {
       overview: {
         subtitle: 'A seamless ordering experience for pickup, dine-in, and delivery.',

@@ -2,8 +2,10 @@
 import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { caseStudyContent } from "@/data/caseStudyContent";
+import { useDisplay } from "vuetify";
 
 const route = useRoute();
+const display = useDisplay();
 
 const caseStudyData = computed(() => {
   const slug = route.params.slug as string;
@@ -19,9 +21,12 @@ const caseStudyData = computed(() => {
 <template>
   <div class="d-flex">
     <v-col
-      cols="2"
-      class="d-flex flex-column sticky-sidebar links"
-      style="margin-left: 5%"
+      v-if="display.smAndUp"
+      cols="3"
+      xs="0"
+      sm="3"
+      md="2"
+      class="d-flex flex-column sticky-sidebar links colNav d-none"
     >
       <p class="navTitles mb-4 mt-4" :style="`color: ${caseStudyData.color};`">
         {{ caseStudyData?.title }}
@@ -116,53 +121,56 @@ const caseStudyData = computed(() => {
         Reflection
       </RouterLink>
     </v-col>
-    <v-col style="margin: 0 15% 0 2%">
-      <h1 :style="`color:${caseStudyData.color};`" class="sticky-title">
-        {{ caseStudyData.title }}
-      </h1>
+    <v-col class="customPadding">
       <section id="overview">
+        <h1 :style="`color:${caseStudyData.color};`" class="sticky-title">
+          {{ caseStudyData.title }}
+        </h1>
         <p class="pb-2" style="width: 100%">
           <b>{{ caseStudyData?.sections.overview.subtitle }}</b>
         </p>
         <p><b>Scope: </b>{{ caseStudyData?.sections.overview.scope }}</p>
         <div class="d-flex align-center mt-4">
           <p class="mr-4"><b>Link to Prototype:</b></p>
-          <p v-if="caseStudyData.links[0].web" class="link-sub">Web</p>
+          <p v-if="caseStudyData.links.web" class="link-sub">Web</p>
           <a
-            v-if="caseStudyData.links[0].web"
-            :href="caseStudyData.links[0].web"
+            v-if="caseStudyData.links.web"
+            :href="caseStudyData.links.web"
             target="_blank"
-            class="d-flex align-center"
+            class="d-flex align-center mr-2"
           >
             <img
               src="@/assets/icons/figma.svg"
               alt="figma icon"
-              class="ml-2 mr-2"
-              style="height: 32px"
+              class="ml-2 mr-2 figmaIconImg"
             />
           </a>
-          <p v-if="caseStudyData.links[0].tablet" class="link-sub">Tablet</p>
+          <p v-if="caseStudyData.links.tablet" class="link-sub">Tablet</p>
           <a
-            v-if="caseStudyData.links[0].tablet"
-            :href="caseStudyData.links[0].tablet"
+            v-if="caseStudyData.links.tablet"
+            :href="caseStudyData.links.tablet"
             target="_blank"
-            class="d-flex align-center"
+            class="d-flex align-center mr-2"
           >
             <img
               src="@/assets/icons/figma.svg"
               alt="figma icon"
-              class="ml-2 mr-2"
-              style="height: 32px"
+              class="ml-2 mr-2 figmaIconImg"
             />
           </a>
-          <p v-if="caseStudyData.links[0].mobile" class="link-sub">Mobile</p>
+          <p v-if="caseStudyData.links.mobile" class="link-sub">Mobile</p>
           <a
-            v-if="caseStudyData.links[0].mobile"
-            :href="caseStudyData.links[0].mobile"
+            v-if="caseStudyData.links.mobile"
+            :href="caseStudyData.links.mobile"
             target="_blank"
-            class="d-flex align-center"
-            style="width: auto; margin: 0"
+            class="d-flex align-center mr-2"
+            style="width: auto"
           >
+            <img
+              src="@/assets/icons/figma.svg"
+              alt="figma icon"
+              class="ml-2 mr-2 figmaIconImg"
+            />
           </a>
         </div>
         <img
@@ -500,5 +508,30 @@ section {
 
 .link-sub {
   font-weight: 400;
+}
+
+.figmaIconImg {
+  height: 32px;
+  margin: 0;
+}
+
+@media (max-width: 800px) {
+  .d-none {
+    display: none !important;
+  }
+
+  .customPadding {
+    margin: 0;
+  }
+}
+
+@media (min-width: 801px) {
+  .d-none {
+    display: flex !important;
+  }
+
+  .customPadding {
+    margin: 0 15% 0 2%;
+  }
 }
 </style>
