@@ -121,10 +121,50 @@ const caseStudyData = computed(() => {
         {{ caseStudyData.title }}
       </h1>
       <section id="overview">
-        <p class="pb-2">
+        <p class="pb-2" style="width: 100%">
           <b>{{ caseStudyData?.sections.overview.subtitle }}</b>
         </p>
         <p><b>Scope: </b>{{ caseStudyData?.sections.overview.scope }}</p>
+        <div class="d-flex align-center mt-4">
+          <p class="mr-4"><b>Link to Prototype:</b></p>
+          <p v-if="caseStudyData.links[0].web" class="link-sub">Web</p>
+          <a
+            v-if="caseStudyData.links[0].web"
+            :href="caseStudyData.links[0].web"
+            target="_blank"
+            class="d-flex align-center"
+          >
+            <img
+              src="@/assets/icons/figma.svg"
+              alt="figma icon"
+              class="ml-2 mr-2"
+              style="height: 32px"
+            />
+          </a>
+          <p v-if="caseStudyData.links[0].tablet" class="link-sub">Tablet</p>
+          <a
+            v-if="caseStudyData.links[0].tablet"
+            :href="caseStudyData.links[0].tablet"
+            target="_blank"
+            class="d-flex align-center"
+          >
+            <img
+              src="@/assets/icons/figma.svg"
+              alt="figma icon"
+              class="ml-2 mr-2"
+              style="height: 32px"
+            />
+          </a>
+          <p v-if="caseStudyData.links[0].mobile" class="link-sub">Mobile</p>
+          <a
+            v-if="caseStudyData.links[0].mobile"
+            :href="caseStudyData.links[0].mobile"
+            target="_blank"
+            class="d-flex align-center"
+            style="width: auto; margin: 0"
+          >
+          </a>
+        </div>
         <img
           v-if="caseStudyData?.sections.overview.img"
           :src="caseStudyData?.sections.overview.img"
@@ -456,5 +496,9 @@ p {
 
 section {
   margin-bottom: 4rem;
+}
+
+.link-sub {
+  font-weight: 400;
 }
 </style>

@@ -34,49 +34,17 @@ const props = defineProps({
             </g>
           </a>
           <div v-else class="d-flex align-center mb-2 mt-2">
-            <p class="mr-4">Link:</p>
-            <p v-if="props.data.links.web" class="link-sub">Web:</p>
-            <a
-              v-if="props.data.links.web"
-              :href="props.data.links.web"
-              target="_blank"
-              class="d-flex align-center"
-            >
-              <img
-                src="@/assets/icons/figma.svg"
-                alt="figma icon"
-                class="ml-2 mr-2"
-                style="height: 32px"
-              />
-            </a>
-            <p v-if="props.data.links.tablet" class="link-sub">Tablet:</p>
-            <a
-              v-if="props.data.links.tablet"
-              :href="props.data.links.tablet"
-              target="_blank"
-              class="d-flex align-center"
-            >
-              <img
-                src="@/assets/icons/figma.svg"
-                alt="figma icon"
-                class="ml-2 mr-2"
-                style="height: 32px"
-              />
-            </a>
-            <p v-if="props.data.links.mobile" class="link-sub">Mobile:</p>
-            <a
-              v-if="props.data.links.mobile"
-              :href="props.data.links.mobile"
-              target="_blank"
-              class="d-flex align-center"
-            >
-              <img
-                src="@/assets/icons/figma.svg"
-                alt="figma icon"
-                class="ml-2 mr-2"
-                style="height: 32px"
-              />
-            </a>
+            <div v-if="props.data.caseStudy" class="d-flex align-center mt-1">
+              <p class="font-weight-bold">Case Study:</p>
+              <RouterLink :to="{ name: 'UxUiCases', params: { slug: $props.data.to } }">
+                <img
+                  src="@/assets/icons/document.svg"
+                  alt="figma icon"
+                  class="ml-2 mr-2 icon"
+                  style="height: 32px"
+                />
+              </RouterLink>
+            </div>
           </div>
         </div>
         <div
@@ -135,17 +103,6 @@ const props = defineProps({
             alt="tech after-effects icon"
             class="px-1"
           />
-        </div>
-        <div v-if="props.data.caseStudy" class="d-flex align-center mt-1">
-          <p class="font-weight-bold">Case Study:</p>
-          <RouterLink :to="{ name: 'UxUiCases', params: { slug: $props.data.to } }">
-            <img
-              src="@/assets/icons/document.svg"
-              alt="figma icon"
-              class="ml-2 mr-2 icon"
-              style="height: 32px"
-            />
-          </RouterLink>
         </div>
       </div>
     </v-col>

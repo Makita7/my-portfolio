@@ -12,6 +12,9 @@ export const caseStudyContent = {
   "mood-garden": {
     title: "Mood Garden",
     color: '#B80016',
+    links: [
+      {mobile: '', tablet: '', web: ''},
+    ],
     sections: {
       overview: {
         subtitle: 'Mood Tracking App for Mobile',
@@ -176,6 +179,9 @@ Instead of relying on traditional mood-tracking charts, the experience transform
   "daily-ground": {
     title: "DailyGround.",
     color: '#1D70C4',
+    links: [
+      {mobile: 'fdgdfg', tablet: '', web: ''},
+    ],
     sections: {
       overview: {
         subtitle: 'A seamless ordering experience for pickup, dine-in, and delivery.',
