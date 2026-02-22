@@ -6,23 +6,20 @@ import { useDisplay } from "vuetify";
 let projectType = ref(true);
 const toggleType = () => (projectType.value = !projectType.value);
 
-const colors = ref(["#F55D3E", "#F6AC42", "#7EBC89", "#0069a2"]);
-const colorsFront = ref(["#FF9883", "#C1DBB3", "#F2C078", "#a5dfff"]);
+const colors = ref<string[]>(["#F55D3E", "#F6AC42", "#7EBC89", "#0069a2"]);
+const colorsFront = ref<string[]>(["#FF9883", "#C1DBB3", "#F2C078", "#a5dfff"]);
 const display = useDisplay();
 
-let cardColors = ref([]);
 let amountCards = ref(6);
+const cardColors = ref<string[]>([]);
 
 function selectNum() {
-  let num = ref(-1);
+  let num = -1;
+  cardColors.value = []; // importante si vuelve a ejecutarse
+
   for (let i = 0; i < amountCards.value; i++) {
-    if (num.value < 3) {
-      num.value += 1;
-      cardColors.value.push(colors.value[num.value]);
-    } else {
-      num.value = 0;
-      cardColors.value.push(colors.value[num.value]);
-    }
+    num = num < 3 ? num + 1 : 0;
+    cardColors.value.push(colors.value[num]);
   }
 }
 

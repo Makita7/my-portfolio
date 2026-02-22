@@ -19,7 +19,7 @@ onUnmounted(() => {
   window.removeEventListener("keyup", handleKey);
 });
 
-function handleKey(event) {
+function handleKey(event: KeyboardEvent) {
   if ((event.key === "ArrowUp" || event.key === "ArrowRight") && counter.value < 9) {
     counter.value += 1;
   } else if (

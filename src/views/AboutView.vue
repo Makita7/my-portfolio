@@ -1,4 +1,4 @@
-<script lang="ts">
+<script setup lang="ts">
 import PhotoshopImg from "@/assets/icons/photoshop.svg";
 
 const TechList = [
@@ -146,7 +146,7 @@ const TechList = [
 
 @media (min-width: 1300px) {
   .myPhoto {
-    max-width: 40rem;
+    max-width: 30rem;
     max-height: -webkit-fill-available;
   }
 

@@ -7,6 +7,42 @@ import reflectionMoodImg from '@/assets/project-previews/mood-garden/mood garden
 import overviewDailyImg from '@/assets/project-previews/daily-ground/daily ground.png';
 import problemDailyImg from '@/assets/project-previews/daily-ground/daily ground - Food Allergies.png';
 import designDailyImg from '@/assets/project-previews/daily-ground/daily ground - previews.png';
+import type { CaseStudyBlock } from '@/data/caseStudyTypes';
+
+export type CaseStudyOverview = {
+  subtitle: string
+  scope: string
+  prototype: string
+  img: string
+  text: string
+  text2?: string
+  text3?: string
+}
+
+export type CaseStudySections = {
+  overview: CaseStudyOverview
+
+  problem?: CaseStudyBlock[]
+  strategy?: CaseStudyBlock[]
+  reflection?: CaseStudyBlock[]
+
+  'goals-constraints'?: CaseStudyBlock[]
+  'research-insight'?: CaseStudyBlock[]
+  'ux-framework'?: CaseStudyBlock[]
+  'design-principles'?: CaseStudyBlock[]
+  'potential-expansion'?: CaseStudyBlock[]
+}
+
+export type CaseStudy = {
+  title: string
+  color: string
+  links?: {
+    mobile?: string
+    web?: string
+    tablet?: string
+  }
+  sections: CaseStudySections
+}
 
 export const caseStudyContent = {
   "mood-garden": {
@@ -23,6 +59,8 @@ export const caseStudyContent = {
         img: overviewMoodImg,
         text: `Mood Garden is designed to help users visualize, understand, and reflect on their emotions over time.
 Instead of relying on traditional mood-tracking charts, the experience transforms emotions into a living garden, where each feeling appears as a uniquely colored flower. This approach replaces clinical data with a warm, engaging visual metaphor that makes emotional awareness feel approachable and intuitive.`,
+        text2: ``,
+        text3: ``,
       },
       problem: [
         { type: 'img', img:problemMoodImg },
@@ -193,7 +231,7 @@ Instead of relying on traditional mood-tracking charts, the experience transform
         text2: `The project explores how thoughtful UX design can reduce friction in high-frequency, time-sensitive transactions while maintaining warmth and brand personality. This case study focuses on building a flexible ordering system that adapts to different contexts without overwhelming the user.`,
         text3: `A key differentiator of the product is its approach to dietary filtering. Many food and beverage apps treat dietary restrictions as an afterthought, making it difficult for users with allergies or preferences to confidently navigate menus. DailyGround integrates dietary filters directly into the browsing experience, allowing users to quickly identify suitable options without needing to inspect every product manually.`,
       },
-      "problem":[
+      problem:[
         { type: 'img', img:problemDailyImg },
         { type: 'list', title: "Ordering coffee should be quick and satisfying — but digital ordering often introduces friction:", items: [
           "Confusing customization flows",
@@ -310,4 +348,4 @@ Instead of relying on traditional mood-tracking charts, the experience transform
         ]},
       ],
   }
-}}
+}}satisfies Record<string, CaseStudy>
