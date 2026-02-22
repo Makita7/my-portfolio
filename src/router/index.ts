@@ -19,8 +19,21 @@ const router = createRouter({
       path: '/projects',
       name: 'projects',
       component: () => import('../views/ProjectsView.vue'),
+      children:[
+        {
+          path: ':slug',
+          name: 'UxUiCases',
+          component: () => import('../views/UxUiCases.vue'),
+        },
+      ]
     },
   ],
+  scrollBehavior(to) {
+    return {
+      el: to.hash,
+      behavior: 'smooth',
+    }
+  }
 })
 
 export default router

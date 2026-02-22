@@ -42,6 +42,7 @@ import CountdownDate from "@/assets/project-previews/countdownDate.jpg";
 import TomaatImg from "@/assets/project-previews/tomaat.jpg";
 import MoodGardenImg from "@/assets/project-previews/mood-garden.png";
 import DailyGroundImg from "@/assets/project-previews/daily-ground.png";
+import { RouterLink } from "vue-router";
 
 // Date format: YYYY-MM-DD
 const listProjectsFront = ref([
@@ -123,6 +124,7 @@ const listProjectsUxUi = ref([
   // },
   {
     title: "MoodGarden",
+    to: "mood-garden",
     description:
       "Colorful app for tracking emotions, triggers and glimmers. Using small animations to lighten users interactions",
     links: {
@@ -139,6 +141,7 @@ const listProjectsUxUi = ref([
   },
   {
     title: "DailyGround.",
+    to: "daily-ground",
     description:
       "App for booking or ordering from coffee shops and choosing how to get order. Similar to UberEats or PedidosYa",
     links: {
@@ -159,7 +162,7 @@ const listProjectsUxUi = ref([
 
 <template>
   <div style="position: relative; height: 92vh">
-    <div class="projects">
+    <div v-if="!$route.params.slug" class="projects">
       <div v-if="!display.xs" class="d-flex align-center justify-space-between fade">
         <v-col class="pa-0" id="ux-ui-arrow">
           <div v-if="!projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
@@ -219,6 +222,7 @@ const listProjectsUxUi = ref([
           :color="cardColors[index]" class="card" :style="getDelay(index)" />
       </div>
     </div>
+    <RouterView />
     <img src="@/assets/project-bg.png" alt="pattern background" class="img-bg fade" v-if="display.mdAndUp.value" />
   </div>
 </template>

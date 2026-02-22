@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { defineProps } from "vue";
+import { RouterLink } from "vue-router";
 
 const props = defineProps({
   color: String,
@@ -60,9 +61,9 @@ const props = defineProps({
         </div>
         <div v-if="props.data.caseStudy" class="d-flex align-center mt-1">
           <p class="font-weight-bold">Case Study:</p>
-          <a :href="props.data.caseStudy" target="_blank" class="d-flex align-center">
+          <RouterLink :to="`${$props.data.to}`">
             <img src="@/assets/icons/document.svg" alt="figma icon" class="ml-2 mr-2 icon" style="height: 32px" />
-          </a>
+          </RouterLink>
         </div>
       </div>
     </v-col>
