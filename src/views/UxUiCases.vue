@@ -18,7 +18,12 @@ const caseStudyData = computed(() => {
 
 <template>
   <div class="d-flex">
-    <v-col cols="2" class="d-flex flex-column sticky-sidebar links">
+    <v-col
+      cols="2"
+      class="d-flex flex-column sticky-sidebar links"
+      style="margin-left: 5%"
+    >
+      <p class="navTitles mb-4 mt-4">{{ caseStudyData?.title }}</p>
       <RouterLink
         :to="{
           name: 'UxUiCases',
@@ -93,31 +98,252 @@ const caseStudyData = computed(() => {
         :to="{
           name: 'UxUiCases',
           params: { slug: $route.params.slug },
+          hash: '#potential-expension',
+        }"
+      >
+        Design Principles
+      </RouterLink>
+
+      <RouterLink
+        :to="{
+          name: 'UxUiCases',
+          params: { slug: $route.params.slug },
           hash: '#reflection',
         }"
       >
         Reflection
       </RouterLink>
     </v-col>
-    <v-col>
-      {{ caseStudyData }}
-      <section id="overview" style="height: 100vh; background-color: aquamarine">
-        overview
+    <v-col style="margin: 0 15% 0 2%">
+      <h1 :style="`color:${caseStudyData.color};`" class="sticky-title">
+        {{ caseStudyData.title }}
+      </h1>
+      <section id="overview">
+        <p class="pb-2">
+          <b>{{ caseStudyData?.sections.overview.subtitle }}</b>
+        </p>
+        <p><b>Scope: </b>{{ caseStudyData?.sections.overview.scope }}</p>
+        <img
+          v-if="caseStudyData?.sections.overview.img"
+          :src="caseStudyData?.sections.overview.img"
+          alt="Project Hero"
+        />
+
+        <p>{{ caseStudyData?.sections.overview.text }}</p>
       </section>
 
-      <section id="problem" style="height: 100vh">problem</section>
+      <section id="problem">
+        <p class="sectionTitles mb-4">The Problem</p>
+        <div v-for="(block, index) in caseStudyData.sections.problem" :key="index">
+          <p v-if="block.type === 'text'" class="mb-4">
+            {{ block.content }}
+          </p>
 
-      <section id="goals-constraints" style="height: 100vh">goals-constraints</section>
+          <div v-if="block.type === 'list'">
+            <p class="listTitles mb-2">{{ block.title }}</p>
+            <ul class="custom-list mb-4 ml-6">
+              <li v-for="item in block.items" :key="item">{{ item }}</li>
+            </ul>
+          </div>
 
-      <section id="research-insight" style="height: 100vh">research</section>
+          <ul v-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
+            <li v-for="item in block.items" :key="item.label">
+              <strong>{{ item.label }}</strong> — {{ item.text }}
+            </li>
+          </ul>
 
-      <section id="strategy" style="height: 100vh">strategy</section>
+          <img v-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+        </div>
+      </section>
 
-      <section id="ux-framework" style="height: 100vh">ux-framework</section>
+      <section id="goals-constraints">
+        <p class="sectionTitles mb-4">Goals & Constraints</p>
+        <!-- <div v-for="goal in caseStudyData?.sections['goals-constraints'].ul" class="mb-6">
+          <p class="mb-3 listTitles">{{ goal.title }}</p>
+          <ul class="ml-6">
+            <li v-for="(item, index) in goal.items" :key="index">{{ item }}</li>
+          </ul>
+        </div> -->
+        <div
+          v-for="(block, index) in caseStudyData.sections['goals-constraints']"
+          :key="index"
+        >
+          <p v-if="block.type === 'text'" class="mb-4">
+            {{ block.content }}
+          </p>
 
-      <section id="design-principles" style="height: 100vh">design-principles</section>
+          <div v-if="block.type === 'list'">
+            <p class="listTitles mb-2">{{ block.title }}</p>
+            <ul class="custom-list mb-4 ml-6">
+              <li v-for="item in block.items" :key="item">{{ item }}</li>
+            </ul>
+          </div>
 
-      <section id="reflection" style="height: 100vh">reflection</section>
+          <ul v-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
+            <li v-for="item in block.items" :key="item.label">
+              <strong>{{ item.label }}</strong> — {{ item.text }}
+            </li>
+          </ul>
+
+          <img v-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+        </div>
+      </section>
+
+      <section id="research-insight">
+        <p class="sectionTitles mb-4">Research & Insight</p>
+        <div
+          v-for="(block, index) in caseStudyData.sections['research-insight']"
+          :key="index"
+        >
+          <p v-if="block.type === 'text'" class="mb-4">
+            {{ block.content }}
+          </p>
+
+          <div v-if="block.type === 'list'">
+            <p class="listTitles mb-2">{{ block.title }}</p>
+            <ul class="custom-list mb-4 ml-6">
+              <li v-for="item in block.items" :key="item">{{ item }}</li>
+            </ul>
+          </div>
+
+          <ul v-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
+            <li v-for="item in block.items" :key="item.label">
+              <strong>{{ item.label }}</strong> — {{ item.text }}
+            </li>
+          </ul>
+
+          <img v-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+        </div>
+      </section>
+
+      <section id="strategy">
+        <p class="sectionTitles mb-4">Strategy</p>
+        <div v-for="(block, index) in caseStudyData.sections.strategy" :key="index">
+          <p v-if="block.type === 'text'" class="mb-4">
+            {{ block.content }}
+          </p>
+
+          <div v-if="block.type === 'list'">
+            <p class="listTitles mb-2">{{ block.title }}</p>
+            <ul class="custom-list mb-4 ml-6">
+              <li v-for="item in block.items" :key="item">{{ item }}</li>
+            </ul>
+          </div>
+
+          <ul v-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
+            <li v-for="item in block.items" :key="item.label">
+              <strong>{{ item.label }}</strong> — {{ item.text }}
+            </li>
+          </ul>
+
+          <img v-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+        </div>
+      </section>
+
+      <section id="ux-framework">
+        <p class="sectionTitles mb-4">Ux Framework</p>
+        <div
+          v-for="(block, index) in caseStudyData.sections['ux-framework']"
+          :key="index"
+        >
+          <p v-if="block.type === 'text'" class="mb-4">
+            {{ block.content }}
+          </p>
+
+          <div v-if="block.type === 'list'">
+            <p class="listTitles mb-2">{{ block.title }}</p>
+            <ul class="custom-list mb-4 ml-6">
+              <li v-for="item in block.items" :key="item">{{ item }}</li>
+            </ul>
+          </div>
+
+          <ul v-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
+            <li v-for="item in block.items" :key="item.label">
+              <strong>{{ item.label }}</strong> — {{ item.text }}
+            </li>
+          </ul>
+
+          <img v-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+        </div>
+      </section>
+
+      <section id="design-principles">
+        <p class="sectionTitles mb-4">Design Principles</p>
+        <div
+          v-for="(block, index) in caseStudyData.sections['design-principles']"
+          :key="index"
+        >
+          <p v-if="block.type === 'text'" class="mb-4">
+            {{ block.content }}
+          </p>
+
+          <div v-if="block.type === 'list'">
+            <p class="listTitles mb-2">{{ block.title }}</p>
+            <ul class="custom-list mb-4 ml-6">
+              <li v-for="item in block.items" :key="item">{{ item }}</li>
+            </ul>
+          </div>
+
+          <ul v-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
+            <li v-for="item in block.items" :key="item.label">
+              <strong>{{ item.label }}</strong> — {{ item.text }}
+            </li>
+          </ul>
+
+          <img v-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+        </div>
+      </section>
+
+      <section id="potential-expension">
+        <p class="sectionTitles mb-4">Potential Expension</p>
+        <div
+          v-for="(block, index) in caseStudyData.sections['potential-expension']"
+          :key="index"
+        >
+          <p v-if="block.type === 'text'" class="mb-4">
+            {{ block.content }}
+          </p>
+
+          <div v-if="block.type === 'list'">
+            <p class="listTitles mb-2">{{ block.title }}</p>
+            <ul class="custom-list mb-4 ml-6">
+              <li v-for="item in block.items" :key="item">{{ item }}</li>
+            </ul>
+          </div>
+
+          <ul v-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
+            <li v-for="item in block.items" :key="item.label">
+              <strong>{{ item.label }}</strong> — {{ item.text }}
+            </li>
+          </ul>
+
+          <img v-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+        </div>
+      </section>
+
+      <section id="reflection">
+        <p class="sectionTitles mb-4">Reflection</p>
+        <div v-for="(block, index) in caseStudyData.sections.reflection" :key="index">
+          <p v-if="block.type === 'text'" class="mb-4">
+            {{ block.content }}
+          </p>
+
+          <div v-if="block.type === 'list'">
+            <p class="listTitles mb-2">{{ block.title }}</p>
+            <ul class="custom-list mb-4 ml-6">
+              <li v-for="item in block.items" :key="item">{{ item }}</li>
+            </ul>
+          </div>
+
+          <ul v-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
+            <li v-for="item in block.items" :key="item.label">
+              <strong>{{ item.label }}</strong> — {{ item.text }}
+            </li>
+          </ul>
+
+          <img v-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+        </div>
+      </section>
     </v-col>
   </div>
 </template>
@@ -145,5 +371,35 @@ const caseStudyData = computed(() => {
 .active a {
   color: #b80016 !important;
   font-weight: bold;
+}
+
+img {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+p {
+  color: var(--blackish);
+}
+
+.listTitles {
+  font-weight: bold;
+}
+
+.sectionTitles {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.5rem;
+  color: #b80016;
+}
+
+.navTitles {
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #b80016;
+}
+
+section {
+  margin-bottom: 4rem;
 }
 </style>

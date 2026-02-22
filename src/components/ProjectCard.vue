@@ -138,7 +138,7 @@ const props = defineProps({
         </div>
         <div v-if="props.data.caseStudy" class="d-flex align-center mt-1">
           <p class="font-weight-bold">Case Study:</p>
-          <RouterLink :to="{ name: 'UxUiCases', params: { slug: 'mood-garden' } }">
+          <RouterLink :to="{ name: 'UxUiCases', params: { slug: $props.data.to } }">
             <img
               src="@/assets/icons/document.svg"
               alt="figma icon"
