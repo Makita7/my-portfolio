@@ -21,7 +21,7 @@ const router = createRouter({
       component: () => import('../views/ProjectsView.vue'),
       children:[
         {
-          path: ':slug',
+          path: '/projects/:slug',
           name: 'UxUiCases',
           component: () => import('../views/UxUiCases.vue'),
         },

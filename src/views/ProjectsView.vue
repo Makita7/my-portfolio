@@ -267,7 +267,7 @@ const listProjectsUxUi = ref([
 }
 
 .img-bg {
-  position: absolute;
+  position: sticky;
   bottom: 0;
   left: 0;
   width: 100%;
