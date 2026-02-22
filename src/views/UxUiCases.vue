@@ -23,7 +23,9 @@ const caseStudyData = computed(() => {
       class="d-flex flex-column sticky-sidebar links"
       style="margin-left: 5%"
     >
-      <p class="navTitles mb-4 mt-4">{{ caseStudyData?.title }}</p>
+      <p class="navTitles mb-4 mt-4" :style="`color: ${caseStudyData.color};`">
+        {{ caseStudyData?.title }}
+      </p>
       <RouterLink
         :to="{
           name: 'UxUiCases',
@@ -98,10 +100,10 @@ const caseStudyData = computed(() => {
         :to="{
           name: 'UxUiCases',
           params: { slug: $route.params.slug },
-          hash: '#potential-expension',
+          hash: '#potential-expansion',
         }"
       >
-        Design Principles
+        Potential Expansion
       </RouterLink>
 
       <RouterLink
@@ -130,13 +132,23 @@ const caseStudyData = computed(() => {
         />
 
         <p>{{ caseStudyData?.sections.overview.text }}</p>
+        <p>{{ caseStudyData?.sections.overview.text2 }}</p>
+        <p>{{ caseStudyData?.sections.overview.text3 }}</p>
       </section>
 
       <section id="problem">
-        <p class="sectionTitles mb-4">The Problem</p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData.color};`">
+          The Problem
+        </p>
         <div v-for="(block, index) in caseStudyData.sections.problem" :key="index">
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
+          </p>
+
+          <p v-if="block.type === 'rich-text'" class="mb-4">
+            <b>
+              {{ block.content }}
+            </b>
           </p>
 
           <div v-if="block.type === 'list'">
@@ -157,19 +169,21 @@ const caseStudyData = computed(() => {
       </section>
 
       <section id="goals-constraints">
-        <p class="sectionTitles mb-4">Goals & Constraints</p>
-        <!-- <div v-for="goal in caseStudyData?.sections['goals-constraints'].ul" class="mb-6">
-          <p class="mb-3 listTitles">{{ goal.title }}</p>
-          <ul class="ml-6">
-            <li v-for="(item, index) in goal.items" :key="index">{{ item }}</li>
-          </ul>
-        </div> -->
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData.color};`">
+          Goals & Constraints
+        </p>
         <div
           v-for="(block, index) in caseStudyData.sections['goals-constraints']"
           :key="index"
         >
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
+          </p>
+
+          <p v-if="block.type === 'rich-text'" class="mb-4">
+            <b>
+              {{ block.content }}
+            </b>
           </p>
 
           <div v-if="block.type === 'list'">
@@ -190,13 +204,21 @@ const caseStudyData = computed(() => {
       </section>
 
       <section id="research-insight">
-        <p class="sectionTitles mb-4">Research & Insight</p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData.color};`">
+          Research & Insight
+        </p>
         <div
           v-for="(block, index) in caseStudyData.sections['research-insight']"
           :key="index"
         >
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
+          </p>
+
+          <p v-if="block.type === 'rich-text'" class="mb-4">
+            <b>
+              {{ block.content }}
+            </b>
           </p>
 
           <div v-if="block.type === 'list'">
@@ -217,10 +239,18 @@ const caseStudyData = computed(() => {
       </section>
 
       <section id="strategy">
-        <p class="sectionTitles mb-4">Strategy</p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData.color};`">
+          Strategy
+        </p>
         <div v-for="(block, index) in caseStudyData.sections.strategy" :key="index">
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
+          </p>
+
+          <p v-if="block.type === 'rich-text'" class="mb-4">
+            <b>
+              {{ block.content }}
+            </b>
           </p>
 
           <div v-if="block.type === 'list'">
@@ -241,13 +271,21 @@ const caseStudyData = computed(() => {
       </section>
 
       <section id="ux-framework">
-        <p class="sectionTitles mb-4">Ux Framework</p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData.color};`">
+          Ux Framework
+        </p>
         <div
           v-for="(block, index) in caseStudyData.sections['ux-framework']"
           :key="index"
         >
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
+          </p>
+
+          <p v-if="block.type === 'rich-text'" class="mb-4">
+            <b>
+              {{ block.content }}
+            </b>
           </p>
 
           <div v-if="block.type === 'list'">
@@ -268,13 +306,21 @@ const caseStudyData = computed(() => {
       </section>
 
       <section id="design-principles">
-        <p class="sectionTitles mb-4">Design Principles</p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData.color};`">
+          Design Principles
+        </p>
         <div
           v-for="(block, index) in caseStudyData.sections['design-principles']"
           :key="index"
         >
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
+          </p>
+
+          <p v-if="block.type === 'rich-text'" class="mb-4">
+            <b>
+              {{ block.content }}
+            </b>
           </p>
 
           <div v-if="block.type === 'list'">
@@ -294,14 +340,22 @@ const caseStudyData = computed(() => {
         </div>
       </section>
 
-      <section id="potential-expension">
-        <p class="sectionTitles mb-4">Potential Expension</p>
+      <section id="potential-expansion">
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData.color};`">
+          Potential Expension
+        </p>
         <div
-          v-for="(block, index) in caseStudyData.sections['potential-expension']"
+          v-for="(block, index) in caseStudyData.sections['potential-expansion']"
           :key="index"
         >
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
+          </p>
+
+          <p v-if="block.type === 'rich-text'" class="mb-4">
+            <b>
+              {{ block.content }}
+            </b>
           </p>
 
           <div v-if="block.type === 'list'">
@@ -322,10 +376,18 @@ const caseStudyData = computed(() => {
       </section>
 
       <section id="reflection">
-        <p class="sectionTitles mb-4">Reflection</p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData.color};`">
+          Reflection
+        </p>
         <div v-for="(block, index) in caseStudyData.sections.reflection" :key="index">
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
+          </p>
+
+          <p v-if="block.type === 'rich-text'" class="mb-4">
+            <b>
+              {{ block.content }}
+            </b>
           </p>
 
           <div v-if="block.type === 'list'">
@@ -365,11 +427,6 @@ const caseStudyData = computed(() => {
 }
 
 .links a:hover {
-  color: #6e1520;
-}
-
-.active a {
-  color: #b80016 !important;
   font-weight: bold;
 }
 
@@ -389,14 +446,12 @@ p {
 .sectionTitles {
   font-family: "Nunito", sans-serif;
   font-size: 1.5rem;
-  color: #b80016;
 }
 
 .navTitles {
   font-family: "Nunito", sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
-  color: #b80016;
 }
 
 section {

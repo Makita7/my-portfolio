@@ -4,6 +4,10 @@ import frameworkMoodImg from '@/assets/project-previews/mood-garden/mood garden 
 import designMoodImg from '@/assets/project-previews/mood-garden/mood garden preview.png';
 import reflectionMoodImg from '@/assets/project-previews/mood-garden/mood garden reflection.png';
 
+import overviewDailyImg from '@/assets/project-previews/daily-ground/daily ground.png';
+import problemDailyImg from '@/assets/project-previews/daily-ground/daily ground - Food Allergies.png';
+import designDailyImg from '@/assets/project-previews/daily-ground/daily ground - previews.png';
+
 export const caseStudyContent = {
   "mood-garden": {
     title: "Mood Garden",
@@ -141,7 +145,7 @@ Instead of relying on traditional mood-tracking charts, the experience transform
         {type: 'text', content: 'This is regulation-focused, not productivity-focused.'},
         { type: 'img', img:designMoodImg },
       ],
-      "potential-expension":[
+      "potential-expansion":[
         { type: 'list', title: "Mood Garden could evolve into:", items: [
           "Personalized emotional ecosystems",
           "Guided reflections",
@@ -174,11 +178,129 @@ Instead of relying on traditional mood-tracking charts, the experience transform
     color: '#1D70C4',
     sections: {
       overview: {
-        text: "DailyGround optimiza la experiencia de compra de café...",
+        subtitle: 'A seamless ordering experience for pickup, dine-in, and delivery.',
+        scope:`End-to-end product vision, experience strategy, behavioral design principles, and scalable feature roadmap`,
+        prototype: 'link',
+        img: overviewDailyImg,
+        text: `DailyGround is a mobile app designed to simplify how customers order coffee — whether they’re picking up on the go, dining in, or ordering delivery.`,
+        text2: `The project explores how thoughtful UX design can reduce friction in high-frequency, time-sensitive transactions while maintaining warmth and brand personality. This case study focuses on building a flexible ordering system that adapts to different contexts without overwhelming the user.`,
+        text3: `A key differentiator of the product is its approach to dietary filtering. Many food and beverage apps treat dietary restrictions as an afterthought, making it difficult for users with allergies or preferences to confidently navigate menus. DailyGround integrates dietary filters directly into the browsing experience, allowing users to quickly identify suitable options without needing to inspect every product manually.`,
       },
-      problem: {
-        text: "El principal inconveniente detectado fue el tiempo de espera...",
-      }
-    }
+      "problem":[
+        { type: 'img', img:problemDailyImg },
+        { type: 'list', title: "Ordering coffee should be quick and satisfying — but digital ordering often introduces friction:", items: [
+          "Confusing customization flows",
+          "Overloaded menus",
+          "Unclear wait times",
+          "Too many steps at checkout",
+          "Limited support for dietary needs",
+        ]},
+        {type: 'text' , content: 'Most coffee apps treat dietary restrictions as secondary. Users with allergies or preferences are often forced to open each product individually to verify ingredients, increasing cognitive load and anxiety.'},
+        {type: 'rich-text', content: 'Core problem:'},
+        {type: 'text', content: ' How might we create one cohesive ordering system that supports pickup, dine-in, and delivery — while also making dietary needs visible, accessible, and effortless to navigate?'},
+      ],
+      "goals-constraints":[
+        { type: 'list', title: "Ordering coffee should be quick and satisfying — but digital ordering often introduces friction:", items: [
+          "Complete a first-time order in under 60 seconds",
+          "Enable repeat orders in under 15 seconds",
+          "Make customization intuitive and transparent",
+          "Clearly communicate wait times and status",
+          "Provide built-in dietary filtering that reduces the need to inspect each item individually",
+          "Maintain a polished, professional aesthetic",
+        ]},
+        { type: 'list', title: "Constraints:", items: [
+          "Mobile-first experience",
+          "Multiple ordering modes in one interface",
+          "Flexible product customization (size, milk, syrups, add-ons)",
+          "Accurate tagging system for dietary categories (e.g., gluten-free, dairy-free, vegan)",
+          "Accessibility standards (contrast, tap targets, hierarchy clarity)",
+        ]},
+      ],
+      "research-insight":[
+        {type: 'text' , content: 'This project is concept-driven but grounded in common food ordering behaviors:'},
+
+        { type: 'list', title: "Observed Patterns:", items: [
+          "Users often reorder the same item",
+          "Time pressure increases decision fatigue",
+          "Long modifier lists create friction",
+          "Users with dietary restrictions spend more time verifying menu items",
+        ]},
+        {type: 'rich-text', content: 'Key Insight:'},
+        {type: 'text', content: 'Coffee ordering is habitual — but dietary verification is cautious.'},
+        {type: 'text', content: 'While most users want speed, users with allergies or restrictions prioritize certainty. When dietary information isn’t surfaced clearly, it creates hesitation and slows the entire flow.'},
+        {type: 'text', content: 'The system must support both urgency and safety — without making either group feel secondary.'},
+      ],
+      "strategy":[
+        {type: 'text' , content: 'The strategy focused on reducing friction while maintaining flexibility and inclusivity.'},
+        {type: 'rich-text', content: '1. One Core System, Three Contexts'},
+        {type: 'text', content: 'Pickup, dine-in, and delivery share the same structural flow. Dietary filtering is consistent across all modes to ensure predictability.'},
+        {type: 'rich-text', content: '2. Proactive Dietary Filtering'},
+        { type: 'list', title: "Instead of burying dietary information within product details:", items: [
+          "Users can filter menu items by dietary restriction or preference",
+          "Visual badges indicate compatibility at a glance",
+          "Filtering persists while browsing to reduce repetitive actions",
+        ]},
+        {type: 'text', content: 'This transforms dietary needs from an afterthought into a first-class navigation tool.'},
+        {type: 'rich-text', content: '3. Modular Customization'},
+        {type: 'text', content: 'Modifier groups clearly indicate how changes affect dietary compatibility.'},
+        {type: 'text', content: 'For example, switching milk types dynamically updates dietary labels when relevant.'},
+        {type: 'rich-text', content: '4. Transparent System Feedback'},
+        {type: 'text', content: 'Users receive clear confirmation when selections align with their chosen dietary filters.'},
+      ],
+      "ux-framework":[
+        {type: 'rich-text', content: 'The experience was built around three principles:'},
+        { type: 'list', title: "1. Reduce Cognitive Load", items: [
+          "Dietary filters remove the need to manually inspect every product",
+          "Smart defaults and clear tagging minimize uncertainty",
+        ]},
+        {type: 'rich-text', content: '2. Maintain Context'},
+        { type: 'list', title: "Users always know:", items: [
+          "Which ordering mode they’re in",
+          "Which store they selected",
+          "Whether dietary filters are active",
+        ]},
+        {type: 'text' , content: 'Active filters remain visible, reinforcing clarity and trust.'},
+        { type: 'list', title: "3. Design for Confidence", items: [
+          "Speed is important — but confidence is essential",
+          "The system supports informed decisions without slowing down the flow",
+        ]},
+      ],
+      "design-principles":[
+        {type: 'rich-text', content: '1. Inclusive by Default'},
+        {type: 'text' , content: 'Dietary restrictions are not treated as edge cases. The interface supports them as a core navigation layer.'},
+        {type: 'rich-text', content: '2. Visible Compatibility'},
+        {type: 'text' , content: 'Products clearly display dietary badges (e.g., gluten-free, dairy-free, vegan) to reduce scanning effort.'},
+        {type: 'rich-text', content: '3. Progressive Disclosure'},
+        {type: 'text' , content: 'Detailed ingredient information is available, but not forced upfront.'},
+        {type: 'rich-text', content: '4. System-Level Consistency'},
+        {type: 'text' , content: 'Dietary logic remains consistent across pickup, dine-in, and delivery to avoid confusion.'},
+        {type: 'rich-text', content: '5. Functional Elegance'},
+        {type: 'text' , content: 'Clarity replaces clutter. The design avoids overwhelming users while still surfacing essential information.'},
+        { type: 'img', img:designDailyImg },
+      ],
+      "potential-expansion":[
+        {type: 'text' , content: 'DailyGround was designed as a scalable ordering system, with flexibility built into its foundation. Future iterations could expand the product beyond transactional efficiency and into deeper personalization and ecosystem integration.'},
+        { type: 'list', title: "Mood Garden could evolve into:", items: [
+          "Personalized Dietary Profiles",
+          "Smart Re-Order & Habit Learning",
+          "Scheduled & Subscription Orders",
+          "Loyalty & Rewards Integration",
+        ]},
+      ],
+      "reflection":[
+        {type: 'text' , content: 'Integrating dietary filtering across the entire system shifted this project from a standard ordering app to a more inclusive product experience.'},
+        {type: 'text' , content: 'Rather than treating dietary needs as a feature, I approached them as a structural layer within the system. This required thinking beyond UI and considering tagging logic, dynamic updates, and how filtering impacts browsing patterns.'},
+        { type: 'list', title: "Designing DailyGround strengthened my ability to:", items: [
+          "Build scalable systems with embedded accessibility",
+          "Design for both speed and certainty",
+          "Anticipate edge cases as primary flows",
+          "Balance business goals with inclusive UX decisions",
+        ]},
+        { type: 'list', title: "If expanded further, I would explore:", items: [
+          "Personalized dietary profiles",
+          "Smart recommendations based on restrictions",
+          "Real-time allergen cross-check validation",
+        ]},
+      ],
   }
-};
+}}
