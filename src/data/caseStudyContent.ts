@@ -72,7 +72,7 @@ Instead of relying on traditional mood-tracking charts, the experience transform
           "Become abandoned after short-term use",
         ]},
         {type: 'text', content: 'While these tools collect data, they rarely support deeper emotional processing.'},
-        {type: 'rich-text', content: 'Users want more than logs — they want clarity.'},
+        {type: 'rich-text', content: 'Users want more than logs. They want clarity.'},
         {type: 'text', content: 'They want to understand why they feel the way they do and how patterns connect over time.'},
         { type: 'list', title: "There is a gap between:", items: [
           "Emotional awareness",
@@ -120,13 +120,13 @@ Instead of relying on traditional mood-tracking charts, the experience transform
           "Overly structured mood trackers can increase pressure",
           "Soft feedback systems encourage habit retention",
         ]},
-        {type: 'rich-text', content: 'A major insight: Emotions are dynamic — so the interface should feel alive '},
+        {type: 'rich-text', content: 'A major insight: Emotions are dynamic, so the interface should feel alive '},
       ],
       strategy:[
         {type: 'text', content: 'The core strategic decision was to use a garden metaphor as the emotional model of the product. Rather than visualizing emotions as data points, Mood Garden translates them into a living environment that evolves over time.'},
         { type: 'list', title: "Why a Garden?", items: [
           "Growth represents emotional patterns and consistency.",
-          "Every emotion — positive or negative — becomes a flower.",
+          "Every emotion, positive or negative, becomes a flower.",
           "No emotion is visually “ugly” or degraded.",
           "Visual feedback replaces numeric metrics, reducing performance pressure.",
         ]},
@@ -145,7 +145,7 @@ Instead of relying on traditional mood-tracking charts, the experience transform
         ]},
         {type: 'rich-text', content: 'Instead of:'},
         {type: 'text', content: "“You logged 4 sad days.”"},
-        {type: 'text', content: "The interface communicates visually. The garden changes subtly — not to signal failure, but to show emotional diversity and patterns over time."},
+        {type: 'text', content: "The interface communicates visually. The garden changes subtly not to signal failure, but to show emotional diversity and patterns over time."},
         {type: 'text', content: "There are no accusatory prompts, streak counters, or corrective language."},
         { type: 'list', title: "By representing every emotion as something worthy of space, the product reinforces:", items: [
           "Emotional acceptance",
@@ -165,7 +165,7 @@ Instead of relying on traditional mood-tracking charts, the experience transform
           "Environmental changes",
         ]},
         {type: 'rich-text', content: '3. Long-Term Feedback'},
-        {type: 'text', content: 'Users see emotional trends as landscape changes — not charts.'},
+        {type: 'text', content: 'Users see emotional trends as landscape changes, not charts.'},
         {type: 'rich-text', content: 'This creates:'},
         {type: 'text', content: 'Awareness → Visualization → Reflection → Regulation'},
         { type: 'img', img:frameworkMoodImg },
@@ -227,13 +227,13 @@ Instead of relying on traditional mood-tracking charts, the experience transform
         scope:`End-to-end product vision, experience strategy, behavioral design principles, and scalable feature roadmap`,
         prototype: 'link',
         img: overviewDailyImg,
-        text: `DailyGround is a mobile app designed to simplify how customers order coffee — whether they’re picking up on the go, dining in, or ordering delivery.`,
+        text: `DailyGround is a mobile app designed to simplify how customers order coffee, whether they’re picking up on the go, dining in, or ordering delivery.`,
         text2: `The project explores how thoughtful UX design can reduce friction in high-frequency, time-sensitive transactions while maintaining warmth and brand personality. This case study focuses on building a flexible ordering system that adapts to different contexts without overwhelming the user.`,
         text3: `A key differentiator of the product is its approach to dietary filtering. Many food and beverage apps treat dietary restrictions as an afterthought, making it difficult for users with allergies or preferences to confidently navigate menus. DailyGround integrates dietary filters directly into the browsing experience, allowing users to quickly identify suitable options without needing to inspect every product manually.`,
       },
       problem:[
         { type: 'img', img:problemDailyImg },
-        { type: 'list', title: "Ordering coffee should be quick and satisfying — but digital ordering often introduces friction:", items: [
+        { type: 'list', title: "Ordering coffee should be quick and satisfying, but digital ordering often introduces friction:", items: [
           "Confusing customization flows",
           "Overloaded menus",
           "Unclear wait times",
@@ -242,10 +242,10 @@ Instead of relying on traditional mood-tracking charts, the experience transform
         ]},
         {type: 'text' , content: 'Most coffee apps treat dietary restrictions as secondary. Users with allergies or preferences are often forced to open each product individually to verify ingredients, increasing cognitive load and anxiety.'},
         {type: 'rich-text', content: 'Core problem:'},
-        {type: 'text', content: ' How might we create one cohesive ordering system that supports pickup, dine-in, and delivery — while also making dietary needs visible, accessible, and effortless to navigate?'},
+        {type: 'text', content: ' How might we create one cohesive ordering system that supports pickup, dine-in, and delivery. While also making dietary needs visible, accessible, and effortless to navigate?'},
       ],
       "goals-constraints":[
-        { type: 'list', title: "Ordering coffee should be quick and satisfying — but digital ordering often introduces friction:", items: [
+        { type: 'list', title: "Ordering coffee should be quick and satisfying, but digital ordering often introduces friction:", items: [
           "Complete a first-time order in under 60 seconds",
           "Enable repeat orders in under 15 seconds",
           "Make customization intuitive and transparent",
@@ -271,9 +271,9 @@ Instead of relying on traditional mood-tracking charts, the experience transform
           "Users with dietary restrictions spend more time verifying menu items",
         ]},
         {type: 'rich-text', content: 'Key Insight:'},
-        {type: 'text', content: 'Coffee ordering is habitual — but dietary verification is cautious.'},
+        {type: 'text', content: 'Coffee ordering is habitual, but dietary verification is cautious.'},
         {type: 'text', content: 'While most users want speed, users with allergies or restrictions prioritize certainty. When dietary information isn’t surfaced clearly, it creates hesitation and slows the entire flow.'},
-        {type: 'text', content: 'The system must support both urgency and safety — without making either group feel secondary.'},
+        {type: 'text', content: 'The system must support both urgency and safety, without making either group feel secondary.'},
       ],
       "strategy":[
         {type: 'text' , content: 'The strategy focused on reducing friction while maintaining flexibility and inclusivity.'},
@@ -306,7 +306,7 @@ Instead of relying on traditional mood-tracking charts, the experience transform
         ]},
         {type: 'text' , content: 'Active filters remain visible, reinforcing clarity and trust.'},
         { type: 'list', title: "3. Design for Confidence", items: [
-          "Speed is important — but confidence is essential",
+          "Speed is important, but confidence is essential",
           "The system supports informed decisions without slowing down the flow",
         ]},
       ],

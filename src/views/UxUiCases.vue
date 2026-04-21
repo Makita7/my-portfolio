@@ -1,101 +1,125 @@
 <script setup lang="ts">
-import { computed } from "vue";
-import { useRoute } from "vue-router";
-import { caseStudyContent } from "@/data/caseStudyContent";
-import type { CaseStudy } from "@/data/caseStudyContent";
-import { useDisplay } from "vuetify";
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+import { caseStudyContent } from '@/data/caseStudyContent'
+import type { CaseStudy } from '@/data/caseStudyContent'
+import { useDisplay } from 'vuetify'
 
-const route = useRoute();
-const display = useDisplay();
-const links = computed(() => caseStudyData.value?.links);
+const route = useRoute()
+const display = useDisplay()
+const links = computed(() => caseStudyData.value?.links)
 
 const caseStudyData = computed<CaseStudy | null>(() => {
-  const slug = route.params.slug as string;
+  const slug = route.params.slug as string
 
   if (slug && slug in caseStudyContent) {
-    return caseStudyContent[slug as keyof typeof caseStudyContent] as CaseStudy;
+    return caseStudyContent[slug as keyof typeof caseStudyContent] as CaseStudy
   }
 
-  return null;
-});
+  return null
+})
 </script>
 
 <template>
   <div v-if="caseStudyData && links" class="d-flex">
-    <v-col v-if="display.smAndUp" cols="3" xs="0" sm="3" md="2"
-      class="d-flex flex-column sticky-sidebar links colNav d-none">
+    <v-col
+      v-if="display.smAndUp"
+      cols="3"
+      xs="0"
+      sm="3"
+      md="2"
+      class="d-flex flex-column sticky-sidebar links colNav d-none"
+    >
       <p class="navTitles mb-4 mt-4" :style="`color: ${caseStudyData?.color};`">
         {{ caseStudyData?.title }}
       </p>
-      <RouterLink :to="{
-        name: 'UxUiCases',
-        params: { slug: $route.params.slug },
-        hash: '#overview',
-      }">
+      <RouterLink
+        :to="{
+          name: 'UxUiCases',
+          params: { slug: $route.params.slug },
+          hash: '#overview',
+        }"
+      >
         Overview
       </RouterLink>
 
-      <RouterLink :to="{
-        name: 'UxUiCases',
-        params: { slug: $route.params.slug },
-        hash: '#problem',
-      }">
+      <RouterLink
+        :to="{
+          name: 'UxUiCases',
+          params: { slug: $route.params.slug },
+          hash: '#problem',
+        }"
+      >
         Problem
       </RouterLink>
 
-      <RouterLink :to="{
-        name: 'UxUiCases',
-        params: { slug: $route.params.slug },
-        hash: '#goals-constraints',
-      }">
+      <RouterLink
+        :to="{
+          name: 'UxUiCases',
+          params: { slug: $route.params.slug },
+          hash: '#goals-constraints',
+        }"
+      >
         Goal Constraints
       </RouterLink>
 
-      <RouterLink :to="{
-        name: 'UxUiCases',
-        params: { slug: $route.params.slug },
-        hash: '#research-insight',
-      }">
+      <RouterLink
+        :to="{
+          name: 'UxUiCases',
+          params: { slug: $route.params.slug },
+          hash: '#research-insight',
+        }"
+      >
         Research & Insight
       </RouterLink>
 
-      <RouterLink :to="{
-        name: 'UxUiCases',
-        params: { slug: $route.params.slug },
-        hash: '#strategy',
-      }">
+      <RouterLink
+        :to="{
+          name: 'UxUiCases',
+          params: { slug: $route.params.slug },
+          hash: '#strategy',
+        }"
+      >
         Strategy
       </RouterLink>
 
-      <RouterLink :to="{
-        name: 'UxUiCases',
-        params: { slug: $route.params.slug },
-        hash: '#ux-framework',
-      }">
+      <RouterLink
+        :to="{
+          name: 'UxUiCases',
+          params: { slug: $route.params.slug },
+          hash: '#ux-framework',
+        }"
+      >
         UX Framework
       </RouterLink>
 
-      <RouterLink :to="{
-        name: 'UxUiCases',
-        params: { slug: $route.params.slug },
-        hash: '#design-principles',
-      }">
+      <RouterLink
+        :to="{
+          name: 'UxUiCases',
+          params: { slug: $route.params.slug },
+          hash: '#design-principles',
+        }"
+      >
         Design Principles
       </RouterLink>
 
-      <RouterLink :to="{
-        name: 'UxUiCases',
-        params: { slug: $route.params.slug },
-        hash: '#potential-expansion',
-      }">
+      <RouterLink
+        :to="{
+          name: 'UxUiCases',
+          params: { slug: $route.params.slug },
+          hash: '#potential-expansion',
+        }"
+      >
         Potential Expansion
       </RouterLink>
 
-      <RouterLink :to="{
-        name: 'UxUiCases',
-        params: { slug: $route.params.slug },
-        hash: '#reflection',
-      }">
+      <RouterLink
+        :to="{
+          name: 'UxUiCases',
+          params: { slug: $route.params.slug },
+          hash: '#reflection',
+        }"
+      >
         Reflection
       </RouterLink>
     </v-col>
@@ -111,23 +135,39 @@ const caseStudyData = computed<CaseStudy | null>(() => {
         <div class="d-flex align-center mt-4">
           <p class="mr-4"><b>Link to Prototype:</b></p>
           <p v-if="'web' in (caseStudyData?.links || {})" class="link-sub">Web</p>
-          <a v-if="'web' in (caseStudyData?.links || {})" :href="(caseStudyData?.links as any).web" target="_blank"
-            class="d-flex align-center mr-2">
+          <a
+            v-if="'web' in (caseStudyData?.links || {})"
+            :href="(caseStudyData?.links as any).web"
+            target="_blank"
+            class="d-flex align-center mr-2"
+          >
             <img src="@/assets/icons/figma.svg" alt="figma icon" class="ml-2 mr-2 figmaIconImg" />
           </a>
           <p v-if="'tablet' in (caseStudyData?.links || {})" class="link-sub">Tablet</p>
-          <a v-if="'tablet' in (caseStudyData?.links || {})" :href="(caseStudyData?.links as any).tablet"
-            target="_blank" class="d-flex align-center mr-2">
+          <a
+            v-if="'tablet' in (caseStudyData?.links || {})"
+            :href="(caseStudyData?.links as any).tablet"
+            target="_blank"
+            class="d-flex align-center mr-2"
+          >
             <img src="@/assets/icons/figma.svg" alt="figma icon" class="ml-2 mr-2 figmaIconImg" />
           </a>
           <p v-if="links.mobile" class="link-sub">Mobile</p>
-          <a v-if="links.mobile" :href="links.mobile" target="_blank" class="d-flex align-center mr-2"
-            style="width: auto">
+          <a
+            v-if="links.mobile"
+            :href="links.mobile"
+            target="_blank"
+            class="d-flex align-center mr-2"
+            style="width: auto"
+          >
             <img src="@/assets/icons/figma.svg" alt="figma icon" class="ml-2 mr-2 figmaIconImg" />
           </a>
         </div>
-        <img v-if="caseStudyData?.sections.overview.img" :src="caseStudyData?.sections.overview.img"
-          alt="Project Hero" />
+        <img
+          v-if="caseStudyData?.sections.overview.img"
+          :src="caseStudyData?.sections.overview.img"
+          alt="Project Hero"
+        />
 
         <p>{{ caseStudyData?.sections.overview.text }}</p>
         <p v-if="caseStudyData?.sections.overview.text2">
@@ -139,9 +179,7 @@ const caseStudyData = computed<CaseStudy | null>(() => {
       </section>
 
       <section id="problem">
-        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">
-          The Problem
-        </p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">The Problem</p>
         <div v-for="(block, index) in caseStudyData?.sections.problem" :key="index">
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
@@ -240,9 +278,7 @@ const caseStudyData = computed<CaseStudy | null>(() => {
       </section>
 
       <section id="strategy">
-        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">
-          Strategy
-        </p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">Strategy</p>
         <div v-for="(block, index) in caseStudyData?.sections.strategy" :key="index">
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
@@ -272,9 +308,7 @@ const caseStudyData = computed<CaseStudy | null>(() => {
       </section>
 
       <section id="ux-framework">
-        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">
-          Ux Framework
-        </p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">Ux Framework</p>
         <div v-for="(block, index) in caseStudyData?.sections['ux-framework']" :key="index">
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
@@ -368,9 +402,7 @@ const caseStudyData = computed<CaseStudy | null>(() => {
       </section>
 
       <section id="reflection">
-        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">
-          Reflection
-        </p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">Reflection</p>
         <div v-for="(block, index) in caseStudyData.sections.reflection" :key="index">
           <p v-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
@@ -400,7 +432,7 @@ const caseStudyData = computed<CaseStudy | null>(() => {
       </section>
     </v-col>
   </div>
-  <p v-else>Case Study not fund.</p>
+  <p v-else class="text-center mt-20" style="min-height: 55vh">Sorry, Case Study not found.</p>
 </template>
 
 <style scoped>
@@ -437,12 +469,12 @@ p {
 }
 
 .sectionTitles {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
 }
 
 .navTitles {
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
 }

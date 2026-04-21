@@ -1,108 +1,109 @@
 <script setup lang="ts">
-import { ref, onMounted } from "vue";
-import ProjectCard from "@/components/ProjectCard.vue";
-import { useDisplay } from "vuetify";
+import { ref, onMounted } from 'vue'
+import ProjectCard from '@/components/ProjectCard.vue'
+import { useDisplay } from 'vuetify'
 
-let projectType = ref(true);
-const toggleType = () => (projectType.value = !projectType.value);
+const projectType = ref(true)
+const toggleType = () => (projectType.value = !projectType.value)
 
-const colors = ref<string[]>(["#F55D3E", "#F6AC42", "#7EBC89", "#0069a2"]);
-const colorsFront = ref<string[]>(["#FF9883", "#C1DBB3", "#F2C078", "#a5dfff"]);
-const display = useDisplay();
+const colors = ref<string[]>(['#F55D3E', '#F6AC42', '#7EBC89', '#0069a2'])
+const colorsFront = ref<string[]>(['#FF9883', '#C1DBB3', '#F2C078', '#a5dfff'])
+const display = useDisplay()
 
-let amountCards = ref(6);
-const cardColors = ref<string[]>([]);
+const amountCards = ref(6)
+const cardColors = ref<string[]>([])
 
 function selectNum() {
-  let num = -1;
-  cardColors.value = []; // importante si vuelve a ejecutarse
+  let num = -1
+  cardColors.value = [] // importante si vuelve a ejecutarse
 
   for (let i = 0; i < amountCards.value; i++) {
-    num = num < 3 ? num + 1 : 0;
-    cardColors.value.push(colors.value[num]);
+    num = num < 3 ? num + 1 : 0
+    cardColors.value.push(colors.value[num])
   }
 }
 
 const getDelay = (index: number) => {
-  return `animation: fadeDown ${index / 2}s ease-in-out;`;
-};
+  return `animation: fadeDown ${index / 2}s ease-in-out;`
+}
 
 onMounted(() => {
-  selectNum();
-});
+  selectNum()
+})
 
-import SpaceImg from "@/assets/project-previews/space-tourism.jpg";
-import StepFormImg from "@/assets/project-previews/step-form.jpg";
-import TipCalculatorImg from "@/assets/project-previews/tip-calculator.jpg";
-import ShoeECommerce from "@/assets/project-previews/shoe-e-commerce.jpg";
-import CountdownDate from "@/assets/project-previews/countdownDate.jpg";
-import TomaatImg from "@/assets/project-previews/tomaat.jpg";
-import MoodGardenImg from "@/assets/project-previews/mood-garden.png";
-import DailyGroundImg from "@/assets/project-previews/daily-ground.png";
-import { RouterLink } from "vue-router";
+import SpaceImg from '@/assets/project-previews/space-tourism.jpg'
+import StepFormImg from '@/assets/project-previews/step-form.jpg'
+import TipCalculatorImg from '@/assets/project-previews/tip-calculator.jpg'
+import ShoeECommerce from '@/assets/project-previews/shoe-e-commerce.jpg'
+import CountdownDate from '@/assets/project-previews/countdownDate.jpg'
+import TomaatImg from '@/assets/project-previews/tomaat.jpg'
+import MoodGardenImg from '@/assets/project-previews/mood-garden.png'
+import DailyGroundImg from '@/assets/project-previews/daily-ground.png'
+import FleurPatiserrieImg from '@/assets/project-previews/fleur-patiserrie.png'
+import { RouterLink } from 'vue-router'
 
 // Date format: YYYY-MM-DD
 const listProjectsFront = ref([
   {
-    title: "Date Countdown App",
+    title: 'Date Countdown App',
     description:
       "It's a basic countdown app where you can add, edit or delete the dates you want to countdown, I also used VueUse and custom vue Directives",
-    link: "https://makita7.github.io/date-countdown/",
-    type: "front",
-    program: "vue",
+    link: 'https://makita7.github.io/date-countdown/',
+    type: 'front',
+    program: 'vue',
     img: CountdownDate,
-    year: "2025-07-18",
+    year: '2025-07-18',
     frontendMentor: false,
-    tech: ["html", "css", "vue"],
+    tech: ['html', 'css', 'vue'],
   },
   {
-    title: "Shoe E-Commerce",
+    title: 'Shoe E-Commerce',
     description:
-      "Basic e-commerce site for a fictional shoe store, with cart and checkout functionality",
-    link: "https://makita7.github.io/ecommerce-product-react/",
-    type: "front",
-    program: "react",
+      'Basic e-commerce site for a fictional shoe store, with cart and checkout functionality',
+    link: 'https://makita7.github.io/ecommerce-product-react/',
+    type: 'front',
+    program: 'react',
     img: ShoeECommerce,
-    year: "2025-05-27",
+    year: '2025-05-27',
     frontendMentor: true,
-    tech: ["html", "css", "react"],
+    tech: ['html', 'css', 'react'],
   },
   {
-    title: "Step Form",
-    description: "Sign Up form for with steps and diferent preferences for user",
-    link: "https://makita7.github.io/stepForm/",
-    type: "front",
-    program: "vue",
+    title: 'Step Form',
+    description: 'Sign Up form for with steps and diferent preferences for user',
+    link: 'https://makita7.github.io/stepForm/',
+    type: 'front',
+    program: 'vue',
     img: StepFormImg,
-    year: "2024-02-17",
+    year: '2024-02-17',
     frontendMentor: true,
-    tech: ["html", "css", "vue"],
+    tech: ['html', 'css', 'vue'],
   },
   {
-    title: "Space Tourism",
-    description: "Landing page for a fictional page about space tourism",
-    link: "https://makita7.github.io/space-tourism-site/",
-    type: "front",
-    program: "vue",
+    title: 'Space Tourism',
+    description: 'Landing page for a fictional page about space tourism',
+    link: 'https://makita7.github.io/space-tourism-site/',
+    type: 'front',
+    program: 'vue',
     img: SpaceImg,
-    year: "2023-08-12",
+    year: '2023-08-12',
     frontendMentor: true,
-    tech: ["html", "css", "vue"],
+    tech: ['html', 'css', 'vue'],
   },
 
   {
-    title: "Tip Calculator",
+    title: 'Tip Calculator',
     description:
-      "Calculator to help split tips depending on percentage of bill that wants to be given",
-    link: "https://makita7.github.io/Tip-Calculator/",
-    type: "front",
-    program: "vue",
+      'Calculator to help split tips depending on percentage of bill that wants to be given',
+    link: 'https://makita7.github.io/Tip-Calculator/',
+    type: 'front',
+    program: 'vue',
     img: TipCalculatorImg,
-    year: "2023-06-30",
+    year: '2023-06-30',
     frontendMentor: true,
-    tech: ["html", "css", "vue"],
+    tech: ['html', 'css', 'vue'],
   },
-]);
+])
 
 const listProjectsUxUi = ref([
   // {
@@ -120,41 +121,59 @@ const listProjectsUxUi = ref([
   //   caseStudy: "sasa",
   // },
   {
-    title: "MoodGarden",
-    to: "mood-garden",
+    title: 'MoodGarden',
+    to: 'mood-garden',
     description:
-      "Colorful app for tracking emotions, triggers and glimmers. Using small animations to lighten users interactions",
+      'Colorful app for tracking emotions, triggers and glimmers. Using small animations to lighten users interactions',
     links: {
-      mobile: "sdfsdf",
+      mobile: 'sdfsdf',
     },
-    type: "ux",
-    program: "figma",
+    type: 'ux',
+    program: 'figma',
     img: MoodGardenImg,
-    year: "2025-05-12",
+    year: '2025-05-12',
     frontendMentor: false,
-    tech: ["figma", "photoshop", "illustrator"],
+    tech: ['figma', 'photoshop', 'illustrator'],
     caseStudy:
-      "https://docs.google.com/document/d/1s2UR2-gRqk0CPmRPLaOBuz2Qk3kZpemmAzTvQouyElI/edit?usp=sharing",
+      'https://docs.google.com/document/d/1s2UR2-gRqk0CPmRPLaOBuz2Qk3kZpemmAzTvQouyElI/edit?usp=sharing',
   },
   {
-    title: "DailyGround.",
-    to: "daily-ground",
+    title: 'DailyGround.',
+    to: 'daily-ground',
     description:
-      "App for booking or ordering from coffee shops and choosing how to get order. Similar to UberEats or PedidosYa",
+      'App for booking or ordering from coffee shops and choosing how to get order. Similar to UberEats or PedidosYa',
     links: {
-      web: "sdfsdf",
-      mobile: "sdfsdf",
+      web: 'sdfsdf',
+      mobile: 'sdfsdf',
     },
-    type: "ux",
-    program: "figma",
+    type: 'ux',
+    program: 'figma',
     img: DailyGroundImg,
-    year: "2025-05-12",
+    year: '2025-05-12',
     frontendMentor: false,
-    tech: ["figma", "photoshop", "illustrator"],
+    tech: ['figma', 'photoshop', 'illustrator'],
     caseStudy:
-      "https://docs.google.com/document/d/1x8RcqWXGkLA2D9070pZotmHrXXgNQzHhf0D-WOGhCQ8/edit?usp=sharing",
+      'https://docs.google.com/document/d/1x8RcqWXGkLA2D9070pZotmHrXXgNQzHhf0D-WOGhCQ8/edit?usp=sharing',
   },
-]);
+  {
+    title: 'Fleur Pattiserie',
+    to: 'fleur-patiserrie',
+    description:
+      'App for a high end Botanical inspired French Cafe, virtual menu and cafe institutional information.',
+    links: {
+      web: 'sdfsdf',
+      mobile: 'sdfsdf',
+    },
+    type: 'ux',
+    program: 'figma',
+    img: FleurPatiserrieImg,
+    year: '2025-05-12',
+    frontendMentor: false,
+    tech: ['figma', 'photoshop', 'illustrator'],
+    caseStudy:
+      'https://docs.google.com/document/d/1x8RcqWXGkLA2D9070pZotmHrXXgNQzHhf0D-WOGhCQ8/edit?usp=sharing',
+  },
+])
 </script>
 
 <template>
@@ -163,7 +182,12 @@ const listProjectsUxUi = ref([
       <div v-if="!display.xs" class="d-flex align-center justify-space-between fade">
         <v-col class="pa-0" id="ux-ui-arrow">
           <div v-if="!projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
-            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="mr-2" style="transform: rotate(180deg)" />
+            <img
+              src="@/assets/icons/plane-arrow.svg"
+              alt="go to icon"
+              class="mr-2"
+              style="transform: rotate(180deg)"
+            />
             <p class="goto">UX/UI Design</p>
           </div>
         </v-col>
@@ -187,7 +211,11 @@ const listProjectsUxUi = ref([
 
       <div v-if="display.xs" class="d-flex align-center justify-center fade">
         <div v-if="projectType" id="ux-ui-title" class="d-flex fadeTitles">
-          <img src="@/assets/icons/line-md_pencil.svg" alt="ux ui icon for title" class="mr-2 icon" />
+          <img
+            src="@/assets/icons/line-md_pencil.svg"
+            alt="ux ui icon for title"
+            class="mr-2 icon"
+          />
           <h2 class="title text-center">UX/UI Design</h2>
         </div>
         <div v-if="!projectType" id="ux-ui-title" class="d-flex fadeTitles">
@@ -199,7 +227,12 @@ const listProjectsUxUi = ref([
       <div v-if="display.xs" class="d-flex align-center justify-space-between fade mt-2">
         <v-col class="pa-0" id="ux-ui-arrow">
           <div v-if="!projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
-            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="mr-2" style="transform: rotate(180deg)" />
+            <img
+              src="@/assets/icons/plane-arrow.svg"
+              alt="go to icon"
+              class="mr-2"
+              style="transform: rotate(180deg)"
+            />
             <p class="goto">UX/UI Design</p>
           </div>
         </v-col>
@@ -212,15 +245,37 @@ const listProjectsUxUi = ref([
       </div>
 
       <div>
-        <ProjectCard v-if="!projectType" v-for="(i, index) in listProjectsFront" :data="i" :key="index"
-          :color="cardColors[index]" class="card" :style="getDelay(index)" />
+        <ProjectCard
+          v-if="!projectType"
+          v-for="(i, index) in listProjectsFront"
+          :data="i"
+          :href="i.link"
+          target="_blank"
+          :key="index"
+          :color="cardColors[index]"
+          class="card"
+          :style="getDelay(index)"
+        />
 
-        <ProjectCard v-if="projectType" v-for="(i, index) in listProjectsUxUi" :data="i" :key="index"
-          :color="cardColors[index]" class="card" :style="getDelay(index)" />
+        <ProjectCard
+          v-if="projectType"
+          v-for="(i, index) in listProjectsUxUi"
+          :data="i"
+          :to="{ name: 'UxUiCases', params: { slug: i.to } }"
+          :key="index"
+          :color="cardColors[index]"
+          class="card"
+          :style="getDelay(index)"
+        />
       </div>
     </div>
     <RouterView />
-    <img src="@/assets/project-bg.png" alt="pattern background" class="img-bg fade" v-if="display.mdAndUp.value" />
+    <img
+      src="@/assets/project-bg.png"
+      alt="pattern background"
+      class="img-bg fade"
+      v-if="display.mdAndUp.value"
+    />
   </div>
 </template>
 
@@ -228,8 +283,6 @@ const listProjectsUxUi = ref([
 .projects {
   position: relative;
   padding: 0 1rem;
-  height: 80vh;
-  overflow-y: scroll;
 }
 
 .arrow {
@@ -293,12 +346,6 @@ const listProjectsUxUi = ref([
 
   .icon {
     width: 2rem;
-  }
-}
-
-@media (min-width: 960px) {
-  .projects {
-    height: 92vh;
   }
 }
 </style>
