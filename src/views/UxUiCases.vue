@@ -57,50 +57,30 @@ const caseStudyData = computed<CaseStudy | null>(() => {
         :to="{
           name: 'UxUiCases',
           params: { slug: $route.params.slug },
-          hash: '#goals-constraints',
+          hash: '#goals',
         }"
       >
-        Goal Constraints
+        Goal
       </RouterLink>
 
       <RouterLink
         :to="{
           name: 'UxUiCases',
           params: { slug: $route.params.slug },
-          hash: '#research-insight',
+          hash: '#UX-decisions',
         }"
       >
-        Research & Insight
+        UX Decisions
       </RouterLink>
 
       <RouterLink
         :to="{
           name: 'UxUiCases',
           params: { slug: $route.params.slug },
-          hash: '#strategy',
+          hash: '#design',
         }"
       >
-        Strategy
-      </RouterLink>
-
-      <RouterLink
-        :to="{
-          name: 'UxUiCases',
-          params: { slug: $route.params.slug },
-          hash: '#ux-framework',
-        }"
-      >
-        UX Framework
-      </RouterLink>
-
-      <RouterLink
-        :to="{
-          name: 'UxUiCases',
-          params: { slug: $route.params.slug },
-          hash: '#design-principles',
-        }"
-      >
-        Design Principles
+        Design
       </RouterLink>
 
       <RouterLink
@@ -111,16 +91,6 @@ const caseStudyData = computed<CaseStudy | null>(() => {
         }"
       >
         Potential Expansion
-      </RouterLink>
-
-      <RouterLink
-        :to="{
-          name: 'UxUiCases',
-          params: { slug: $route.params.slug },
-          hash: '#reflection',
-        }"
-      >
-        Reflection
       </RouterLink>
     </v-col>
     <v-col class="customPadding">
@@ -179,9 +149,10 @@ const caseStudyData = computed<CaseStudy | null>(() => {
       </section>
 
       <section id="problem">
-        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">The Problem</p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">The Problem:</p>
         <div v-for="(block, index) in caseStudyData?.sections.problem" :key="index">
-          <p v-if="block.type === 'text'" class="mb-4">
+          <p v-if="block.type === 'subtitle'" class="subtitle">{{ block.subtitle }}</p>
+          <p v-else-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
           </p>
 
@@ -200,21 +171,25 @@ const caseStudyData = computed<CaseStudy | null>(() => {
 
           <ul v-else-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
             <li v-for="item in block.items" :key="item?.label">
-              <strong>{{ item?.label }}</strong> — {{ item?.text }}
+              <strong>{{ item?.label }}</strong> - {{ item?.text }}
             </li>
           </ul>
 
-          <img v-else-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+          <img
+            v-else-if="block.type === 'img'"
+            :src="block.img"
+            :alt="block.alt"
+            class="caseStudyImg"
+          />
         </div>
       </section>
 
-      <section id="goals-constraints">
-        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">
-          Goals & Constraints
-        </p>
-        <div v-for="(block, index) in caseStudyData?.sections['goals-constraints']" :key="index">
+      <section id="goals">
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">Goals:</p>
+        <div v-for="(block, index) in caseStudyData?.sections['goals']" :key="index">
+          <p v-if="block.type === 'subtitle'" class="subtitle">{{ block.subtitle }}</p>
           <!-- TEXT -->
-          <p v-if="block.type === 'text'" class="mb-4">
+          <p v-else-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
           </p>
 
@@ -236,21 +211,27 @@ const caseStudyData = computed<CaseStudy | null>(() => {
           <!-- DESCRIPTION LIST -->
           <ul v-else-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
             <li v-for="item in block.items" :key="item.label">
-              <strong>{{ item.label }}</strong> — {{ item.text }}
+              <strong>{{ item.label }}</strong> : {{ item.text }}
             </li>
           </ul>
 
           <!-- IMAGE -->
-          <img v-else-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+          <img
+            v-else-if="block.type === 'img'"
+            :src="block.img"
+            :alt="block.alt"
+            class="caseStudyImg"
+          />
         </div>
       </section>
 
-      <section id="research-insight">
+      <section id="UX-decisions">
         <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">
-          Research & Insight
+          UX Decisions I Made Along The Way:
         </p>
-        <div v-for="(block, index) in caseStudyData.sections['research-insight']" :key="index">
-          <p v-if="block.type === 'text'" class="mb-4">
+        <div v-for="(block, index) in caseStudyData.sections['UX-decisions']" :key="index">
+          <p v-if="block.type === 'subtitle'" class="subtitle">{{ block.subtitle }}</p>
+          <p v-else-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
           </p>
 
@@ -269,18 +250,24 @@ const caseStudyData = computed<CaseStudy | null>(() => {
 
           <ul v-else-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
             <li v-for="item in block.items" :key="item?.label">
-              <strong>{{ item?.label }}</strong> — {{ item?.text }}
+              <strong>{{ item?.label }}:</strong> {{ item?.text }}
             </li>
           </ul>
 
-          <img v-else-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+          <img
+            v-else-if="block.type === 'img'"
+            :src="block.img"
+            :alt="block.alt"
+            class="caseStudyImg"
+          />
         </div>
       </section>
 
-      <section id="strategy">
-        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">Strategy</p>
-        <div v-for="(block, index) in caseStudyData?.sections.strategy" :key="index">
-          <p v-if="block.type === 'text'" class="mb-4">
+      <section id="design">
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">Design:</p>
+        <div v-for="(block, index) in caseStudyData?.sections.design" :key="index">
+          <p v-if="block.type === 'subtitle'" class="subtitle">{{ block.subtitle }}</p>
+          <p v-else-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
           </p>
 
@@ -299,82 +286,26 @@ const caseStudyData = computed<CaseStudy | null>(() => {
 
           <ul v-else-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
             <li v-for="item in block.items" :key="item?.label">
-              <strong>{{ item?.label }}</strong> — {{ item?.text }}
+              <strong>{{ item?.label }}</strong> - {{ item?.text }}
             </li>
           </ul>
 
-          <img v-else-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
-        </div>
-      </section>
-
-      <section id="ux-framework">
-        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">Ux Framework</p>
-        <div v-for="(block, index) in caseStudyData?.sections['ux-framework']" :key="index">
-          <p v-if="block.type === 'text'" class="mb-4">
-            {{ block.content }}
-          </p>
-
-          <p v-else-if="block.type === 'rich-text'" class="mb-4">
-            <b>
-              {{ block.content }}
-            </b>
-          </p>
-
-          <div v-else-if="block.type === 'list'">
-            <p class="listTitles mb-2">{{ block.title }}</p>
-            <ul class="custom-list mb-4 ml-6">
-              <li v-for="item in block.items" :key="item">{{ item }}</li>
-            </ul>
-          </div>
-
-          <ul v-else-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
-            <li v-for="item in block.items" :key="item?.label">
-              <strong>{{ item?.label }}</strong> — {{ item?.text }}
-            </li>
-          </ul>
-
-          <img v-else-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
-        </div>
-      </section>
-
-      <section id="design-principles">
-        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">
-          Design Principles
-        </p>
-        <div v-for="(block, index) in caseStudyData?.sections['design-principles']" :key="index">
-          <p v-if="block.type === 'text'" class="mb-4">
-            {{ block.content }}
-          </p>
-
-          <p v-else-if="block.type === 'rich-text'" class="mb-4">
-            <b>
-              {{ block.content }}
-            </b>
-          </p>
-
-          <div v-else-if="block.type === 'list'">
-            <p class="listTitles mb-2">{{ block.title }}</p>
-            <ul class="custom-list mb-4 ml-6">
-              <li v-for="item in block.items" :key="item">{{ item }}</li>
-            </ul>
-          </div>
-
-          <ul v-else-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
-            <li v-for="item in block.items" :key="item?.label">
-              <strong>{{ item?.label }}</strong> — {{ item?.text }}
-            </li>
-          </ul>
-
-          <img v-else-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+          <img
+            v-else-if="block.type === 'img'"
+            :src="block.img"
+            :alt="block.alt"
+            class="caseStudyImg"
+          />
         </div>
       </section>
 
       <section id="potential-expansion">
         <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">
-          Potential Expension
+          Potential Expansion:
         </p>
         <div v-for="(block, index) in caseStudyData?.sections['potential-expansion']" :key="index">
-          <p v-if="block.type === 'text'" class="mb-4">
+          <p v-if="block.type === 'subtitle'" class="subtitle">{{ block.subtitle }}</p>
+          <p v-else-if="block.type === 'text'" class="mb-4">
             {{ block.content }}
           </p>
 
@@ -393,41 +324,16 @@ const caseStudyData = computed<CaseStudy | null>(() => {
 
           <ul v-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
             <li v-for="item in block.items" :key="item?.label">
-              <strong>{{ item?.label }}</strong> — {{ item?.text }}
+              <strong>{{ item?.label }}</strong> - {{ item?.text }}
             </li>
           </ul>
 
-          <img v-else-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
-        </div>
-      </section>
-
-      <section id="reflection">
-        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">Reflection</p>
-        <div v-for="(block, index) in caseStudyData.sections.reflection" :key="index">
-          <p v-if="block.type === 'text'" class="mb-4">
-            {{ block.content }}
-          </p>
-
-          <p v-else-if="block.type === 'rich-text'" class="mb-4">
-            <b>
-              {{ block.content }}
-            </b>
-          </p>
-
-          <div v-else-if="block.type === 'list'">
-            <p class="listTitles mb-2">{{ block.title }}</p>
-            <ul class="custom-list mb-4 ml-6">
-              <li v-for="item in block.items" :key="item">{{ item }}</li>
-            </ul>
-          </div>
-
-          <ul v-else-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
-            <li v-for="item in block.items" :key="item?.label">
-              <strong>{{ item?.label }}</strong> — {{ item?.text }}
-            </li>
-          </ul>
-
-          <img v-else-if="block.type === 'img'" :src="block.img" alt="Project Problem" />
+          <img
+            v-else-if="block.type === 'img'"
+            :src="block.img"
+            :alt="block.alt"
+            class="caseStudyImg"
+          />
         </div>
       </section>
     </v-col>
@@ -471,6 +377,7 @@ p {
 .sectionTitles {
   font-family: 'Nunito', sans-serif;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .navTitles {
@@ -492,6 +399,11 @@ section {
   margin: 0;
 }
 
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
 @media (max-width: 800px) {
   .d-none {
     display: none !important;
@@ -509,6 +421,15 @@ section {
 
   .customPadding {
     margin: 0 15% 0 2%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .caseStudyImg {
+    display: block;
+    width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 </style>

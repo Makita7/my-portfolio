@@ -21,8 +21,14 @@ export type ImageBlock = {
   alt?: string
 }
 
+export type SubtitleBlock = {
+  type: string
+  subtitle: string
+}
+
 export type CaseStudyBlock =
   | TextBlock
   | ListBlock
   | DescriptionListBlock
   | ImageBlock
+  | SubtitleBlock

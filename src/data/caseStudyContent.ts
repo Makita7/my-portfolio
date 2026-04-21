@@ -1,13 +1,24 @@
-import overviewMoodImg from '@/assets/project-previews/mood-garden/Hero mood Garden.png';
-import problemMoodImg from '@/assets/project-previews/mood-garden/mood tracker chart.png';
-import frameworkMoodImg from '@/assets/project-previews/mood-garden/mood garden process.png';
-import designMoodImg from '@/assets/project-previews/mood-garden/mood garden preview.png';
-import reflectionMoodImg from '@/assets/project-previews/mood-garden/mood garden reflection.png';
+// Mood Garden
+import overviewMoodImg from '@/assets/project-previews/mood-garden/hero-mood-garden.png'
+import problemMoodImg from '@/assets/project-previews/mood-garden/mood-tracker-chart.png'
+import logIn from '@/assets/project-previews/mood-garden/login-screens.jpg'
+import logginMood from '@/assets/project-previews/mood-garden/logging-mood.jpg'
+import daily from '@/assets/project-previews/mood-garden/Daily.jpg'
+import month from '@/assets/project-previews/mood-garden/Monthly.jpg'
+import insight from '@/assets/project-previews/mood-garden/glimmer-Trigger.jpg'
+import moodCycle from '@/assets/project-previews/mood-garden/mood-garden-process.png'
+import settingMood from '@/assets/project-previews/mood-garden/Settings.jpg'
+import moodReflection from '@/assets/project-previews/mood-garden/mood-garden-reflection.png'
+import logoMood from '@/assets/project-previews/mood-garden/logo-design.jpg'
+import colorsMood from '@/assets/project-previews/mood-garden/color-palette.jpg'
+import fontsMood from '@/assets/project-previews/mood-garden/Fonts.jpg'
+import animationsMood from '@/assets/project-previews/mood-garden/animation-keyframes.jpg'
 
-import overviewDailyImg from '@/assets/project-previews/daily-ground/daily ground.png';
-import problemDailyImg from '@/assets/project-previews/daily-ground/daily ground - Food Allergies.png';
-import designDailyImg from '@/assets/project-previews/daily-ground/daily ground - previews.png';
-import type { CaseStudyBlock } from '@/data/caseStudyTypes';
+// Daily Ground
+import overviewDailyImg from '@/assets/project-previews/daily-ground/daily ground.png'
+import problemDailyImg from '@/assets/project-previews/daily-ground/daily ground - Food Allergies.png'
+
+import type { CaseStudyBlock } from '@/data/caseStudyTypes'
 
 export type CaseStudyOverview = {
   subtitle: string
@@ -23,11 +34,11 @@ export type CaseStudySections = {
   overview: CaseStudyOverview
 
   problem?: CaseStudyBlock[]
-  strategy?: CaseStudyBlock[]
+  design?: CaseStudyBlock[]
   reflection?: CaseStudyBlock[]
 
-  'goals-constraints'?: CaseStudyBlock[]
-  'research-insight'?: CaseStudyBlock[]
+  goals?: CaseStudyBlock[]
+  'UX-decisions'?: CaseStudyBlock[]
   'ux-framework'?: CaseStudyBlock[]
   'design-principles'?: CaseStudyBlock[]
   'potential-expansion'?: CaseStudyBlock[]
@@ -45,307 +56,479 @@ export type CaseStudy = {
 }
 
 export const caseStudyContent = {
-  "mood-garden": {
-    title: "Mood Garden",
+  'mood-garden': {
+    title: 'Mood Garden',
     color: '#B80016',
     links: {
-      mobile: 'https://www.figma.com/proto/yD9JmMrtMHLTVK6LogI0Q3/Mood-Garden?node-id=78-1499&p=f&viewport=268%2C356%2C0.07&t=q4m3oi0pNAuyzREH-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=341%3A3657',
+      mobile:
+        'https://www.figma.com/proto/yD9JmMrtMHLTVK6LogI0Q3/Mood-Garden?node-id=78-1499&p=f&viewport=268%2C356%2C0.07&t=q4m3oi0pNAuyzREH-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=341%3A3657',
     },
     sections: {
       overview: {
         subtitle: 'Mood Tracking App for Mobile',
-        scope:`Product vision, UX framework, emotional model design, interaction concepts`,
+        scope: `Product vision, UX framework, emotional model design, interaction concepts`,
         prototype: 'link',
         img: overviewMoodImg,
-        text: `Mood Garden is designed to help users visualize, understand, and reflect on their emotions over time.
-Instead of relying on traditional mood-tracking charts, the experience transforms emotions into a living garden, where each feeling appears as a uniquely colored flower. This approach replaces clinical data with a warm, engaging visual metaphor that makes emotional awareness feel approachable and intuitive.`,
+        text: `Mood garden is designed to help users visualize, understand and reflect on their emotions over time. Traditional mood tracking charts can be rigid and boring at times, many people struggle to stay consistent, specially in an era where everything is stimulating. That's why in this app the emotions are represented by colorful flowers to help the user connect with them instead of it being just some letters on a page.`,
         text2: ``,
         text3: ``,
       },
       problem: [
-        { type: 'img', img:problemMoodImg },
-        { type: 'list', title: "Most Mood-Trackers:", items: [
-          "Feel clinical or data heavy",
-          "Rely on rigid labels",
-          "Focus on tracking rather than processing",
-          "Lack emotional warmth",
-          "Become abandoned after short-term use",
-        ]},
-        {type: 'text', content: 'While these tools collect data, they rarely support deeper emotional processing.'},
-        {type: 'rich-text', content: 'Users want more than logs. They want clarity.'},
-        {type: 'text', content: 'They want to understand why they feel the way they do and how patterns connect over time.'},
-        { type: 'list', title: "There is a gap between:", items: [
-          "Emotional awareness",
-          "Emotional regulation",
-          "Daily habit consistency",
-        ]},
-        {type: 'text', content: 'Mood Garden bridges this gap through gentle interactions and intentional reflection.'},
-        { type: 'description-list', title: "Beyond recording emotions, users can log:", items: [
-          {label: "Triggers", text: "situations that contributed to negative emotional states"},
-          {label: "Glimmers", text: "small positive moments or experiences that sparked joy or comfort"},
-        ]},
-        {type: 'text', content: 'By capturing both, the system encourages balanced reflection instead of negativity bias.'},
-        { type: 'list', title: "This structured yet soft framework supports:", items: [
-          "Long-term mental health awareness",
-          "Pattern recognition",
-          "More productive conversations with therapists",
-        ]},
-        {type: 'text', content: 'Rather than simply asking “How do you feel?”,'},
-        {type: 'text', content: 'Mood Garden helps answer “Why did I feel this way?”'},
+        { type: 'img', img: problemMoodImg },
+        {
+          type: 'list',
+          title: 'Most Mood-Trackers:',
+          items: [
+            'Feel clinical or data heavy',
+            'Rely on rigid labels',
+            'Focus on tracking rather than processing',
+            'Lack emotional warmth',
+            'Become abandoned after short-term use',
+          ],
+        },
       ],
-      "goals-constraints": [
-        { type: 'list', title: "Product Goals:", items: [
-          "Make emotional reflection feel intuitive and non-intimidating",
-          "Encourage daily check-ins",
-          "Reduce overwhelm",
-          "Promote self-regulation through visual feedback",
-        ]},
-        { type: 'list', title: "User Goals:", items: [
-          "Understand how they’re feeling",
-          "Track patterns over time",
-          "Feel safe engaging with emotions",
-          "Avoid clinical or judgmental systems",
-        ]},
-        { type: 'list', title: "Constraints:", items: [
-          "Early-stage conceptual product",
-          "No backend yet",
-          "Designed as a scalable system that could evolve into a real app",
-          "Must remain simple enough to not become another overwhelming tool",
-        ]},
+      goals: [
+        {
+          type: 'list',
+          title: 'Product Goals:',
+          items: [
+            'Reduce Overwhelm',
+            'Accessibility for logging emotions',
+            'Help with emotional regulation',
+            'Give awareness by tracking the emotions and logging their causes',
+            'Help user accept their emotions, by using colorful visuals',
+            'Track patterns over time',
+          ],
+        },
       ],
-      "research-insight":[
-        { type: 'list', title: "Key behavioral insights driving the concept:", items: [
-          "People engage more consistently with visual metaphors than abstract data",
-          "Emotional self-reflection must feel safe, not analytical",
-          "Overly structured mood trackers can increase pressure",
-          "Soft feedback systems encourage habit retention",
-        ]},
-        {type: 'rich-text', content: 'A major insight: Emotions are dynamic, so the interface should feel alive '},
+      'UX-decisions': [
+        {
+          type: 'text',
+          content:
+            'The purpose of the app is to interact gently with the user and help them do self reflection. Most people who start using mood trackers usually are either struggling with their emotions or they want to better understand them. ',
+        },
+        {
+          type: 'text',
+          content:
+            'The idea was to make this app gentle for it to be more inclusive. Many people who struggle with mental illness, or have some level of neurodivergence are more sensitive to stimulus. So this was a big consideration in the design, it was also meant to be for all ages and in general people that enjoy colorful designs.',
+        },
+        {
+          type: 'text',
+          content:
+            "The first thing that comes up in the app is the register and login, it's meant to be easy and straight forward. Once that is completed the user will see a welcome animation and then be brought directly to their garden.",
+        },
+        { type: 'img', img: logIn },
+        {
+          type: 'text',
+          content:
+            "Initially their won't be any flowers, but that doesn't last long as soon as they input their first emotion the screen will change into a flower in a vase, representing the emotion.",
+        },
+        {
+          type: 'text',
+          content:
+            "To add their emotions they press the button and go straight into another screen where multiple cards are shown each with a flower and a label, after that depending if the emotion is positive of negative another page will fade in and they will be able to fill out the reason for their emotion, either a Glimmer if it's positive and Trigger if negative.",
+        },
+        {
+          type: 'description-list',
+          title: '',
+          items: [
+            {
+              label: `Triggers`,
+              text: `situations that contributed to negative emotional states`,
+            },
+            {
+              label: `Glimmers`,
+              text: `small positive moments or experiences that sparked joy or comfort`,
+            },
+          ],
+        },
+        {
+          type: 'text',
+          content:
+            "It's important for self reflection to understand why I feel a certain emotion not just identifying which emotion it was.",
+        },
+        { type: 'img', img: logginMood },
+        {
+          type: 'text',
+          content: 'The navigation in the app is simple, comes down into only four pages',
+        },
+        {
+          type: 'text',
+          content:
+            "Daily: it's we're as the name says only the emotions of today can be seen, by pressing the vase a log will all the daily emotions will pop up with all the details: flower, emotion label, and the glimmer or trigger if the user wrote something, here they can choose to modify their description but not the emotion.",
+        },
+        { type: 'img', img: daily },
+        {
+          type: 'text',
+          content:
+            'Month:  Here the flowers selected through out the month can be seen in two ways. One is in a beautiful bouquet, where the prominent flower of each day is visible and the other  way is a calendar format seeing which day each flower belong to. In the calendar option the user will be able to click on any specific day and see the log with the details of each emotion and the description. This will allow them to be able to see an overlook of the whole month without losing the detailed information that was written. ',
+        },
+        { type: 'img', img: month },
+        {
+          type: 'text',
+          content:
+            'Insight: The purpose of this page is to help the user have a general eyes view of what the information that they have inputted says about that month or their mental state. They can see what flower was more prevalent that month and a percentage so that they can understand how much more one flower was selected over the rest.A simple counter for glimmers and triggers is available, and a simple card that shows the most selected flower. If they press the Glimmer and Trigger counter cards they will be directed to another page where all there is a list with the date and detail of each log. This helps them go back and read what happened if needed',
+        },
+        { type: 'img', img: insight },
+        {
+          type: 'text',
+          content: 'This generates a cycle of Awareness, Visualization, Reflection and Regulation.',
+        },
+        { type: 'img', img: moodCycle },
+        {
+          type: 'text',
+          content:
+            "Setting: Here the users can modify the name of their garden, customize the flowers and their labels, even add new flowers if the ones available are insufficient. It's important for users to be able to feel their garden their own, so customization is very important in this regard, it won't offer unlimited options because of scope but enough that it fulfils it's purpose.",
+        },
+        { type: 'img', img: settingMood },
+        {
+          type: 'text',
+          content:
+            "One of the key features is that note of the flowers are ugly, it's not meant to shame the user just identify and therefor reward them for doing so. That way they are incentivized to continue logging their emotions. Logging itself is growth",
+        },
+        { type: 'img', img: moodReflection },
+        {
+          type: 'list',
+          title: "That's why I avoided:",
+          items: ['Harsh data visuals', 'Performance metrics', 'Streak pressure'],
+        },
+        {
+          type: 'text',
+          content:
+            "This helps the interaction with the app calmer and more relaxed, in setting their is the option to add a notification but the user isn't pressured into it.",
+        },
       ],
-      strategy:[
-        {type: 'text', content: 'The core strategic decision was to use a garden metaphor as the emotional model of the product. Rather than visualizing emotions as data points, Mood Garden translates them into a living environment that evolves over time.'},
-        { type: 'list', title: "Why a Garden?", items: [
-          "Growth represents emotional patterns and consistency.",
-          "Every emotion, positive or negative, becomes a flower.",
-          "No emotion is visually “ugly” or degraded.",
-          "Visual feedback replaces numeric metrics, reducing performance pressure.",
-        ]},
-        {type: 'text', content: 'A key design choice was to make all flowers beautiful, regardless of emotional valence.'},
-        { type: 'description-list', title: "", items: [
-          {label: `Sadness, anger, joy, calm"`, text: `each is represented with care and aesthetic value.`},
-        ]},
-        {type: 'text', content: "This avoids reinforcing the idea that some emotions are “bad” or should be hidden. Instead, the system communicates that all emotions are valid and part of a healthy inner ecosystem."},
-        {type: 'text', content: "The garden does not punish."},
-        {type: 'text', content: "It reflects."},
-        { type: 'list', title: "Interaction Philosophy", items: [
-          "Low-friction daily check-ins",
-          "Gentle reflection prompts",
-          "Non-judgmental system responses",
-          "Continuous visual evolution instead of performance summaries",
-        ]},
-        {type: 'rich-text', content: 'Instead of:'},
-        {type: 'text', content: "“You logged 4 sad days.”"},
-        {type: 'text', content: "The interface communicates visually. The garden changes subtly not to signal failure, but to show emotional diversity and patterns over time."},
-        {type: 'text', content: "There are no accusatory prompts, streak counters, or corrective language."},
-        { type: 'list', title: "By representing every emotion as something worthy of space, the product reinforces:", items: [
-          "Emotional acceptance",
-          "Self-compassion",
-          "Regulation through awareness",
-        ]},
-        {type: 'text', content: "The goal is not to eliminate difficult emotions, but to acknowledge and integrate them."},
-
+      design: [
+        {
+          type: 'subtitle',
+          subtitle: 'Logo:',
+        },
+        {
+          type: 'text',
+          content:
+            "For the logo design I wanted to make the center of attention a cute toony flower, that stood out. That's why a vibrant red that is to make it pop out next to the pink flower. Since both are warm colors it stands out against the white background and green leaves.",
+        },
+        { type: 'img', img: logoMood },
+        {
+          type: 'text',
+          content:
+            "two logos we're made for different screen, for the header the logotype is used alone, but for more decorative screens the combination mark, which makes the app more identifiable if you only see the logo on it's own. Following the idea that the emotions are flowers I decided to make the logomark a flower.",
+        },
+        {
+          type: 'subtitle',
+          subtitle: 'Colors:',
+        },
+        {
+          type: 'text',
+          content:
+            "The pallete is meant to be vibrant and cheery, and with a lot of contrast with the white background. This helps it look cleaner and more cheerful, because the flowers are of many colors I decided to choose a slightly darker less saturated color for primary, this way the interface and the background don't oversaturate the design.",
+        },
+        { type: 'img', img: colorsMood },
+        {
+          type: 'subtitle',
+          subtitle: 'Fonts:',
+        },
+        {
+          type: 'text',
+          content:
+            'The fonts chosen to combine with a cheerful toony style of animations were "Sour Gummy" and "Noto Sans".',
+        },
+        {
+          type: 'text',
+          content:
+            "Sour Gummy for titles and headers because it's a more rounded and less formal more playful font that went well with the concept and stood out.",
+        },
+        {
+          type: 'text',
+          content:
+            'Noto Sans for general texts and labels because of it not being formal but very legible, this helps with readability. I choose a font sans serif so it would match better with Sour Gummy giving a general calm and fun aesthetic to the design.',
+        },
+        { type: 'img', img: fontsMood },
+        {
+          type: 'subtitle',
+          subtitle: 'Animations:',
+        },
+        {
+          type: 'text',
+          content:
+            'I used a lot of text animations for in-between screens with fade ins and out transitions. Following the pattern of wanting to reward logging an emotion I decided to make the reward a soft animation of the flower fading in and it having an idle loop movement.',
+        },
+        {
+          type: 'text',
+          content:
+            'I also added text animation when saving changes or logging an emotion to the app, so the person is sure when changes have occurred also creating a feedback loop that feels satisfying.',
+        },
+        { type: 'img', img: animationsMood },
       ],
-      "ux-framework":[
-        {type: 'rich-text', content: 'Mood Garden is built around three core layers:'},
-        {type: 'rich-text', content: '1. Emotional Input'},
-        {type: 'text', content: 'Simple, low-pressure mood selection or reflection prompts.'},
-        { type: 'list', title: "2. Visual Translation — Each mood affects the state of a part of the garden:", items: [
-          "Color shifts",
-          "Growth patterns",
-          "Environmental changes",
-        ]},
-        {type: 'rich-text', content: '3. Long-Term Feedback'},
-        {type: 'text', content: 'Users see emotional trends as landscape changes, not charts.'},
-        {type: 'rich-text', content: 'This creates:'},
-        {type: 'text', content: 'Awareness → Visualization → Reflection → Regulation'},
-        { type: 'img', img:frameworkMoodImg },
+      'potential-expansion': [
+        {
+          type: 'list',
+          title: 'In the future the app could grow in the following ways:',
+          items: [
+            'More personation availability, like dark mode or more muted colors',
+            'Sharing options for therapists ',
+            'Parent-child co-reflection spaces',
+            'Shared gardens for couples, so both parties know how the other is doing',
+          ],
+        },
       ],
-      "design-principles":[
-        { type: 'list', title: "", items: [
-          "Soft visual language",
-          "Calm color palette",
-          "Organic motion",
-          "Minimal cognitive load",
-          "Emotion-first interface",
-        ]},
-        { type: 'list', title: "The system avoids:", items: [
-          "Harsh data visuals",
-          "Performance metrics",
-          "Streak pressure",
-        ]},
-        {type: 'text', content: 'This is regulation-focused, not productivity-focused.'},
-        { type: 'img', img:designMoodImg },
-      ],
-      "potential-expansion":[
-        { type: 'list', title: "Mood Garden could evolve into:", items: [
-          "Personalized emotional ecosystems",
-          "Guided reflections",
-          "Seasonal changes representing emotional cycles",
-          "Subtle AI-based insights",
-          "Parent-child co-reflection spaces",
-          "Shared gardens for couples, allowing partners to voluntarily share the state of their emotional landscape ",
-        ]},
-        {type: 'text', content: 'It’s designed as a scalable emotional framework, not just a tracking app.'},
-      ],
-      "reflection":[
-        {type: 'rich-text', content: 'Mood Garden reflects a shift in how digital products approach mental wellness:'},
-        {type: 'text', content: 'From Judging → To Tending'},
-        {type: 'text', content: 'From Self-Monitoring → To Self-Understanding'},
-        {type: 'text', content: 'From Optimization → To Self-Regulation.'},
-        { type: 'img', img:reflectionMoodImg },
-        { type: 'list', title: "This project demonstrates:", items: [
-          "Product thinking",
-          "Behavioral design strategy",
-          "Emotional UX",
-          "Systems thinking",
-          "Conceptual innovation",
-        ]},
-        {type: 'text', content: 'It’s not just a UI concept, it’s an interaction philosophy.'},
-      ],
-    }
+    },
   },
-  "daily-ground": {
-    title: "DailyGround.",
+  'daily-ground': {
+    title: 'DailyGround.',
     color: '#1D70C4',
     links: {
-      mobile: 'https://www.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=66-477&p=f&viewport=3364%2C640%2C0.19&t=5PXRrZGuiBvFjJ2H-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=66%3A717',
-      web: 'https://www.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=783-16999&p=f&viewport=3064%2C680%2C0.19&t=5PXRrZGuiBvFjJ2H-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=783%3A17738'
+      mobile:
+        'https://www.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=66-477&p=f&viewport=3364%2C640%2C0.19&t=5PXRrZGuiBvFjJ2H-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=66%3A717',
+      web: 'https://www.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=783-16999&p=f&viewport=3064%2C680%2C0.19&t=5PXRrZGuiBvFjJ2H-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=783%3A17738',
     },
     sections: {
       overview: {
         subtitle: 'A seamless ordering experience for pickup, dine-in, and delivery.',
-        scope:`End-to-end product vision, experience strategy, behavioral design principles, and scalable feature roadmap`,
+        scope: `End-to-end product vision, experience strategy, behavioral design principles, and scalable feature roadmap`,
         prototype: 'link',
         img: overviewDailyImg,
         text: `DailyGround is a mobile app designed to simplify how customers order coffee, whether they’re picking up on the go, dining in, or ordering delivery.`,
         text2: `The project explores how thoughtful UX design can reduce friction in high-frequency, time-sensitive transactions while maintaining warmth and brand personality. This case study focuses on building a flexible ordering system that adapts to different contexts without overwhelming the user.`,
         text3: `A key differentiator of the product is its approach to dietary filtering. Many food and beverage apps treat dietary restrictions as an afterthought, making it difficult for users with allergies or preferences to confidently navigate menus. DailyGround integrates dietary filters directly into the browsing experience, allowing users to quickly identify suitable options without needing to inspect every product manually.`,
       },
-      problem:[
-        { type: 'img', img:problemDailyImg },
-        { type: 'list', title: "Ordering coffee should be quick and satisfying, but digital ordering often introduces friction:", items: [
-          "Confusing customization flows",
-          "Overloaded menus",
-          "Unclear wait times",
-          "Too many steps at checkout",
-          "Limited support for dietary needs",
-        ]},
-        {type: 'text' , content: 'Most coffee apps treat dietary restrictions as secondary. Users with allergies or preferences are often forced to open each product individually to verify ingredients, increasing cognitive load and anxiety.'},
-        {type: 'rich-text', content: 'Core problem:'},
-        {type: 'text', content: ' How might we create one cohesive ordering system that supports pickup, dine-in, and delivery. While also making dietary needs visible, accessible, and effortless to navigate?'},
+      problem: [
+        { type: 'img', img: problemDailyImg },
+        {
+          type: 'list',
+          title:
+            'Ordering coffee should be quick and satisfying, but digital ordering often introduces friction:',
+          items: [
+            'Confusing customization flows',
+            'Overloaded menus',
+            'Unclear wait times',
+            'Too many steps at checkout',
+            'Limited support for dietary needs',
+          ],
+        },
+        {
+          type: 'text',
+          content:
+            'Most coffee apps treat dietary restrictions as secondary. Users with allergies or preferences are often forced to open each product individually to verify ingredients, increasing cognitive load and anxiety.',
+        },
+        { type: 'rich-text', content: 'Core problem:' },
+        {
+          type: 'text',
+          content:
+            ' How might we create one cohesive ordering system that supports pickup, dine-in, and delivery. While also making dietary needs visible, accessible, and effortless to navigate?',
+        },
       ],
-      "goals-constraints":[
-        { type: 'list', title: "Ordering coffee should be quick and satisfying, but digital ordering often introduces friction:", items: [
-          "Complete a first-time order in under 60 seconds",
-          "Enable repeat orders in under 15 seconds",
-          "Make customization intuitive and transparent",
-          "Clearly communicate wait times and status",
-          "Provide built-in dietary filtering that reduces the need to inspect each item individually",
-          "Maintain a polished, professional aesthetic",
-        ]},
-        { type: 'list', title: "Constraints:", items: [
-          "Mobile-first experience",
-          "Multiple ordering modes in one interface",
-          "Flexible product customization (size, milk, syrups, add-ons)",
-          "Accurate tagging system for dietary categories (e.g., gluten-free, dairy-free, vegan)",
-          "Accessibility standards (contrast, tap targets, hierarchy clarity)",
-        ]},
+      goals: [
+        {
+          type: 'list',
+          title:
+            'Ordering coffee should be quick and satisfying, but digital ordering often introduces friction:',
+          items: [
+            'Complete a first-time order in under 60 seconds',
+            'Enable repeat orders in under 15 seconds',
+            'Make customization intuitive and transparent',
+            'Clearly communicate wait times and status',
+            'Provide built-in dietary filtering that reduces the need to inspect each item individually',
+            'Maintain a polished, professional aesthetic',
+          ],
+        },
+        {
+          type: 'list',
+          title: 'Constraints:',
+          items: [
+            'Mobile-first experience',
+            'Multiple ordering modes in one interface',
+            'Flexible product customization (size, milk, syrups, add-ons)',
+            'Accurate tagging system for dietary categories (e.g., gluten-free, dairy-free, vegan)',
+            'Accessibility standards (contrast, tap targets, hierarchy clarity)',
+          ],
+        },
       ],
-      "research-insight":[
-        {type: 'text' , content: 'This project is concept-driven but grounded in common food ordering behaviors:'},
+      'research-insight': [
+        {
+          type: 'text',
+          content: 'This project is concept-driven but grounded in common food ordering behaviors:',
+        },
 
-        { type: 'list', title: "Observed Patterns:", items: [
-          "Users often reorder the same item",
-          "Time pressure increases decision fatigue",
-          "Long modifier lists create friction",
-          "Users with dietary restrictions spend more time verifying menu items",
-        ]},
-        {type: 'rich-text', content: 'Key Insight:'},
-        {type: 'text', content: 'Coffee ordering is habitual, but dietary verification is cautious.'},
-        {type: 'text', content: 'While most users want speed, users with allergies or restrictions prioritize certainty. When dietary information isn’t surfaced clearly, it creates hesitation and slows the entire flow.'},
-        {type: 'text', content: 'The system must support both urgency and safety, without making either group feel secondary.'},
+        {
+          type: 'list',
+          title: 'Observed Patterns:',
+          items: [
+            'Users often reorder the same item',
+            'Time pressure increases decision fatigue',
+            'Long modifier lists create friction',
+            'Users with dietary restrictions spend more time verifying menu items',
+          ],
+        },
+        { type: 'rich-text', content: 'Key Insight:' },
+        {
+          type: 'text',
+          content: 'Coffee ordering is habitual, but dietary verification is cautious.',
+        },
+        {
+          type: 'text',
+          content:
+            'While most users want speed, users with allergies or restrictions prioritize certainty. When dietary information isn’t surfaced clearly, it creates hesitation and slows the entire flow.',
+        },
+        {
+          type: 'text',
+          content:
+            'The system must support both urgency and safety, without making either group feel secondary.',
+        },
       ],
-      "strategy":[
-        {type: 'text' , content: 'The strategy focused on reducing friction while maintaining flexibility and inclusivity.'},
-        {type: 'rich-text', content: '1. One Core System, Three Contexts'},
-        {type: 'text', content: 'Pickup, dine-in, and delivery share the same structural flow. Dietary filtering is consistent across all modes to ensure predictability.'},
-        {type: 'rich-text', content: '2. Proactive Dietary Filtering'},
-        { type: 'list', title: "Instead of burying dietary information within product details:", items: [
-          "Users can filter menu items by dietary restriction or preference",
-          "Visual badges indicate compatibility at a glance",
-          "Filtering persists while browsing to reduce repetitive actions",
-        ]},
-        {type: 'text', content: 'This transforms dietary needs from an afterthought into a first-class navigation tool.'},
-        {type: 'rich-text', content: '3. Modular Customization'},
-        {type: 'text', content: 'Modifier groups clearly indicate how changes affect dietary compatibility.'},
-        {type: 'text', content: 'For example, switching milk types dynamically updates dietary labels when relevant.'},
-        {type: 'rich-text', content: '4. Transparent System Feedback'},
-        {type: 'text', content: 'Users receive clear confirmation when selections align with their chosen dietary filters.'},
+      design: [
+        {
+          type: 'text',
+          content:
+            'The strategy focused on reducing friction while maintaining flexibility and inclusivity.',
+        },
+        { type: 'rich-text', content: '1. One Core System, Three Contexts' },
+        {
+          type: 'text',
+          content:
+            'Pickup, dine-in, and delivery share the same structural flow. Dietary filtering is consistent across all modes to ensure predictability.',
+        },
+        { type: 'rich-text', content: '2. Proactive Dietary Filtering' },
+        {
+          type: 'list',
+          title: 'Instead of burying dietary information within product details:',
+          items: [
+            'Users can filter menu items by dietary restriction or preference',
+            'Visual badges indicate compatibility at a glance',
+            'Filtering persists while browsing to reduce repetitive actions',
+          ],
+        },
+        {
+          type: 'text',
+          content:
+            'This transforms dietary needs from an afterthought into a first-class navigation tool.',
+        },
+        { type: 'rich-text', content: '3. Modular Customization' },
+        {
+          type: 'text',
+          content: 'Modifier groups clearly indicate how changes affect dietary compatibility.',
+        },
+        {
+          type: 'text',
+          content:
+            'For example, switching milk types dynamically updates dietary labels when relevant.',
+        },
+        { type: 'rich-text', content: '4. Transparent System Feedback' },
+        {
+          type: 'text',
+          content:
+            'Users receive clear confirmation when selections align with their chosen dietary filters.',
+        },
       ],
-      "ux-framework":[
-        {type: 'rich-text', content: 'The experience was built around three principles:'},
-        { type: 'list', title: "1. Reduce Cognitive Load", items: [
-          "Dietary filters remove the need to manually inspect every product",
-          "Smart defaults and clear tagging minimize uncertainty",
-        ]},
-        {type: 'rich-text', content: '2. Maintain Context'},
-        { type: 'list', title: "Users always know:", items: [
-          "Which ordering mode they’re in",
-          "Which store they selected",
-          "Whether dietary filters are active",
-        ]},
-        {type: 'text' , content: 'Active filters remain visible, reinforcing clarity and trust.'},
-        { type: 'list', title: "3. Design for Confidence", items: [
-          "Speed is important, but confidence is essential",
-          "The system supports informed decisions without slowing down the flow",
-        ]},
+      'ux-framework': [
+        { type: 'rich-text', content: 'The experience was built around three principles:' },
+        {
+          type: 'list',
+          title: '1. Reduce Cognitive Load',
+          items: [
+            'Dietary filters remove the need to manually inspect every product',
+            'Smart defaults and clear tagging minimize uncertainty',
+          ],
+        },
+        { type: 'rich-text', content: '2. Maintain Context' },
+        {
+          type: 'list',
+          title: 'Users always know:',
+          items: [
+            'Which ordering mode they’re in',
+            'Which store they selected',
+            'Whether dietary filters are active',
+          ],
+        },
+        { type: 'text', content: 'Active filters remain visible, reinforcing clarity and trust.' },
+        {
+          type: 'list',
+          title: '3. Design for Confidence',
+          items: [
+            'Speed is important, but confidence is essential',
+            'The system supports informed decisions without slowing down the flow',
+          ],
+        },
       ],
-      "design-principles":[
-        {type: 'rich-text', content: '1. Inclusive by Default'},
-        {type: 'text' , content: 'Dietary restrictions are not treated as edge cases. The interface supports them as a core navigation layer.'},
-        {type: 'rich-text', content: '2. Visible Compatibility'},
-        {type: 'text' , content: 'Products clearly display dietary badges (e.g., gluten-free, dairy-free, vegan) to reduce scanning effort.'},
-        {type: 'rich-text', content: '3. Progressive Disclosure'},
-        {type: 'text' , content: 'Detailed ingredient information is available, but not forced upfront.'},
-        {type: 'rich-text', content: '4. System-Level Consistency'},
-        {type: 'text' , content: 'Dietary logic remains consistent across pickup, dine-in, and delivery to avoid confusion.'},
-        {type: 'rich-text', content: '5. Functional Elegance'},
-        {type: 'text' , content: 'Clarity replaces clutter. The design avoids overwhelming users while still surfacing essential information.'},
-        { type: 'img', img:designDailyImg },
+      'design-principles': [
+        { type: 'rich-text', content: '1. Inclusive by Default' },
+        {
+          type: 'text',
+          content:
+            'Dietary restrictions are not treated as edge cases. The interface supports them as a core navigation layer.',
+        },
+        { type: 'rich-text', content: '2. Visible Compatibility' },
+        {
+          type: 'text',
+          content:
+            'Products clearly display dietary badges (e.g., gluten-free, dairy-free, vegan) to reduce scanning effort.',
+        },
+        { type: 'rich-text', content: '3. Progressive Disclosure' },
+        {
+          type: 'text',
+          content: 'Detailed ingredient information is available, but not forced upfront.',
+        },
+        { type: 'rich-text', content: '4. System-Level Consistency' },
+        {
+          type: 'text',
+          content:
+            'Dietary logic remains consistent across pickup, dine-in, and delivery to avoid confusion.',
+        },
+        { type: 'rich-text', content: '5. Functional Elegance' },
+        {
+          type: 'text',
+          content:
+            'Clarity replaces clutter. The design avoids overwhelming users while still surfacing essential information.',
+        },
       ],
-      "potential-expansion":[
-        {type: 'text' , content: 'DailyGround was designed as a scalable ordering system, with flexibility built into its foundation. Future iterations could expand the product beyond transactional efficiency and into deeper personalization and ecosystem integration.'},
-        { type: 'list', title: "Mood Garden could evolve into:", items: [
-          "Personalized Dietary Profiles",
-          "Smart Re-Order & Habit Learning",
-          "Scheduled & Subscription Orders",
-          "Loyalty & Rewards Integration",
-        ]},
+      'potential-expansion': [
+        {
+          type: 'text',
+          content:
+            'DailyGround was designed as a scalable ordering system, with flexibility built into its foundation. Future iterations could expand the product beyond transactional efficiency and into deeper personalization and ecosystem integration.',
+        },
+        {
+          type: 'list',
+          title: 'Mood Garden could evolve into:',
+          items: [
+            'Personalized Dietary Profiles',
+            'Smart Re-Order & Habit Learning',
+            'Scheduled & Subscription Orders',
+            'Loyalty & Rewards Integration',
+          ],
+        },
       ],
-      "reflection":[
-        {type: 'text' , content: 'Integrating dietary filtering across the entire system shifted this project from a standard ordering app to a more inclusive product experience.'},
-        {type: 'text' , content: 'Rather than treating dietary needs as a feature, I approached them as a structural layer within the system. This required thinking beyond UI and considering tagging logic, dynamic updates, and how filtering impacts browsing patterns.'},
-        { type: 'list', title: "Designing DailyGround strengthened my ability to:", items: [
-          "Build scalable systems with embedded accessibility",
-          "Design for both speed and certainty",
-          "Anticipate edge cases as primary flows",
-          "Balance business goals with inclusive UX decisions",
-        ]},
-        { type: 'list', title: "If expanded further, I would explore:", items: [
-          "Personalized dietary profiles",
-          "Smart recommendations based on restrictions",
-          "Real-time allergen cross-check validation",
-        ]},
+      reflection: [
+        {
+          type: 'text',
+          content:
+            'Integrating dietary filtering across the entire system shifted this project from a standard ordering app to a more inclusive product experience.',
+        },
+        {
+          type: 'text',
+          content:
+            'Rather than treating dietary needs as a feature, I approached them as a structural layer within the system. This required thinking beyond UI and considering tagging logic, dynamic updates, and how filtering impacts browsing patterns.',
+        },
+        {
+          type: 'list',
+          title: 'Designing DailyGround strengthened my ability to:',
+          items: [
+            'Build scalable systems with embedded accessibility',
+            'Design for both speed and certainty',
+            'Anticipate edge cases as primary flows',
+            'Balance business goals with inclusive UX decisions',
+          ],
+        },
+        {
+          type: 'list',
+          title: 'If expanded further, I would explore:',
+          items: [
+            'Personalized dietary profiles',
+            'Smart recommendations based on restrictions',
+            'Real-time allergen cross-check validation',
+          ],
+        },
       ],
-  }
-}}satisfies Record<string, CaseStudy>
+    },
+  },
+} satisfies Record<string, CaseStudy>
