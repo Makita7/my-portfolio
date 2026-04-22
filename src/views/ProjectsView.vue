@@ -39,7 +39,7 @@ import CountdownDate from '@/assets/project-previews/countdownDate.jpg'
 import TomaatImg from '@/assets/project-previews/tomaat.jpg'
 import MoodGardenImg from '@/assets/project-previews/mood-garden.png'
 import DailyGroundImg from '@/assets/project-previews/daily-ground.png'
-import FleurPatiserrieImg from '@/assets/project-previews/fleur-patiserrie.png'
+import FleurPatiserieImg from '@/assets/project-previews/fleur-patisserie.png'
 import { RouterLink } from 'vue-router'
 
 // Date format: YYYY-MM-DD
@@ -157,7 +157,7 @@ const listProjectsUxUi = ref([
   },
   {
     title: 'Fleur Pattiserie',
-    to: 'fleur-patiserrie',
+    to: 'fleur-patisserie',
     description:
       'App for a high end Botanical inspired French Cafe, virtual menu and cafe institutional information.',
     links: {
@@ -166,7 +166,7 @@ const listProjectsUxUi = ref([
     },
     type: 'ux',
     program: 'figma',
-    img: FleurPatiserrieImg,
+    img: FleurPatiserieImg,
     year: '2025-05-12',
     frontendMentor: false,
     tech: ['figma', 'photoshop', 'illustrator'],
