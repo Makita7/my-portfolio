@@ -89,6 +89,7 @@ const caseStudyData = computed<CaseStudy | null>(() => {
           params: { slug: $route.params.slug },
           hash: '#potential-expansion',
         }"
+        v-if="caseStudyData?.sections['potential-expansion']?.length"
       >
         Potential Expansion
       </RouterLink>
@@ -299,7 +300,10 @@ const caseStudyData = computed<CaseStudy | null>(() => {
         </div>
       </section>
 
-      <section id="potential-expansion">
+      <section
+        v-if="caseStudyData?.sections['potential-expansion']?.length"
+        id="potential-expansion"
+      >
         <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">
           Potential Expansion:
         </p>

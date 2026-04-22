@@ -15,8 +15,20 @@ import fontsMood from '@/assets/project-previews/mood-garden/Fonts.jpg'
 import animationsMood from '@/assets/project-previews/mood-garden/animation-keyframes.jpg'
 
 // Daily Ground
-import overviewDailyImg from '@/assets/project-previews/daily-ground/daily ground.png'
-import problemDailyImg from '@/assets/project-previews/daily-ground/daily ground - Food Allergies.png'
+import overviewDailyImg from '@/assets/project-previews/daily-ground/daily-ground.png'
+import problemDailyImg from '@/assets/project-previews/daily-ground/daily-ground-food-allergies.png'
+import chooseSeatingDailyGround from '@/assets/project-previews/daily-ground/choose-seating-options.png'
+import menuDailyGround from '@/assets/project-previews/daily-ground/menu-dailyground.png'
+import menufilteredDailyGround from '@/assets/project-previews/daily-ground/menu-filters-dailyground.png'
+import menuDetailsDailyGround from '@/assets/project-previews/daily-ground/product-detail-dailyground.png'
+import myOrderDailyGround from '@/assets/project-previews/daily-ground/my-order-dailyground.png'
+import checkoutDailyGround from '@/assets/project-previews/daily-ground/checkout-dailyground.png'
+import deliveryDailyGround from '@/assets/project-previews/daily-ground/receiving-order.png'
+import referencesDailyGround from '@/assets/project-previews/daily-ground/references-dailyground.png'
+import mascotDailyGround from '@/assets/project-previews/daily-ground/mascot-dailyground.png'
+import logoDailyGround from '@/assets/project-previews/daily-ground/logo-dailyground.png'
+import colorsDailyGround from '@/assets/project-previews/daily-ground/color-palette-dailyground.png'
+import fontsDailyGround from '@/assets/project-previews/daily-ground/fonts-dailyground.png'
 
 import type { CaseStudyBlock } from '@/data/caseStudyTypes'
 
@@ -34,13 +46,9 @@ export type CaseStudySections = {
   overview: CaseStudyOverview
 
   problem?: CaseStudyBlock[]
-  design?: CaseStudyBlock[]
-  reflection?: CaseStudyBlock[]
-
   goals?: CaseStudyBlock[]
   'UX-decisions'?: CaseStudyBlock[]
-  'ux-framework'?: CaseStudyBlock[]
-  'design-principles'?: CaseStudyBlock[]
+  design?: CaseStudyBlock[]
   'potential-expansion'?: CaseStudyBlock[]
 }
 
@@ -288,245 +296,163 @@ export const caseStudyContent = {
         scope: `End-to-end product vision, experience strategy, behavioral design principles, and scalable feature roadmap`,
         prototype: 'link',
         img: overviewDailyImg,
-        text: `DailyGround is a mobile app designed to simplify how customers order coffee, whether they’re picking up on the go, dining in, or ordering delivery.`,
-        text2: `The project explores how thoughtful UX design can reduce friction in high-frequency, time-sensitive transactions while maintaining warmth and brand personality. This case study focuses on building a flexible ordering system that adapts to different contexts without overwhelming the user.`,
-        text3: `A key differentiator of the product is its approach to dietary filtering. Many food and beverage apps treat dietary restrictions as an afterthought, making it difficult for users with allergies or preferences to confidently navigate menus. DailyGround integrates dietary filters directly into the browsing experience, allowing users to quickly identify suitable options without needing to inspect every product manually.`,
+        text: `DailyGround is a mobile app designed to simplify how customers order coffee whether they’re picking up on the go, dining in, or ordering delivery.`,
+        text2: `This project is designed to show how thoughtful UX design can help user by lowering friction when ordering on an app, by adapting to different situations that the client might have. From ordering as someone with allergies or just a busy person that needs something on the go or even simplifying reservations for groups.`,
+        text3: `A key differentiator of the product is its approach to dietary filtering. Many food ordering apps treat dietary restrictions as an afterthought, making it difficult for users with allergies or preferences to confidently navigate menus. DailyGround integrates dietary filters directly into the browsing experience, allowing users to quickly identify suitable options without needing to check every product manually or ask the waiter multiple times.`,
       },
       problem: [
         { type: 'img', img: problemDailyImg },
         {
           type: 'list',
           title:
-            'Ordering coffee should be quick and satisfying, but digital ordering often introduces friction:',
+            'Ordering coffee should be quick and satisfying but digital ordering often introduces friction:',
           items: [
-            'Confusing customization flows',
+            'Confusing flows',
             'Overloaded menus',
             'Unclear wait times',
-            'Too many steps at checkout',
             'Limited support for dietary needs',
           ],
         },
         {
           type: 'text',
           content:
-            'Most coffee apps treat dietary restrictions as secondary. Users with allergies or preferences are often forced to open each product individually to verify ingredients, increasing cognitive load and anxiety.',
-        },
-        { type: 'rich-text', content: 'Core problem:' },
-        {
-          type: 'text',
-          content:
-            ' How might we create one cohesive ordering system that supports pickup, dine-in, and delivery. While also making dietary needs visible, accessible, and effortless to navigate?',
+            'Most coffee apps treat dietary restrictions as secondary. Users with allergies or preferences are often forced to open each product individually to verify ingredients, increasing cognitive load and anxiety. Many clients end up not ordering due to the stress induced by this pain point.',
         },
       ],
       goals: [
         {
           type: 'list',
-          title:
-            'Ordering coffee should be quick and satisfying, but digital ordering often introduces friction:',
+          title: '',
           items: [
-            'Complete a first-time order in under 60 seconds',
-            'Enable repeat orders in under 15 seconds',
-            'Make customization intuitive and transparent',
-            'Clearly communicate wait times and status',
-            'Provide built-in dietary filtering that reduces the need to inspect each item individually',
-            'Maintain a polished, professional aesthetic',
-          ],
-        },
-        {
-          type: 'list',
-          title: 'Constraints:',
-          items: [
-            'Mobile-first experience',
-            'Multiple ordering modes in one interface',
-            'Flexible product customization (size, milk, syrups, add-ons)',
-            'Accurate tagging system for dietary categories (e.g., gluten-free, dairy-free, vegan)',
+            'Dietary Restriction Filtering',
+            "Dietary tags so even if the client hasn't chosen a filter they can know what it contains",
+            'Clear and simple navigation to specific product categories',
+            'Mobile first',
+            'Flexible Customization (size, milk, syrups, add-ons)',
             'Accessibility standards (contrast, tap targets, hierarchy clarity)',
           ],
         },
       ],
-      'research-insight': [
+      'UX-decisions': [
         {
           type: 'text',
-          content: 'This project is concept-driven but grounded in common food ordering behaviors:',
-        },
-
-        {
-          type: 'list',
-          title: 'Observed Patterns:',
-          items: [
-            'Users often reorder the same item',
-            'Time pressure increases decision fatigue',
-            'Long modifier lists create friction',
-            'Users with dietary restrictions spend more time verifying menu items',
-          ],
-        },
-        { type: 'rich-text', content: 'Key Insight:' },
-        {
-          type: 'text',
-          content: 'Coffee ordering is habitual, but dietary verification is cautious.',
+          content:
+            'The login is meant to be easy so that the client can navigate quickly to the menu for ordering.',
         },
         {
           type: 'text',
           content:
-            'While most users want speed, users with allergies or restrictions prioritize certainty. When dietary information isn’t surfaced clearly, it creates hesitation and slows the entire flow.',
+            'Once you log in you can choose whether you are dining in alone or with a group, delivery or in-store pickup. Making it easier for the app to choose what user flow is more relevant for the client.',
+        },
+        { type: 'img', img: chooseSeatingDailyGround },
+        {
+          type: 'text',
+          content:
+            'The menu is divided into separate pages that the clients can navigate using the the tabs with clear descriptive labels so clients can get quickly to the products they actually want to purchase.',
+        },
+        { type: 'img', img: menuDailyGround },
+        {
+          type: 'text',
+          content:
+            'At the blow the tabs are the active filters and also the button to select or unselect filters, this makes it easy and less stressful.',
+        },
+        { type: 'img', img: menufilteredDailyGround },
+        {
+          type: 'text',
+          content:
+            "As a person with celiac disease it is very difficult to find clear information online if a product is or isn't gluten free. I've talked with other people that have other eating restrictions and they also face difficulty when eating out or ordering from apps. That's why the filtering in this app is very important and intentional, cute icons we're designed for each restriction accompanied by a clear label so that people can know what they each mean. It makes it clear and easy to understand.",
         },
         {
           type: 'text',
           content:
-            'The system must support both urgency and safety, without making either group feel secondary.',
+            "The product cards display a photo of said product, the name and the price, once you click on one of them  you will navigate to another page where the product detail can be seen, here is where client can see add-ons, dietary restriction labels, and other customizations that related to the specific product. One the product is customized they can add it on to their order, and if they don't want it or were just curious then they can press the back button at the top left corner to go back to the menu.",
+        },
+        { type: 'img', img: menuDetailsDailyGround },
+        {
+          type: 'text',
+          content:
+            'This helps the clients navigate quickly and without stress trough the menu items until they find what they want to order.',
+        },
+        {
+          type: 'text',
+          content:
+            'The Navigation at the bottom is composed of two buttons, one being "My Order" and the other "Checkout".',
+        },
+        {
+          type: 'text',
+          content:
+            '"My Order" button navigates to the products already selected by the client, they can also remove any product, or simply adjust the amount if they want more or less of a product. This helps avoid friction because otherwise the client would have to remove the product and go back to the menu and do all customization again.',
+        },
+        { type: 'img', img: myOrderDailyGround },
+        {
+          type: 'text',
+          content: `"Checkout" is self explanatory, it's a list of the products with the price and the option to pay the order, this leads to a simple checkout flow where the client will be able to select their payment method, If in their account they already have a payment method associated they the transaction will happen automatically after the client chooses to checkout. Making it easier and faster for regulars. If it's tedious every time the clients eventually stop using the app, this way after the first time it becomes easier to order again.`,
+        },
+        { type: 'img', img: checkoutDailyGround },
+        {
+          type: 'text',
+          content: `I added a screen that shows in what status the order is in, depending on what the client chose before different relevant information will be shown. In the case of dining-in it'll show an estimate of how long it will take for order to be at your table and who is your server; for in-store pickup it'll show time estimate so you can go to the counter when the order is ready; and finally, in the case of delivery it'll show a real-time tracking of where your order is and in how much time you will be receiving it.`,
+        },
+        {
+          type: 'text',
+          content: `This part varies a lot depending on what the customer chose at the beginning`,
+        },
+        { type: 'img', img: deliveryDailyGround },
+        {
+          type: 'text',
+          content: `Once order is received, the app will ask if everything was ok with the order and if they want or not to tip. This helps because it avoids waiters having to ask for tips and clients have less anxiety in the interaction.`,
         },
       ],
       design: [
         {
           type: 'text',
           content:
-            'The strategy focused on reducing friction while maintaining flexibility and inclusivity.',
+            'For this design I was inspired by coffee shops aesthetic from Korea, they usually use a simplified cartoons with the logo written besides it. Color palletes tend to be vibrant primary colors accompanied with white or very light background.',
         },
-        { type: 'rich-text', content: '1. One Core System, Three Contexts' },
+        { type: 'img', img: referencesDailyGround },
         {
           type: 'text',
-          content:
-            'Pickup, dine-in, and delivery share the same structural flow. Dietary filtering is consistent across all modes to ensure predictability.',
+          content: `Following this inspiration I designed a cute fox mascot inspired on a barista, the target clients are coffee shops, cafes or ice créame shops. For this reason the mascot aligns with it's target stores.`,
         },
-        { type: 'rich-text', content: '2. Proactive Dietary Filtering' },
+        { type: 'img', img: mascotDailyGround },
         {
-          type: 'list',
-          title: 'Instead of burying dietary information within product details:',
-          items: [
-            'Users can filter menu items by dietary restriction or preference',
-            'Visual badges indicate compatibility at a glance',
-            'Filtering persists while browsing to reduce repetitive actions',
-          ],
+          type: 'subtitle',
+          subtitle: 'Logo:',
         },
         {
           type: 'text',
-          content:
-            'This transforms dietary needs from an afterthought into a first-class navigation tool.',
+          content: `For this logo I went for a combination mark, I wanted to combine a illustration with a name for the app. Because the target stores are coffee shops and cafes I decided to choose a coffee bean as the Logomark, following the same idea for the Logotype I chose the name "DailyGround.", on of the nice things of going to a coffee shop is being to drink freshly grounded coffee, it's less acidic more aromatic it gives a better experience specially if made by a barista.`,
         },
-        { type: 'rich-text', content: '3. Modular Customization' },
+        { type: 'img', img: logoDailyGround },
         {
-          type: 'text',
-          content: 'Modifier groups clearly indicate how changes affect dietary compatibility.',
-        },
-        {
-          type: 'text',
-          content:
-            'For example, switching milk types dynamically updates dietary labels when relevant.',
-        },
-        { type: 'rich-text', content: '4. Transparent System Feedback' },
-        {
-          type: 'text',
-          content:
-            'Users receive clear confirmation when selections align with their chosen dietary filters.',
-        },
-      ],
-      'ux-framework': [
-        { type: 'rich-text', content: 'The experience was built around three principles:' },
-        {
-          type: 'list',
-          title: '1. Reduce Cognitive Load',
-          items: [
-            'Dietary filters remove the need to manually inspect every product',
-            'Smart defaults and clear tagging minimize uncertainty',
-          ],
-        },
-        { type: 'rich-text', content: '2. Maintain Context' },
-        {
-          type: 'list',
-          title: 'Users always know:',
-          items: [
-            'Which ordering mode they’re in',
-            'Which store they selected',
-            'Whether dietary filters are active',
-          ],
-        },
-        { type: 'text', content: 'Active filters remain visible, reinforcing clarity and trust.' },
-        {
-          type: 'list',
-          title: '3. Design for Confidence',
-          items: [
-            'Speed is important, but confidence is essential',
-            'The system supports informed decisions without slowing down the flow',
-          ],
-        },
-      ],
-      'design-principles': [
-        { type: 'rich-text', content: '1. Inclusive by Default' },
-        {
-          type: 'text',
-          content:
-            'Dietary restrictions are not treated as edge cases. The interface supports them as a core navigation layer.',
-        },
-        { type: 'rich-text', content: '2. Visible Compatibility' },
-        {
-          type: 'text',
-          content:
-            'Products clearly display dietary badges (e.g., gluten-free, dairy-free, vegan) to reduce scanning effort.',
-        },
-        { type: 'rich-text', content: '3. Progressive Disclosure' },
-        {
-          type: 'text',
-          content: 'Detailed ingredient information is available, but not forced upfront.',
-        },
-        { type: 'rich-text', content: '4. System-Level Consistency' },
-        {
-          type: 'text',
-          content:
-            'Dietary logic remains consistent across pickup, dine-in, and delivery to avoid confusion.',
-        },
-        { type: 'rich-text', content: '5. Functional Elegance' },
-        {
-          type: 'text',
-          content:
-            'Clarity replaces clutter. The design avoids overwhelming users while still surfacing essential information.',
-        },
-      ],
-      'potential-expansion': [
-        {
-          type: 'text',
-          content:
-            'DailyGround was designed as a scalable ordering system, with flexibility built into its foundation. Future iterations could expand the product beyond transactional efficiency and into deeper personalization and ecosystem integration.',
-        },
-        {
-          type: 'list',
-          title: 'Mood Garden could evolve into:',
-          items: [
-            'Personalized Dietary Profiles',
-            'Smart Re-Order & Habit Learning',
-            'Scheduled & Subscription Orders',
-            'Loyalty & Rewards Integration',
-          ],
-        },
-      ],
-      reflection: [
-        {
-          type: 'text',
-          content:
-            'Integrating dietary filtering across the entire system shifted this project from a standard ordering app to a more inclusive product experience.',
+          type: 'subtitle',
+          subtitle: 'Colors:',
         },
         {
           type: 'text',
-          content:
-            'Rather than treating dietary needs as a feature, I approached them as a structural layer within the system. This required thinking beyond UI and considering tagging logic, dynamic updates, and how filtering impacts browsing patterns.',
+          content: `The color palette is meant to be vibrant, but calming at the same time, so I stayed away from warm colors like reds, oranges and pinks. Soft greens and blues we're chosen with a more vibrant blue as the primary for Mascot lineart, Titles and important details. but paired with the more pastel colors to make the design more robust and not look empty but still within minimalism.`,
+        },
+        { type: 'img', img: colorsDailyGround },
+        {
+          type: 'subtitle',
+          subtitle: 'Fonts:',
         },
         {
-          type: 'list',
-          title: 'Designing DailyGround strengthened my ability to:',
-          items: [
-            'Build scalable systems with embedded accessibility',
-            'Design for both speed and certainty',
-            'Anticipate edge cases as primary flows',
-            'Balance business goals with inclusive UX decisions',
-          ],
+          type: 'text',
+          content: `I choose Nunito for Headers; Manrope for regular text, labels, buttons, etc. ; and Merriweather for special titles that are only located on more animated screens that needed a more decorative title.`,
         },
         {
-          type: 'list',
-          title: 'If expanded further, I would explore:',
-          items: [
-            'Personalized dietary profiles',
-            'Smart recommendations based on restrictions',
-            'Real-time allergen cross-check validation',
-          ],
+          type: 'text',
+          content: `The selection of these three fonts was to keep a more minimalistic design feel, that's why both Nunito and Manrope are non serif because I wanted the app to feel more relaxed and informal. And Merriweather was chosen for the logo and special titles because it's more unique and easy to identify. Between the both I was able to build a clean design that is easy to read and doesn't generate visual noise.`,
+        },
+        { type: 'img', img: fontsDailyGround },
+        {
+          type: 'subtitle',
+          subtitle: 'Animations:',
+        },
+        {
+          type: 'text',
+          content: `The animations are soft fade ins and outs, with some whimsical mascot animations here and there. The idea is to not overstimulate the users but at the same time make the app look more polished, many people like cute aesthetic indifferently of their age so it appeals to a large demographic.`,
         },
       ],
     },
