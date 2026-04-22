@@ -154,32 +154,32 @@ const caseStudyData = computed<CaseStudy | null>(() => {
         <div v-for="(block, index) in caseStudyData?.sections.problem" :key="index">
           <p v-if="block.type === 'subtitle'" class="subtitle">{{ block.subtitle }}</p>
           <p v-else-if="block.type === 'text'" class="mb-4">
-            {{ block.content }}
+            {{ (block as any).content }}
           </p>
 
           <p v-else-if="block.type === 'rich-text'" class="mb-4">
             <b>
-              {{ block.content }}
+              {{ (block as any).content }}
             </b>
           </p>
 
           <div v-else-if="block.type === 'list'">
-            <p class="listTitles mb-2">{{ block.title }}</p>
+            <p class="listTitles mb-2">{{ (block as any).title }}</p>
             <ul class="custom-list mb-4 ml-6">
-              <li v-for="item in block.items" :key="item">{{ item }}</li>
+              <li v-for="item in (block as any).items" :key="item">{{ item }}</li>
             </ul>
           </div>
 
           <ul v-else-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
-            <li v-for="item in block.items" :key="item?.label">
+            <li v-for="item in (block as any).items" :key="item?.label">
               <strong>{{ item?.label }}</strong> - {{ item?.text }}
             </li>
           </ul>
 
           <img
             v-else-if="block.type === 'img'"
-            :src="block.img"
-            :alt="block.alt"
+            :src="(block as any).img"
+            :alt="(block as any).alt"
             class="caseStudyImg"
           />
         </div>
@@ -191,19 +191,19 @@ const caseStudyData = computed<CaseStudy | null>(() => {
           <p v-if="block.type === 'subtitle'" class="subtitle">{{ block.subtitle }}</p>
           <!-- TEXT -->
           <p v-else-if="block.type === 'text'" class="mb-4">
-            {{ block.content }}
+            {{ (block as any).content }}
           </p>
 
           <!-- RICH TEXT -->
           <p v-else-if="block.type === 'rich-text'" class="mb-4">
-            <b>{{ block.content }}</b>
+            <b>{{ (block as any).content }}</b>
           </p>
 
           <!-- SIMPLE LIST -->
           <div v-else-if="block.type === 'list'">
-            <p class="listTitles mb-2">{{ block.title }}</p>
+            <p class="listTitles mb-2">{{ (block as any).title }}</p>
             <ul class="custom-list mb-4 ml-6">
-              <li v-for="(item, i) in block.items" :key="i">
+              <li v-for="(item, i) in (block as any).items" :key="i">
                 {{ item }}
               </li>
             </ul>
@@ -211,7 +211,7 @@ const caseStudyData = computed<CaseStudy | null>(() => {
 
           <!-- DESCRIPTION LIST -->
           <ul v-else-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
-            <li v-for="item in block.items" :key="item.label">
+            <li v-for="item in (block as any).items" :key="item.label">
               <strong>{{ item.label }}</strong> : {{ item.text }}
             </li>
           </ul>
@@ -219,8 +219,8 @@ const caseStudyData = computed<CaseStudy | null>(() => {
           <!-- IMAGE -->
           <img
             v-else-if="block.type === 'img'"
-            :src="block.img"
-            :alt="block.alt"
+            :src="(block as any).img"
+            :alt="(block as any).alt"
             class="caseStudyImg"
           />
         </div>
@@ -231,34 +231,34 @@ const caseStudyData = computed<CaseStudy | null>(() => {
           UX Decisions I Made Along The Way:
         </p>
         <div v-for="(block, index) in caseStudyData.sections['UX-decisions']" :key="index">
-          <p v-if="block.type === 'subtitle'" class="subtitle">{{ block.subtitle }}</p>
+          <p v-if="block.type === 'subtitle'" class="subtitle">{{ (block as any).subtitle }}</p>
           <p v-else-if="block.type === 'text'" class="mb-4">
-            {{ block.content }}
+            {{ (block as any).content }}
           </p>
 
           <p v-else-if="block.type === 'rich-text'" class="mb-4">
             <b>
-              {{ block.content }}
+              {{ (block as any).content }}
             </b>
           </p>
 
           <div v-else-if="block.type === 'list'">
-            <p class="listTitles mb-2">{{ block.title }}</p>
+            <p class="listTitles mb-2">{{ (block as any).title }}</p>
             <ul class="custom-list mb-4 ml-6">
-              <li v-for="item in block.items" :key="item">{{ item }}</li>
+              <li v-for="item in (block as any).items" :key="item">{{ item }}</li>
             </ul>
           </div>
 
           <ul v-else-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
-            <li v-for="item in block.items" :key="item?.label">
+            <li v-for="item in (block as any).items" :key="item?.label">
               <strong>{{ item?.label }}:</strong> {{ item?.text }}
             </li>
           </ul>
 
           <img
             v-else-if="block.type === 'img'"
-            :src="block.img"
-            :alt="block.alt"
+            :src="(block as any).img"
+            :alt="(block as any).alt"
             class="caseStudyImg"
           />
         </div>
@@ -269,32 +269,32 @@ const caseStudyData = computed<CaseStudy | null>(() => {
         <div v-for="(block, index) in caseStudyData?.sections.design" :key="index">
           <p v-if="block.type === 'subtitle'" class="subtitle">{{ block.subtitle }}</p>
           <p v-else-if="block.type === 'text'" class="mb-4">
-            {{ block.content }}
+            {{ (block as any).content }}
           </p>
 
           <p v-else-if="block.type === 'rich-text'" class="mb-4">
             <b>
-              {{ block.content }}
+              {{ (block as any).content }}
             </b>
           </p>
 
           <div v-else-if="block.type === 'list'">
-            <p class="listTitles mb-2">{{ block.title }}</p>
+            <p class="listTitles mb-2">{{ (block as any).title }}</p>
             <ul class="custom-list mb-4 ml-6">
-              <li v-for="item in block.items" :key="item">{{ item }}</li>
+              <li v-for="item in (block as any).items" :key="item">{{ item }}</li>
             </ul>
           </div>
 
           <ul v-else-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
-            <li v-for="item in block.items" :key="item?.label">
+            <li v-for="item in (block as any).items" :key="item?.label">
               <strong>{{ item?.label }}</strong> - {{ item?.text }}
             </li>
           </ul>
 
           <img
             v-else-if="block.type === 'img'"
-            :src="block.img"
-            :alt="block.alt"
+            :src="(block as any).img"
+            :alt="(block as any).alt"
             class="caseStudyImg"
           />
         </div>
@@ -310,32 +310,32 @@ const caseStudyData = computed<CaseStudy | null>(() => {
         <div v-for="(block, index) in caseStudyData?.sections['potential-expansion']" :key="index">
           <p v-if="block.type === 'subtitle'" class="subtitle">{{ block.subtitle }}</p>
           <p v-else-if="block.type === 'text'" class="mb-4">
-            {{ block.content }}
+            {{ (block as any).content }}
           </p>
 
           <p v-if="block.type === 'rich-text'" class="mb-4">
             <b>
-              {{ block.content }}
+              {{ (block as any).content }}
             </b>
           </p>
 
           <div v-if="block.type === 'list'">
-            <p class="listTitles mb-2">{{ block.title }}</p>
+            <p class="listTitles mb-2">{{ (block as any).title }}</p>
             <ul class="custom-list mb-4 ml-6">
-              <li v-for="item in block.items" :key="item">{{ item }}</li>
+              <li v-for="item in (block as any).items" :key="item">{{ item }}</li>
             </ul>
           </div>
 
           <ul v-if="block.type === 'description-list'" class="desc-list mb-4 ml-6">
-            <li v-for="item in block.items" :key="item?.label">
+            <li v-for="item in (block as any).items" :key="item?.label">
               <strong>{{ item?.label }}</strong> - {{ item?.text }}
             </li>
           </ul>
 
           <img
             v-else-if="block.type === 'img'"
-            :src="block.img"
-            :alt="block.alt"
+            :src="(block as any).img"
+            :alt="(block as any).alt"
             class="caseStudyImg"
           />
         </div>
