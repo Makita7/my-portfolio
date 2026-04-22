@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink } from "vue-router";
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
@@ -10,11 +10,18 @@ import { RouterLink } from "vue-router";
     <div class="d-flex">
       <TransitionGroup name="fade" mode="in-out">
         <RouterLink to="/" class="link pl-4 home" activeClass="active" id="Home">Home</RouterLink>
-        <RouterLink to="/about" class="link pl-4 about" activeClass="active" id="About">About</RouterLink>
-        <RouterLink to="/projects" class="link pl-4 project" activeClass="active" id="About">Projects</RouterLink>
+        <RouterLink to="/about" class="link pl-4 about" activeClass="active" id="About"
+          >About</RouterLink
+        >
+        <RouterLink to="/projects" class="link pl-4 project" activeClass="active" id="About"
+          >Projects</RouterLink
+        >
         <RouterLink to="/" class="link pl-4 cv" custom>
-          <a href="https://drive.google.com/file/d/1S308C5rWxPqxs52iEOH-SfJthYDa659J/view?usp=sharing" target="_blank"
-            rel="noopener noreferrer">
+          <a
+            href="https://drive.google.com/file/d/18ChlYEHitT3oIWGT1KNfRlm-JTysF8II/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             CV
           </a>
         </RouterLink>
@@ -90,5 +97,6 @@ import { RouterLink } from "vue-router";
   }
 }
 
-@media (min-width: 960px) {}
+@media (min-width: 960px) {
+}
 </style>

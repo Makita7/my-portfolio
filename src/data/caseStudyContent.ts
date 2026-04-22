@@ -13,6 +13,7 @@ import logoMood from '@/assets/project-previews/mood-garden/logo-design.jpg'
 import colorsMood from '@/assets/project-previews/mood-garden/color-palette.jpg'
 import fontsMood from '@/assets/project-previews/mood-garden/Fonts.jpg'
 import animationsMood from '@/assets/project-previews/mood-garden/animation-keyframes.jpg'
+import diffLogosMood from '@/assets/project-previews/mood-garden/different-logos.jpg'
 
 // Daily Ground
 import overviewDailyImg from '@/assets/project-previews/daily-ground/daily-ground.png'
@@ -32,6 +33,17 @@ import fontsDailyGround from '@/assets/project-previews/daily-ground/fonts-daily
 
 // Fleur Patisserie
 import overviewFleurImg from '@/assets/project-previews/fleur-patisserie/hero-fleur.jpg'
+import twoColumnsFleur from '@/assets/project-previews/fleur-patisserie/two-columns-fleur.png'
+import twoColumnsMobileFleur from '@/assets/project-previews/fleur-patisserie/two-columns-mobile-fleur.png'
+import gardenPageFleur from '@/assets/project-previews/fleur-patisserie/garden-fleur.png'
+import aboutPageFleur from '@/assets/project-previews/fleur-patisserie/about-fleur.png'
+import visitPageFleur from '@/assets/project-previews/fleur-patisserie/visit-fleur.png'
+import reservePageFleur from '@/assets/project-previews/fleur-patisserie/reserve-fleur.png'
+import footerFleur from '@/assets/project-previews/fleur-patisserie/footer-fleur.png'
+import fontsFleur from '@/assets/project-previews/fleur-patisserie/fonts-fleur.png'
+import colorFleur from '@/assets/project-previews/fleur-patisserie/color-palette-fleur.png'
+import bottomFleur from '@/assets/project-previews/fleur-patisserie/bottom-fleur.png'
+import logoFleur from '@/assets/project-previews/fleur-patisserie/logo-fleur.png'
 
 import type { CaseStudyBlock } from '@/data/caseStudyTypes'
 
@@ -101,7 +113,7 @@ export const caseStudyContent = {
       goals: [
         {
           type: 'list',
-          title: 'Product Goals:',
+          title: '',
           items: [
             'Reduce Overwhelm',
             'Accessibility for logging emotions',
@@ -164,21 +176,38 @@ export const caseStudyContent = {
           content: 'The navigation in the app is simple, comes down into only four pages',
         },
         {
+          type: 'rich-text',
+          content: 'Daily:',
+        },
+        {
           type: 'text',
           content:
-            "Daily: it's we're as the name says only the emotions of today can be seen, by pressing the vase a log will all the daily emotions will pop up with all the details: flower, emotion label, and the glimmer or trigger if the user wrote something, here they can choose to modify their description but not the emotion.",
+            "It's we're as the name says only the emotions of today can be seen, by pressing the vase a log will all the daily emotions will pop up with all the details: flower, emotion label, and the glimmer or trigger if the user wrote something, here they can choose to modify their description but not the emotion.",
         },
         { type: 'img', img: daily },
         {
-          type: 'text',
-          content:
-            'Month:  Here the flowers selected through out the month can be seen in two ways. One is in a beautiful bouquet, where the prominent flower of each day is visible and the other  way is a calendar format seeing which day each flower belong to. In the calendar option the user will be able to click on any specific day and see the log with the details of each emotion and the description. This will allow them to be able to see an overlook of the whole month without losing the detailed information that was written. ',
+          type: 'rich-text',
+          content: 'Monthly:',
         },
-        { type: 'img', img: month },
         {
           type: 'text',
           content:
-            'Insight: The purpose of this page is to help the user have a general eyes view of what the information that they have inputted says about that month or their mental state. They can see what flower was more prevalent that month and a percentage so that they can understand how much more one flower was selected over the rest.A simple counter for glimmers and triggers is available, and a simple card that shows the most selected flower. If they press the Glimmer and Trigger counter cards they will be directed to another page where all there is a list with the date and detail of each log. This helps them go back and read what happened if needed',
+            'Here the flowers selected through out the month can be seen in two ways. One is in a beautiful bouquet, where the prominent flower of each day is visible and the other  way is a calendar format seeing which day each flower belong to. In the calendar option the user will be able to click on any specific day and see the log with the details of each emotion and the description. This will allow them to be able to see an overlook of the whole month without losing the detailed information that was written.',
+        },
+        { type: 'img', img: month },
+        {
+          type: 'rich-text',
+          content: 'Insight:',
+        },
+        {
+          type: 'text',
+          content:
+            'The purpose of this page is to help the user have a general eyes view of what the information that they have inputted says about that month or their mental state. They can see what flower was more prevalent that month and a percentage so that they can understand how much more one flower was selected over the rest.',
+        },
+        {
+          type: 'text',
+          content:
+            'A simple counter for glimmers and triggers is available, and a simple card that shows the most selected flower. If they press the Glimmer and Trigger counter cards they will be directed to another page where all there is a list with the date and detail of each log. This helps them go back and read what happened if needed.',
         },
         { type: 'img', img: insight },
         {
@@ -187,9 +216,13 @@ export const caseStudyContent = {
         },
         { type: 'img', img: moodCycle },
         {
+          type: 'rich-text',
+          content: 'Setting:',
+        },
+        {
           type: 'text',
           content:
-            "Setting: Here the users can modify the name of their garden, customize the flowers and their labels, even add new flowers if the ones available are insufficient. It's important for users to be able to feel their garden their own, so customization is very important in this regard, it won't offer unlimited options because of scope but enough that it fulfils it's purpose.",
+            "Here the users can modify the name of their garden, customize the flowers and their labels, even add new flowers if the ones available are insufficient. It's important for users to be able to feel their garden their own, so customization is very important in this regard, it won't offer unlimited options because of scope but enough that it fulfils it's purpose.",
         },
         { type: 'img', img: settingMood },
         {
@@ -225,6 +258,7 @@ export const caseStudyContent = {
           content:
             "two logos we're made for different screen, for the header the logotype is used alone, but for more decorative screens the combination mark, which makes the app more identifiable if you only see the logo on it's own. Following the idea that the emotions are flowers I decided to make the logomark a flower.",
         },
+        { type: 'img', img: diffLogosMood },
         {
           type: 'subtitle',
           subtitle: 'Colors:',
@@ -464,8 +498,9 @@ export const caseStudyContent = {
     title: 'Fleur Patisserie',
     color: '#984C3E',
     links: {
+      web: 'https://www.figma.com/proto/KCSRr5bHFZiTVGhdaDcGQd/Fleur-Patisserie?node-id=0-1&p=f&viewport=622%2C-79%2C0.07&t=9NEH7XukGbu9hvKR-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=84%3A609&show-proto-sidebar=1',
       mobile:
-        'https://www.figma.com/proto/yD9JmMrtMHLTVK6LogI0Q3/Mood-Garden?node-id=78-1499&p=f&viewport=268%2C356%2C0.07&t=q4m3oi0pNAuyzREH-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=341%3A3657',
+        'https://www.figma.com/proto/KCSRr5bHFZiTVGhdaDcGQd/Fleur-Patisserie?node-id=88-828&p=f&viewport=622%2C-79%2C0.07&t=9NEH7XukGbu9hvKR-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A827&show-proto-sidebar=1',
     },
     sections: {
       overview: {
@@ -512,100 +547,125 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'The purpose of the app is to interact gently with the user and help them do self reflection. Most people who start using mood trackers usually are either struggling with their emotions or they want to better understand them. ',
+            'I wanted the design to be an editorial style site, so I decided that the sections of the page would be divided into two',
+        },
+        {
+          type: 'img',
+          img: twoColumnsFleur,
+          alt: 'Image of how content is organized into two columns in',
+        },
+        {
+          type: 'text',
+          content: 'This made it clean to analyze what you are looking at, zero clutter.',
         },
         {
           type: 'text',
           content:
-            'The idea was to make this app gentle for it to be more inclusive. Many people who struggle with mental illness, or have some level of neurodivergence are more sensitive to stimulus. So this was a big consideration in the design, it was also meant to be for all ages and in general people that enjoy colorful designs.',
+            'This also made it very easy to adapt the design for mobile, into a single column, because of it not being content heavy it is still easy to skim through. Here you can see three examples of how the content is reorganized into a single column.',
+        },
+        {
+          type: 'img',
+          img: twoColumnsMobileFleur,
+          alt: 'Image of 3 examples of how content is organized into one columns for mobile',
         },
         {
           type: 'text',
           content:
-            "The first thing that comes up in the app is the register and login, it's meant to be easy and straight forward. Once that is completed the user will see a welcome animation and then be brought directly to their garden.",
-        },
-        { type: 'img', img: logIn },
-        {
-          type: 'text',
-          content:
-            "Initially their won't be any flowers, but that doesn't last long as soon as they input their first emotion the screen will change into a flower in a vase, representing the emotion.",
+            'To respect the direction of an editorial design, only one photo per menu section. This helps avoid infinite scrolling or getting lost. Because the menu is limited and changes with the seasons, this is an elegant way of displaying the menu items.',
         },
         {
           type: 'text',
-          content:
-            "To add their emotions they press the button and go straight into another screen where multiple cards are shown each with a flower and a label, after that depending if the emotion is positive of negative another page will fade in and they will be able to fill out the reason for their emotion, either a Glimmer if it's positive and Trigger if negative.",
+          content: `Each page of the site has a single purpose, that helps navigate to where something is with ought having to go through the whole page, most clients will just enter the menu that's why it's the landing page, keeping the navigation clean will encourage the clients to go to other pages and dig deeper into the information given in the site.`,
         },
         {
-          type: 'description-list',
-          title: '',
-          items: [
-            {
-              label: `Triggers`,
-              text: `situations that contributed to negative emotional states`,
-            },
-            {
-              label: `Glimmers`,
-              text: `small positive moments or experiences that sparked joy or comfort`,
-            },
-          ],
+          type: 'rich-text',
+          content: `Garden Page:`,
         },
         {
           type: 'text',
-          content:
-            "It's important for self reflection to understand why I feel a certain emotion not just identifying which emotion it was.",
-        },
-        { type: 'img', img: logginMood },
-        {
-          type: 'text',
-          content: 'The navigation in the app is simple, comes down into only four pages',
+          content: `Speaks about the botanical garden itself, it's an informative section of what is done in the garden and how the produce is used`,
         },
         {
-          type: 'text',
-          content:
-            "Daily: it's we're as the name says only the emotions of today can be seen, by pressing the vase a log will all the daily emotions will pop up with all the details: flower, emotion label, and the glimmer or trigger if the user wrote something, here they can choose to modify their description but not the emotion.",
+          type: 'img',
+          img: gardenPageFleur,
+          alt: 'Garden page preview with information of the garden and how it works.',
         },
-        { type: 'img', img: daily },
         {
-          type: 'text',
-          content:
-            'Month:  Here the flowers selected through out the month can be seen in two ways. One is in a beautiful bouquet, where the prominent flower of each day is visible and the other  way is a calendar format seeing which day each flower belong to. In the calendar option the user will be able to click on any specific day and see the log with the details of each emotion and the description. This will allow them to be able to see an overlook of the whole month without losing the detailed information that was written. ',
-        },
-        { type: 'img', img: month },
-        {
-          type: 'text',
-          content:
-            'Insight: The purpose of this page is to help the user have a general eyes view of what the information that they have inputted says about that month or their mental state. They can see what flower was more prevalent that month and a percentage so that they can understand how much more one flower was selected over the rest.A simple counter for glimmers and triggers is available, and a simple card that shows the most selected flower. If they press the Glimmer and Trigger counter cards they will be directed to another page where all there is a list with the date and detail of each log. This helps them go back and read what happened if needed',
-        },
-        { type: 'img', img: insight },
-        {
-          type: 'text',
-          content: 'This generates a cycle of Awareness, Visualization, Reflection and Regulation.',
-        },
-        { type: 'img', img: moodCycle },
-        {
-          type: 'text',
-          content:
-            "Setting: Here the users can modify the name of their garden, customize the flowers and their labels, even add new flowers if the ones available are insufficient. It's important for users to be able to feel their garden their own, so customization is very important in this regard, it won't offer unlimited options because of scope but enough that it fulfils it's purpose.",
-        },
-        { type: 'img', img: settingMood },
-        {
-          type: 'text',
-          content:
-            "One of the key features is that note of the flowers are ugly, it's not meant to shame the user just identify and therefor reward them for doing so. That way they are incentivized to continue logging their emotions. Logging itself is growth",
-        },
-        { type: 'img', img: moodReflection },
-        {
-          type: 'list',
-          title: "That's why I avoided:",
-          items: ['Harsh data visuals', 'Performance metrics', 'Streak pressure'],
+          type: 'rich-text',
+          content: `About Page:`,
         },
         {
           type: 'text',
-          content:
-            "This helps the interaction with the app calmer and more relaxed, in setting their is the option to add a notification but the user isn't pressured into it.",
+          content: `Speaks of why the cafe was founded and what their passion is.`,
+        },
+        {
+          type: 'img',
+          img: aboutPageFleur,
+          alt: 'About page preview and company information',
+        },
+        {
+          type: 'rich-text',
+          content: `Visit Page:`,
+        },
+        {
+          type: 'text',
+          content: `It's exactly that how to reserve a visit with the cafe / garden and why you should visit if you haven't. It's an important part of the page, specially is the person viewing has not yet come to visit and needs to know more information before visiting or wants to know how to reserve. that's why it has a call to action with a button at the bottom saying: "Reserve a Table".`,
+        },
+        {
+          type: 'img',
+          img: visitPageFleur,
+          alt: 'Visits page preview explaining how to make a reservation at the cafe to visit.',
+        },
+        {
+          type: 'rich-text',
+          content: `Reserve Page:`,
+        },
+        {
+          type: 'text',
+          content: `Considering that visit already talks about the cafe and why you should visit this section might sound like overkill. But it really isn't because here you have the locations, opening and closing hours of the different cafes and a call to action button to make the reservation. It's clean and short, very good for clients that are coming out of town or even the country and want to visit; with ought neglecting recurrent clients that want a reservation for a special day.`,
+        },
+        {
+          type: 'img',
+          img: reservePageFleur,
+          alt: 'Reservation layout for booking',
+        },
+        {
+          type: 'rich-text',
+          content: `Footer:`,
+        },
+        {
+          type: 'text',
+          content: `It has locations, opening and closing hours the logo and socials for anyone to be able to get quick information from any of the pages.`,
+        },
+        {
+          type: 'img',
+          img: footerFleur,
+          alt: 'image preview of footer layout',
         },
       ],
       design: [
+        {
+          type: 'text',
+          content:
+            'The aim is for every guest to feel a sense of calm, a connection with nature, and a rich sensory experience through taste, smell, and touch.',
+        },
+        {
+          type: 'subtitle',
+          subtitle: 'Fonts:',
+        },
+        {
+          type: 'text',
+          content: `I choose Playfair for the titles because it's a more formal font that looks fancy on it's own. This connected with the idea of French tradition and pastries. Still a very legible font but too formal if used on paragraphs`,
+        },
+        {
+          type: 'text',
+          content: `For page texts and paragraphs I choose Inter, because it's easy to read gives a more calm and less structured mood because of it being sans serif. But still very delicate when paired with Playfair, it makes Playfair less formal and Playfair makes inter less informal. This really helps because it gives a less rigid feel to the design `,
+        },
+        {
+          type: 'text',
+          content: `Finally, I choose Inconsolata for numbers and links, specially with the purpose of making them stand out. That's why I adjusted the letter spacing to make ir more different form the other two fonts. But because of this it can't be used for paragraphs.`,
+        },
+        { type: 'img', img: fontsFleur },
         {
           type: 'subtitle',
           subtitle: 'Logo:',
@@ -613,44 +673,22 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            "For the logo design I wanted to make the center of attention a cute toony flower, that stood out. That's why a vibrant red that is to make it pop out next to the pink flower. Since both are warm colors it stands out against the white background and green leaves.",
+            'For the logo I chose to use Playfair because it made it simple but very elegant specially with it referencing French traditional elegance, specially s to French cooking.',
         },
-        { type: 'img', img: logoMood },
-        {
-          type: 'text',
-          content:
-            "two logos we're made for different screen, for the header the logotype is used alone, but for more decorative screens the combination mark, which makes the app more identifiable if you only see the logo on it's own. Following the idea that the emotions are flowers I decided to make the logomark a flower.",
-        },
+        { type: 'img', img: logoFleur },
         {
           type: 'subtitle',
           subtitle: 'Colors:',
         },
         {
           type: 'text',
-          content:
-            "The pallete is meant to be vibrant and cheery, and with a lot of contrast with the white background. This helps it look cleaner and more cheerful, because the flowers are of many colors I decided to choose a slightly darker less saturated color for primary, this way the interface and the background don't oversaturate the design.",
-        },
-        { type: 'img', img: colorsMood },
-        {
-          type: 'subtitle',
-          subtitle: 'Fonts:',
+          content: `For the color palette I choose muted colors with high contrast against an off white color background. This color was selected for the background to give off a warmer feeling to make the page for welcoming, and the muted color palette made the site more lively with ought loosing legibility of texts and titles.`,
         },
         {
           type: 'text',
-          content:
-            'The fonts chosen to combine with a cheerful toony style of animations were "Sour Gummy" and "Noto Sans".',
+          content: `On the other hand the visuals selected for the page combine vibrant and muted photos to avoid visual saturation. So the page can continue to give lively feeling without loosing professionalism and maintaining peaceful while navigating the page.`,
         },
-        {
-          type: 'text',
-          content:
-            "Sour Gummy for titles and headers because it's a more rounded and less formal more playful font that went well with the concept and stood out.",
-        },
-        {
-          type: 'text',
-          content:
-            'Noto Sans for general texts and labels because of it not being formal but very legible, this helps with readability. I choose a font sans serif so it would match better with Sour Gummy giving a general calm and fun aesthetic to the design.',
-        },
-        { type: 'img', img: fontsMood },
+        { type: 'img', img: colorFleur },
         {
           type: 'subtitle',
           subtitle: 'Animations:',
@@ -658,26 +696,14 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'I used a lot of text animations for in-between screens with fade ins and out transitions. Following the pattern of wanting to reward logging an emotion I decided to make the reward a soft animation of the flower fading in and it having an idle loop movement.',
+            'The animations are subtle, they mostly comprise of soft fade ins and outs. These animations make the site come together more and help the site feel peaceful, which is very important because this would be desirable for the target audience.',
         },
         {
           type: 'text',
           content:
-            'I also added text animation when saving changes or logging an emotion to the app, so the person is sure when changes have occurred also creating a feedback loop that feels satisfying.',
+            'This is not a café designed for movement or noise, but for those seeking a quiet escape from daily life. A small, peaceful space to pause and rest.',
         },
-        { type: 'img', img: animationsMood },
-      ],
-      'potential-expansion': [
-        {
-          type: 'list',
-          title: 'In the future the app could grow in the following ways:',
-          items: [
-            'More personation availability, like dark mode or more muted colors',
-            'Sharing options for therapists ',
-            'Parent-child co-reflection spaces',
-            'Shared gardens for couples, so both parties know how the other is doing',
-          ],
-        },
+        { type: 'img', img: bottomFleur },
       ],
     },
   },

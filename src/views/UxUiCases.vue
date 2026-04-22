@@ -140,11 +140,11 @@ const caseStudyData = computed<CaseStudy | null>(() => {
           alt="Project Hero"
         />
 
-        <p>{{ caseStudyData?.sections.overview.text }}</p>
-        <p v-if="caseStudyData?.sections.overview.text2">
+        <p class="mb-4">{{ caseStudyData?.sections.overview.text }}</p>
+        <p v-if="caseStudyData?.sections.overview.text2" class="mb-4">
           {{ caseStudyData?.sections.overview.text2 }}
         </p>
-        <p v-if="caseStudyData?.sections.overview.text3">
+        <p v-if="caseStudyData?.sections.overview.text3" class="mb-4">
           {{ caseStudyData?.sections.overview.text3 }}
         </p>
       </section>
