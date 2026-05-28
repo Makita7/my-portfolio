@@ -120,22 +120,23 @@ const listProjectsUxUi = ref([
   //   tech: ["figma", "photoshop", "illustrator"],
   //   caseStudy: "sasa",
   // },
-  {
-    title: 'MoodGarden',
-    to: 'mood-garden',
+    {
+    title: 'Fleur Patisserie',
+    to: 'fleur-patisserie',
     description:
-      'Colorful app for tracking emotions, triggers and glimmers. Using small animations to lighten users interactions',
+      'App for a high end Botanical inspired French Cafe, virtual menu and cafe institutional information.',
     links: {
+      web: 'sdfsdf',
       mobile: 'sdfsdf',
     },
     type: 'ux',
     program: 'figma',
-    img: MoodGardenImg,
+    img: FleurPatiserieImg,
     year: '2025-05-12',
     frontendMentor: false,
     tech: ['figma', 'photoshop', 'illustrator'],
     caseStudy:
-      'https://docs.google.com/document/d/1s2UR2-gRqk0CPmRPLaOBuz2Qk3kZpemmAzTvQouyElI/edit?usp=sharing',
+      'https://docs.google.com/document/d/1x8RcqWXGkLA2D9070pZotmHrXXgNQzHhf0D-WOGhCQ8/edit?usp=sharing',
   },
   {
     title: 'DailyGround.',
@@ -156,23 +157,24 @@ const listProjectsUxUi = ref([
       'https://docs.google.com/document/d/1x8RcqWXGkLA2D9070pZotmHrXXgNQzHhf0D-WOGhCQ8/edit?usp=sharing',
   },
   {
-    title: 'Fleur Patisserie',
-    to: 'fleur-patisserie',
+    title: 'MoodGarden',
+    to: 'mood-garden',
     description:
-      'App for a high end Botanical inspired French Cafe, virtual menu and cafe institutional information.',
+      'Colorful app for tracking emotions, triggers and glimmers. Using small animations to lighten users interactions',
     links: {
-      web: 'sdfsdf',
       mobile: 'sdfsdf',
     },
     type: 'ux',
     program: 'figma',
-    img: FleurPatiserieImg,
+    img: MoodGardenImg,
     year: '2025-05-12',
     frontendMentor: false,
     tech: ['figma', 'photoshop', 'illustrator'],
     caseStudy:
-      'https://docs.google.com/document/d/1x8RcqWXGkLA2D9070pZotmHrXXgNQzHhf0D-WOGhCQ8/edit?usp=sharing',
+      'https://docs.google.com/document/d/1s2UR2-gRqk0CPmRPLaOBuz2Qk3kZpemmAzTvQouyElI/edit?usp=sharing',
   },
+
+
 ])
 </script>
 

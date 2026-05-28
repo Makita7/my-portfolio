@@ -14,6 +14,9 @@
     <a href="https://dribbble.com/SofiMakita" class="filter dribble" target="_blank">
       <img type="svg" src="@/assets/icons/dribble.svg" alt="dribble link" class="pl-4" />
     </a>
+    <a href="https://www.linkedin.com/in/sofia-makita-348a29172/" class="filter linkedin" target="_blank">
+      <img type="svg" src="@/assets/icons/linkedin.svg" alt="linkedin link" class="pl-4" />
+    </a>
   </v-footer>
 </template>
 
@@ -56,6 +59,10 @@ footer {
 }
 
 .behance:hover img {
+  filter: invert(22%) sepia(79%) saturate(6545%) hue-rotate(220deg) brightness(104%) contrast(103%);
+}
+
+.linkedin:hover img {
   filter: invert(22%) sepia(79%) saturate(6545%) hue-rotate(220deg) brightness(104%) contrast(103%);
 }
 
