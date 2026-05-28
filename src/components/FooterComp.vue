@@ -2,7 +2,9 @@
 
 <template>
   <v-footer padless class="footer d-flex justify-end" style="position: fixed">
-    <p class="talk mb-0">Let's Talk</p>
+    <a href="mailto:sophiamakita@gmail.com" class="unLink">
+      <p class="talk mb-0">Let's Talk</p>
+    </a>
     <a href="https://www.behance.net/sophiamak" class="filter behance" target="_blank">
       <img src="@/assets/icons/behance.svg" alt="behance link" class="pl-4" />
     </a>
@@ -23,6 +25,17 @@ footer {
   padding: 1rem 1rem;
   width: 100%;
   background-color: var(--almostWhite);
+}
+
+.unLink{
+  text-decoration: none;
+  color: black;
+  transition: 0.3s ease-in-out;
+}
+
+.unLink:hover {
+  color: var(--green);
+  font-weight: bold;
 }
 
 .talk {

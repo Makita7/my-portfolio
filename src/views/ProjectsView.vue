@@ -156,7 +156,7 @@ const listProjectsUxUi = ref([
       'https://docs.google.com/document/d/1x8RcqWXGkLA2D9070pZotmHrXXgNQzHhf0D-WOGhCQ8/edit?usp=sharing',
   },
   {
-    title: 'Fleur Pattiserie',
+    title: 'Fleur Patisserie',
     to: 'fleur-patisserie',
     description:
       'App for a high end Botanical inspired French Cafe, virtual menu and cafe institutional information.',
@@ -177,7 +177,7 @@ const listProjectsUxUi = ref([
 </script>
 
 <template>
-  <div style="position: relative; height: 92vh">
+  <div id="projects" class="mt-4">
     <div v-if="!$route.params.slug" class="projects">
       <div v-if="!display.xs" class="d-flex align-center justify-space-between fade">
         <v-col class="pa-0" id="ux-ui-arrow">
