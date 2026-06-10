@@ -139,36 +139,13 @@ const getTagColor = (tag: string) => {
         <div class="tags d-flex mb-8">
           <p v-for="(tag, index) in caseStudyData?.sections.overview.tags" :key="index" class="py-1 px-4 mr-4 rounded-xl tag whitespace-nowrap capitalize" :class="getTagColor(tag)">{{ tag }}</p>
         </div>
-        <div class="d-flex align-center mt-4">
-          <p class="mr-4"><b>Link to Prototype:</b></p>
-          <p v-if="'web' in (caseStudyData?.links || {})" class="link-sub">Web</p>
-          <a
-            v-if="'web' in (caseStudyData?.links || {})"
-            :href="(caseStudyData?.links as any).web"
-            target="_blank"
-            class="d-flex align-center mr-2"
-          >
-            <img src="@/assets/icons/figma.svg" alt="figma icon" class="ml-2 mr-2 figmaIconImg" />
-          </a>
-          <p v-if="'tablet' in (caseStudyData?.links || {})" class="link-sub">Tablet</p>
-          <a
-            v-if="'tablet' in (caseStudyData?.links || {})"
-            :href="(caseStudyData?.links as any).tablet"
-            target="_blank"
-            class="d-flex align-center mr-2"
-          >
-            <img src="@/assets/icons/figma.svg" alt="figma icon" class="ml-2 mr-2 figmaIconImg" />
-          </a>
-          <p v-if="links.mobile" class="link-sub">Mobile</p>
-          <a
-            v-if="links.mobile"
-            :href="links.mobile"
-            target="_blank"
-            class="d-flex align-center mr-2"
-            style="width: auto"
-          >
-            <img src="@/assets/icons/figma.svg" alt="figma icon" class="ml-2 mr-2 figmaIconImg" />
-          </a>
+        <div class="mt-4">
+          <p class="mr-4 mb-2"><b>Mobile Prototype:</b></p>
+
+          <div
+            v-if="'mobile' in (caseStudyData?.links || {})"
+            v-html="(caseStudyData?.links as any).mobile"
+          />
         </div>
         <img
           v-if="caseStudyData?.sections.overview.imgPreview"

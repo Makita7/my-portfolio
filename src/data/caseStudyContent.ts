@@ -326,7 +326,7 @@ export const caseStudyContent = {
     color: '#1D70C4',
     links: {
       mobile:
-        'https://www.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=66-477&p=f&viewport=3364%2C640%2C0.19&t=5PXRrZGuiBvFjJ2H-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=66%3A717',
+        '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=66-717&viewport=3137%2C805%2C0.19&scaling=scale-down&content-scaling=fixed&starting-point-node-id=66%3A717&page-id=66%3A477&embed-host=share" allowfullscreen></iframe>',
       web: 'https://www.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=783-16999&p=f&viewport=3064%2C680%2C0.19&t=5PXRrZGuiBvFjJ2H-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=783%3A17738',
     },
     sections: {
