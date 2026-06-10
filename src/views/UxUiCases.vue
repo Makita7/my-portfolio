@@ -18,6 +18,35 @@ const caseStudyData = computed<CaseStudy | null>(() => {
 
   return null
 })
+
+const getTagColor = (tag: string) => {
+  switch (tag) {
+    case "UX/UI Design":
+      return "bg-[var(--paleOrange)] font-semibold"
+
+    case "Mobile":
+      return "bg-[var(--paleGreen)] font-semibold"
+
+    case "Web App":
+      return "bg-[var(--paleBlue)] font-semibold"
+
+    case "IOs":
+      return "bg-[var(--blackish)] text-white font-semibold"
+
+    case "Accessibility":
+      return "bg-[var(--orange)] font-semibold"
+
+    case "Design System":
+      return "bg-[var(--brightGreenDark)] text-[var(--greenDark)] font-semibold"
+
+    case "Illustration System":
+      return "bg-[var(--paleLightRed)] font-semibold"
+
+    default:
+      return "bg-gray-300 font-semibold"
+  }
+}
+
 </script>
 
 <template>
@@ -96,13 +125,20 @@ const caseStudyData = computed<CaseStudy | null>(() => {
     </v-col>
     <v-col class="customPadding">
       <section id="overview">
+        <img
+          v-if="caseStudyData?.sections.overview.imgHeader"
+          :src="caseStudyData?.sections.overview.imgHeader"
+          alt="Project Hero"
+        />
         <h1 :style="`color:${caseStudyData?.color};`" class="sticky-title">
           {{ caseStudyData?.title }}
         </h1>
         <p class="pb-2" style="width: 100%">
           <b>{{ caseStudyData?.sections.overview.subtitle }}</b>
         </p>
-        <p><b>Scope: </b>{{ caseStudyData?.sections.overview.scope }}</p>
+        <div class="tags d-flex mb-8">
+          <p v-for="(tag, index) in caseStudyData?.sections.overview.tags" :key="index" class="py-1 px-4 mr-4 rounded-xl tag whitespace-nowrap capitalize" :class="getTagColor(tag)">{{ tag }}</p>
+        </div>
         <div class="d-flex align-center mt-4">
           <p class="mr-4"><b>Link to Prototype:</b></p>
           <p v-if="'web' in (caseStudyData?.links || {})" class="link-sub">Web</p>
@@ -135,8 +171,8 @@ const caseStudyData = computed<CaseStudy | null>(() => {
           </a>
         </div>
         <img
-          v-if="caseStudyData?.sections.overview.img"
-          :src="caseStudyData?.sections.overview.img"
+          v-if="caseStudyData?.sections.overview.imgPreview"
+          :src="caseStudyData?.sections.overview.imgPreview"
           alt="Project Hero"
         />
 
@@ -176,12 +212,15 @@ const caseStudyData = computed<CaseStudy | null>(() => {
             </li>
           </ul>
 
-          <img
-            v-else-if="block.type === 'img'"
-            :src="(block as any).img"
-            :alt="(block as any).alt"
-            class="caseStudyImg"
-          />
+          <div v-else-if="block.type === 'img'">
+            <img
+              :src="(block as any).img"
+              :alt="(block as any).alt"
+              class="caseStudyImg"
+              :class="(block as any).caption ? 'img-caption' : ''"
+            />
+            <p v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</p>
+          </div>
         </div>
       </section>
 
@@ -217,12 +256,15 @@ const caseStudyData = computed<CaseStudy | null>(() => {
           </ul>
 
           <!-- IMAGE -->
-          <img
-            v-else-if="block.type === 'img'"
-            :src="(block as any).img"
-            :alt="(block as any).alt"
-            class="caseStudyImg"
-          />
+           <div v-else-if="block.type === 'img'">
+             <img
+               :src="(block as any).img"
+               :alt="(block as any).alt"
+               class="caseStudyImg"
+               :class="(block as any).caption ? 'img-caption' : ''"
+             />
+             <p v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</p>
+           </div>
         </div>
       </section>
 
@@ -255,12 +297,15 @@ const caseStudyData = computed<CaseStudy | null>(() => {
             </li>
           </ul>
 
-          <img
-            v-else-if="block.type === 'img'"
-            :src="(block as any).img"
-            :alt="(block as any).alt"
-            class="caseStudyImg"
-          />
+          <div v-else-if="block.type === 'img'">
+             <img
+               :src="(block as any).img"
+               :alt="(block as any).alt"
+               class="caseStudyImg"
+               :class="(block as any).caption ? 'img-caption' : ''"
+             />
+             <p v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</p>
+          </div>
         </div>
       </section>
 
@@ -291,12 +336,15 @@ const caseStudyData = computed<CaseStudy | null>(() => {
             </li>
           </ul>
 
-          <img
-            v-else-if="block.type === 'img'"
-            :src="(block as any).img"
-            :alt="(block as any).alt"
-            class="caseStudyImg"
-          />
+          <div v-else-if="block.type === 'img'">
+             <img
+               :src="(block as any).img"
+               :alt="(block as any).alt"
+               class="caseStudyImg"
+               :class="(block as any).caption ? 'img-caption' : ''"
+             />
+             <p v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</p>
+           </div>
         </div>
       </section>
 
@@ -332,12 +380,15 @@ const caseStudyData = computed<CaseStudy | null>(() => {
             </li>
           </ul>
 
-          <img
-            v-else-if="block.type === 'img'"
-            :src="(block as any).img"
-            :alt="(block as any).alt"
-            class="caseStudyImg"
-          />
+          <div v-else-if="block.type === 'img'">
+             <img
+               :src="(block as any).img"
+               :alt="(block as any).alt"
+               class="caseStudyImg"
+               :class="(block as any).caption ? 'img-caption' : ''"
+             />
+             <p v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</p>
+          </div>
         </div>
       </section>
     </v-col>
@@ -370,8 +421,17 @@ img {
   margin: 2rem 0;
 }
 
+.img-caption{
+  width: 100%;
+  margin-bottom: 0;
+}
+
 p {
   color: var(--blackish);
+}
+
+.italic {
+  font-style: italic;
 }
 
 .listTitles {

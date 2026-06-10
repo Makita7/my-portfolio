@@ -1,3 +1,4 @@
+@import "tailwindcss";
 /* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
@@ -5,14 +6,19 @@
   --red: #F55D3E;
   --redPass: hsl(10, 90%, 63%);
   --lightRed: #FF9883;
+  --paleLightRed: #f1c8c0;
   --orange: #F2C078;
+  --paleOrange: #ffdfb3;
   --orange2: #F6AC42;
   --lightYellow: #FAEDCA;
   --lightGreen: #C1DBB3;
   --green: #7EBC89;
+  --paleGreen: #c3dfc8;
   --greenDark: #449453;
+  --brightGreenDark: #c2ebcb;
   --blue: #0069a2;
   --lightBlue: #a5dfff;
+  --paleBlue: #c6deeb;
   --blackish: #433E3F;
   --almostWhite: #FCFCFC;
 }
@@ -35,6 +41,11 @@ h1, h2, h3, h4, h5, h6{
   font-optical-sizing: auto;
   font-style: normal;
   text-transform: capitalize;
+}
+
+h1{
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
 h2{

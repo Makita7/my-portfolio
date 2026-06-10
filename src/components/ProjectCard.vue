@@ -31,7 +31,7 @@ defineOptions({ inheritAttrs: false })
     class="d-md-flex card align-center"
     :style="`border-color: ${props.color};`"
   >
-    <v-col class="pa-0 ma-0">
+    <v-col class="pa-0 ma-0 overflow-hidden rounded-l-2xl">
       <img :src="props.data.img" alt="project cover" class="cover" />
     </v-col>
     <v-col class="cols-md-7">

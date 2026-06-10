@@ -19,6 +19,7 @@ export type ImageBlock = {
   type: 'img'
   img: string
   alt?: string
+  caption?: string,
 }
 
 export type SubtitleBlock = {

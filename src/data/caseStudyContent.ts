@@ -17,6 +17,7 @@ import diffLogosMood from '@/assets/project-previews/mood-garden/different-logos
 
 // Daily Ground
 import overviewDailyImg from '@/assets/project-previews/daily-ground/daily-ground.png'
+import overviewPreviewDailyImg from '@/assets/project-previews/daily-ground/top-screenshot-summary.png'
 import problemDailyImg from '@/assets/project-previews/daily-ground/daily-ground-food-allergies.png'
 import chooseSeatingDailyGround from '@/assets/project-previews/daily-ground/choose-seating-options.png'
 import menuDailyGround from '@/assets/project-previews/daily-ground/menu-dailyground.png'
@@ -48,10 +49,11 @@ import logoFleur from '@/assets/project-previews/fleur-patisserie/logo-fleur.png
 import type { CaseStudyBlock } from '@/data/caseStudyTypes'
 
 export type CaseStudyOverview = {
+  imgHeader: string
   subtitle: string
-  scope: string
+  tags: string[]
   prototype: string
-  img: string
+  imgPreview: string
   text: string
   text2?: string
   text3?: string
@@ -329,16 +331,17 @@ export const caseStudyContent = {
     },
     sections: {
       overview: {
+        imgHeader: overviewDailyImg,
         subtitle: 'A seamless ordering experience for pickup, dine-in, and delivery.',
-        scope: `End-to-end product vision, experience strategy, behavioral design principles, and scalable feature roadmap`,
+        tags: [`UX/UI Design`, `Mobile`, `Web App`, 'Accessibility', "Design System", "Illustration System"],
         prototype: 'link',
-        img: overviewDailyImg,
+        imgPreview: overviewPreviewDailyImg,
         text: `DailyGround is a mobile app designed to simplify how customers order coffee whether they’re picking up on the go, dining in, or ordering delivery.`,
         text2: `This project is designed to show how thoughtful UX design can help user by lowering friction when ordering on an app, by adapting to different situations that the client might have. From ordering as someone with allergies or just a busy person that needs something on the go or even simplifying reservations for groups.`,
         text3: `A key differentiator of the product is its approach to dietary filtering. Many food ordering apps treat dietary restrictions as an afterthought, making it difficult for users with allergies or preferences to confidently navigate menus. DailyGround integrates dietary filters directly into the browsing experience, allowing users to quickly identify suitable options without needing to check every product manually or ask the waiter multiple times.`,
       },
       problem: [
-        { type: 'img', img: problemDailyImg },
+        { type: 'img', img: problemDailyImg, caption: 'Allergen & Diet Icons for allergen free products.' },
         {
           type: 'list',
           title:
@@ -469,7 +472,7 @@ export const caseStudyContent = {
           type: 'text',
           content: `The color palette is meant to be vibrant, but calming at the same time, so I stayed away from warm colors like reds, oranges and pinks. Soft greens and blues we're chosen with a more vibrant blue as the primary for Mascot lineart, Titles and important details. but paired with the more pastel colors to make the design more robust and not look empty but still within minimalism.`,
         },
-        { type: 'img', img: colorsDailyGround },
+        { type: 'img', img: colorsDailyGround},
         {
           type: 'subtitle',
           subtitle: 'Fonts:',
