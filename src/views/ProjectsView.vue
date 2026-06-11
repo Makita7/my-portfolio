@@ -44,18 +44,18 @@ import { RouterLink } from 'vue-router'
 
 // Date format: YYYY-MM-DD
 const listProjectsFront = ref([
-  {
-    title: 'Date Countdown App',
-    description:
-      "It's a basic countdown app where you can add, edit or delete the dates you want to countdown, I also used VueUse and custom vue Directives",
-    link: 'https://makita7.github.io/date-countdown/',
-    type: 'front',
-    program: 'vue',
-    img: CountdownDate,
-    year: '2025-07-18',
-    frontendMentor: false,
-    tech: ['html', 'css', 'vue'],
-  },
+  // {
+  //   title: 'Date Countdown App',
+  //   description:
+  //     "It's a basic countdown app where you can add, edit or delete the dates you want to countdown, I also used VueUse and custom vue Directives",
+  //   link: 'https://makita7.github.io/date-countdown/',
+  //   type: 'front',
+  //   program: 'vue',
+  //   img: CountdownDate,
+  //   year: '2025-07-18',
+  //   frontendMentor: false,
+  //   tech: ['html', 'css', 'vue'],
+  // },
   {
     title: 'Shoe E-Commerce',
     description:
