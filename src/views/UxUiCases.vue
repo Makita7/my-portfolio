@@ -182,7 +182,7 @@ const getTagColor = (tag: string) => {
 
           <div v-else-if="block.type === 'list'">
             <p class="listTitles mb-2">{{ (block as any).title }}</p>
-            <ul class="custom-list mb-4 ml-6">
+            <ul class="  mb-4 ml-6">
               <li v-for="item in (block as any).items" :key="item">{{ item }}</li>
             </ul>
           </div>
@@ -222,7 +222,7 @@ const getTagColor = (tag: string) => {
           <!-- SIMPLE LIST -->
           <div v-else-if="block.type === 'list'">
             <p class="listTitles mb-2">{{ (block as any).title }}</p>
-            <ul class="custom-list mb-4 ml-6">
+            <ul class="  mb-4 ml-6">
               <li v-for="(item, i) in (block as any).items" :key="i">
                 {{ item }}
               </li>
@@ -267,7 +267,7 @@ const getTagColor = (tag: string) => {
 
           <div v-else-if="block.type === 'list'">
             <p class="listTitles mb-2">{{ (block as any).title }}</p>
-            <ul class="custom-list mb-4 ml-6">
+            <ul class="  mb-4 ml-6">
               <li v-for="item in (block as any).items" :key="item">{{ item }}</li>
             </ul>
           </div>
@@ -306,7 +306,7 @@ const getTagColor = (tag: string) => {
 
           <div v-else-if="block.type === 'list'">
             <p class="listTitles mb-2">{{ (block as any).title }}</p>
-            <ul class="custom-list mb-4 ml-6">
+            <ul class="  mb-4 ml-6">
               <li v-for="item in (block as any).items" :key="item">{{ item }}</li>
             </ul>
           </div>
@@ -350,7 +350,7 @@ const getTagColor = (tag: string) => {
 
           <div v-if="block.type === 'list'">
             <p class="listTitles mb-2">{{ (block as any).title }}</p>
-            <ul class="custom-list mb-4 ml-6">
+            <ul class="  mb-4 ml-6">
               <li v-for="item in (block as any).items" :key="item">{{ item }}</li>
             </ul>
           </div>
@@ -410,6 +410,10 @@ img {
 
 p {
   color: var(--blackish);
+}
+
+ul {
+  list-style-type: disc;
 }
 
 .italic {
