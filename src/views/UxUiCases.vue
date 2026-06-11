@@ -42,6 +42,9 @@ const getTagColor = (tag: string) => {
     case "Illustration System":
       return "bg-[var(--paleLightRed)] font-semibold"
 
+    case "Brand Design":
+      return "bg-[var(--paleBlue)] font-semibold"
+
     default:
       return "bg-gray-300 font-semibold"
   }
@@ -109,7 +112,7 @@ const getTagColor = (tag: string) => {
           hash: '#design',
         }"
       >
-        Design
+        Brand Design
       </RouterLink>
 
       <RouterLink
@@ -136,15 +139,16 @@ const getTagColor = (tag: string) => {
         <p class="pb-2" style="width: 100%">
           <b>{{ caseStudyData?.sections.overview.subtitle }}</b>
         </p>
-        <div class="tags d-flex mb-8">
-          <p v-for="(tag, index) in caseStudyData?.sections.overview.tags" :key="index" class="py-1 px-4 mr-4 rounded-xl tag whitespace-nowrap capitalize" :class="getTagColor(tag)">{{ tag }}</p>
+        <div class="tags d-flex mb-8 flex-wrap">
+          <p v-for="(tag, index) in caseStudyData?.sections.overview.tags" :key="index" class="py-1 px-4 mr-4 mb-2 rounded-xl tag whitespace-nowrap capitalize" :class="getTagColor(tag)">{{ tag }}</p>
         </div>
         <div class="mt-4">
-          <p class="mr-4 mb-2"><b>Mobile Prototype:</b></p>
+          <p class="mr-4 mb-2"><b>Prototype:</b></p>
 
           <div
-            v-if="'mobile' in (caseStudyData?.links || {})"
-            v-html="(caseStudyData?.links as any).mobile"
+            v-if="caseStudyData?.links"
+            v-html="caseStudyData?.links"
+            class="mb-6"
           />
         </div>
         <img
@@ -287,7 +291,7 @@ const getTagColor = (tag: string) => {
       </section>
 
       <section id="design">
-        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">Design:</p>
+        <p class="sectionTitles mb-4" :style="`color: ${caseStudyData?.color};`">Brand Design:</p>
         <div v-for="(block, index) in caseStudyData?.sections.design" :key="index">
           <p v-if="block.type === 'subtitle'" class="subtitle">{{ block.subtitle }}</p>
           <p v-else-if="block.type === 'text'" class="mb-4">
@@ -396,6 +400,7 @@ const getTagColor = (tag: string) => {
 img {
   width: 100%;
   margin: 2rem 0;
+  border-radius: 1rem;
 }
 
 .img-caption{

@@ -53,7 +53,7 @@ export type CaseStudyOverview = {
   subtitle: string
   tags: string[]
   prototype: string
-  imgPreview: string
+  imgPreview?: string
   text: string
   text2?: string
   text3?: string
@@ -72,11 +72,7 @@ export type CaseStudySections = {
 export type CaseStudy = {
   title: string
   color: string
-  links?: {
-    mobile?: string
-    web?: string
-    tablet?: string
-  }
+  links?: string
   sections: CaseStudySections
 }
 
@@ -84,16 +80,13 @@ export const caseStudyContent = {
   'mood-garden': {
     title: 'Mood Garden',
     color: '#B80016',
-    links: {
-      mobile:
-        'https://www.figma.com/proto/yD9JmMrtMHLTVK6LogI0Q3/Mood-Garden?node-id=78-1499&p=f&viewport=268%2C356%2C0.07&t=q4m3oi0pNAuyzREH-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=341%3A3657',
-    },
+    links: '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/yD9JmMrtMHLTVK6LogI0Q3/Mood-Garden?node-id=341-3695&p=f&viewport=651%2C177%2C0.05&scaling=scale-down&content-scaling=fixed&starting-point-node-id=341%3A3657&page-id=78%3A1499&embed-host=share" allowfullscreen></iframe>',
     sections: {
       overview: {
+        imgHeader: overviewMoodImg,
         subtitle: 'Mood Tracking App for Mobile',
-        scope: `Product vision, UX framework, emotional model design, interaction concepts`,
+        tags: [`Mobile`, 'Accesability', 'Design System', 'Illustration System', 'Brand Design'],
         prototype: 'link',
-        img: overviewMoodImg,
         text: `Mood garden is designed to help users visualize, understand and reflect on their emotions over time. Traditional mood tracking charts can be rigid and boring at times, many people struggle to stay consistent, specially in an era where everything is stimulating. That's why in this app the emotions are represented by colorful flowers to help the user connect with them instead of it being just some letters on a page.`,
         text2: ``,
         text3: ``,
@@ -324,16 +317,12 @@ export const caseStudyContent = {
   'daily-ground': {
     title: 'DailyGround.',
     color: '#1D70C4',
-    links: {
-      mobile:
-        '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=66-717&viewport=3137%2C805%2C0.19&scaling=scale-down&content-scaling=fixed&starting-point-node-id=66%3A717&page-id=66%3A477&embed-host=share" allowfullscreen></iframe>',
-      web: 'https://www.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=783-16999&p=f&viewport=3064%2C680%2C0.19&t=5PXRrZGuiBvFjJ2H-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=783%3A17738',
-    },
+    links: '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/iiQMBW71CFwwjwxsDChSqy/DailyGround.?node-id=66-717&viewport=3137%2C805%2C0.19&scaling=scale-down&content-scaling=fixed&starting-point-node-id=66%3A717&page-id=66%3A477&embed-host=share" allowfullscreen></iframe>',
     sections: {
       overview: {
         imgHeader: overviewDailyImg,
         subtitle: 'A seamless ordering experience for pickup, dine-in, and delivery.',
-        tags: [`UX/UI Design`, `Mobile`, `Web App`, 'Accessibility', "Design System", "Illustration System"],
+        tags: [`UX/UI Design`, `Mobile`, `Web App`, 'Accessibility', "Design System", "Illustration System", "Brand Design"],
         prototype: 'link',
         imgPreview: overviewPreviewDailyImg,
         text: `DailyGround is a mobile app designed to simplify how customers order coffee whether they’re picking up on the go, dining in, or ordering delivery.`,
@@ -377,6 +366,11 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
+            "As a person with celiac disease it is very difficult to find clear information online if a product is or isn't gluten free. I've talked with other people that have other eating restrictions and they also face difficulty when eating out or ordering from apps. That's why the filtering in this app is very important and intentional, cute icons we're designed for each restriction accompanied by a clear label so that people can know what they each mean. It makes it clear and easy to understand.",
+        },
+        {
+          type: 'text',
+          content:
             'The login is meant to be easy so that the client can navigate quickly to the menu for ordering.',
         },
         {
@@ -397,11 +391,6 @@ export const caseStudyContent = {
             'At the blow the tabs are the active filters and also the button to select or unselect filters, this makes it easy and less stressful.',
         },
         { type: 'img', img: menufilteredDailyGround },
-        {
-          type: 'text',
-          content:
-            "As a person with celiac disease it is very difficult to find clear information online if a product is or isn't gluten free. I've talked with other people that have other eating restrictions and they also face difficulty when eating out or ordering from apps. That's why the filtering in this app is very important and intentional, cute icons we're designed for each restriction accompanied by a clear label so that people can know what they each mean. It makes it clear and easy to understand.",
-        },
         {
           type: 'text',
           content:
@@ -500,17 +489,13 @@ export const caseStudyContent = {
   'fleur-patisserie': {
     title: 'Fleur Patisserie',
     color: '#984C3E',
-    links: {
-      web: 'https://www.figma.com/proto/KCSRr5bHFZiTVGhdaDcGQd/Fleur-Patisserie?node-id=0-1&p=f&viewport=622%2C-79%2C0.07&t=9NEH7XukGbu9hvKR-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=84%3A609&show-proto-sidebar=1',
-      mobile:
-        'https://www.figma.com/proto/KCSRr5bHFZiTVGhdaDcGQd/Fleur-Patisserie?node-id=88-828&p=f&viewport=622%2C-79%2C0.07&t=9NEH7XukGbu9hvKR-0&scaling=scale-down&content-scaling=fixed&starting-point-node-id=88%3A827&show-proto-sidebar=1',
-    },
+    links: '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="450" src="https://embed.figma.com/proto/KCSRr5bHFZiTVGhdaDcGQd/Fleur-Patisserie?node-id=3-2&p=f&viewport=766%2C196%2C0.06&scaling=scale-down&content-scaling=fixed&starting-point-node-id=84%3A609&show-proto-sidebar=1&page-id=0%3A1&embed-host=share" allowfullscreen></iframe>',
     sections: {
       overview: {
+        imgHeader: overviewFleurImg,
         subtitle: 'Botanical inspired French Cafe',
-        scope: `Product Design, UX framework, UI Design, Prototype in Figma, and Development of Page`,
+        tags: [`UX/UI Design`, 'Web App', 'Accesability', 'Design System', 'Brand Design'],
         prototype: 'link',
-        img: overviewFleurImg,
         text: `Fleur Patisserie is a high-end, botanical-inspired cafe that blends nature, French pastries, and signature coffee blends. Reflecting the connection with nature by combining French pastry traditions and seasonal ingredient.`,
         text2: ``,
         text3: ``,
