@@ -28,11 +28,21 @@ const router = createRouter({
       ]
     },
   ],
-  scrollBehavior(to) {
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+        top: 80,
+      }
+    }
+
     return {
-      el: to.hash,
-      behavior: 'smooth',
-      top: 80,
+      top: 0,
     }
   }
 })
