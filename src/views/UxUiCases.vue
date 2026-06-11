@@ -126,7 +126,7 @@ const getTagColor = (tag: string) => {
         Potential Expansion
       </RouterLink>
     </v-col>
-    <v-col class="customPadding">
+    <v-col class="customPadding" style="max-width: 1000px;">
       <section id="overview">
         <img
           v-if="caseStudyData?.sections.overview.imgHeader"
@@ -196,11 +196,11 @@ const getTagColor = (tag: string) => {
           <div v-else-if="block.type === 'img'">
             <img
               :src="(block as any).img"
-              :alt="(block as any).alt"
+              :alt="(block as any).caption"
               class="caseStudyImg"
               :class="(block as any).caption ? 'img-caption' : ''"
             />
-            <p v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</p>
+            <figcaption v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</figcaption>
           </div>
         </div>
       </section>
@@ -240,11 +240,11 @@ const getTagColor = (tag: string) => {
            <div v-else-if="block.type === 'img'">
              <img
                :src="(block as any).img"
-               :alt="(block as any).alt"
+               :alt="(block as any).caption"
                class="caseStudyImg"
                :class="(block as any).caption ? 'img-caption' : ''"
              />
-             <p v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</p>
+             <figcaption v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</figcaption>
            </div>
         </div>
       </section>
@@ -281,11 +281,11 @@ const getTagColor = (tag: string) => {
           <div v-else-if="block.type === 'img'">
              <img
                :src="(block as any).img"
-               :alt="(block as any).alt"
+               :alt="(block as any).caption"
                class="caseStudyImg"
                :class="(block as any).caption ? 'img-caption' : ''"
              />
-             <p v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</p>
+              <figcaption v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</figcaption>
           </div>
         </div>
       </section>
@@ -320,11 +320,11 @@ const getTagColor = (tag: string) => {
           <div v-else-if="block.type === 'img'">
              <img
                :src="(block as any).img"
-               :alt="(block as any).alt"
+               :alt="(block as any).caption"
                class="caseStudyImg"
                :class="(block as any).caption ? 'img-caption' : ''"
              />
-             <p v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</p>
+              <figcaption v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</figcaption>
            </div>
         </div>
       </section>
@@ -364,11 +364,11 @@ const getTagColor = (tag: string) => {
           <div v-else-if="block.type === 'img'">
              <img
                :src="(block as any).img"
-               :alt="(block as any).alt"
+               :alt="(block as any).caption"
                class="caseStudyImg"
                :class="(block as any).caption ? 'img-caption' : ''"
              />
-             <p v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</p>
+              <figcaption v-if="(block as any).caption" class="text-center italic mb-8">{{ (block as any).caption }}</figcaption>
           </div>
         </div>
       </section>
@@ -380,8 +380,8 @@ const getTagColor = (tag: string) => {
 <style scoped>
 .sticky-sidebar {
   position: sticky;
-  top: 3rem;
-  left: 2rem;
+  top: 4rem;
+  left: 5rem;
   height: fit-content;
 }
 
@@ -470,7 +470,7 @@ section {
   }
 
   .customPadding {
-    margin: 0 15% 0 2%;
+    margin: 0 10% 0 10%;
   }
 }
 

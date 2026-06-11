@@ -330,7 +330,7 @@ export const caseStudyContent = {
         text3: `A key differentiator of the product is its approach to dietary filtering. Many food ordering apps treat dietary restrictions as an afterthought, making it difficult for users with allergies or preferences to confidently navigate menus. DailyGround integrates dietary filters directly into the browsing experience, allowing users to quickly identify suitable options without needing to check every product manually or ask the waiter multiple times.`,
       },
       problem: [
-        { type: 'img', img: problemDailyImg, caption: 'Allergen & Diet Icons for allergen free products.' },
+        { type: 'img', img: problemDailyImg, caption: 'DailyGround promoted inclusivity, accessibility, and transparency through allergen and dietary icons that helped users identify safe products.' },
         {
           type: 'list',
           title:
