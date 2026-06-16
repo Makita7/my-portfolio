@@ -1,18 +1,19 @@
 // Mood Garden
 import overviewMoodImg from '@/assets/project-previews/mood-garden/hero-mood-garden.png'
+import previewMoodImg from '@/assets/project-previews/mood-garden/preview-image.png'
 import problemMoodImg from '@/assets/project-previews/mood-garden/mood-tracker-chart.png'
-import logIn from '@/assets/project-previews/mood-garden/login-screens.jpg'
-import logginMood from '@/assets/project-previews/mood-garden/logging-mood.jpg'
-import daily from '@/assets/project-previews/mood-garden/Daily.jpg'
-import month from '@/assets/project-previews/mood-garden/Monthly.jpg'
-import insight from '@/assets/project-previews/mood-garden/glimmer-Trigger.jpg'
+import logIn from '@/assets/project-previews/mood-garden/login-screens.png'
+import logginMood from '@/assets/project-previews/mood-garden/logging-mood.png'
+import daily from '@/assets/project-previews/mood-garden/daily.png'
+import month from '@/assets/project-previews/mood-garden/monthly.png'
+import insight from '@/assets/project-previews/mood-garden/glimmer-Trigger.png'
 import moodCycle from '@/assets/project-previews/mood-garden/mood-garden-process.png'
-import settingMood from '@/assets/project-previews/mood-garden/Settings.jpg'
+import settingMood from '@/assets/project-previews/mood-garden/Settings.png'
 import moodReflection from '@/assets/project-previews/mood-garden/mood-garden-reflection.png'
 import logoMood from '@/assets/project-previews/mood-garden/logo-design.jpg'
 import colorsMood from '@/assets/project-previews/mood-garden/color-palette.jpg'
 import fontsMood from '@/assets/project-previews/mood-garden/Fonts.jpg'
-import animationsMood from '@/assets/project-previews/mood-garden/animation-keyframes.jpg'
+import animationsMood from '@/assets/project-previews/mood-garden/animation-keyframes.png'
 import diffLogosMood from '@/assets/project-previews/mood-garden/different-logos.jpg'
 
 // Daily Ground
@@ -35,6 +36,7 @@ import fontsDailyGround from '@/assets/project-previews/daily-ground/fonts-daily
 // Fleur Patisserie
 import overviewFleurImg from '@/assets/project-previews/fleur-patisserie/hero-fleur.jpg'
 import twoColumnsFleur from '@/assets/project-previews/fleur-patisserie/two-columns-fleur.png'
+import overviewPreviewFleurImg from '@/assets/project-previews/fleur-patisserie/preview-screens.png'
 import twoColumnsMobileFleur from '@/assets/project-previews/fleur-patisserie/two-columns-mobile-fleur.png'
 import gardenPageFleur from '@/assets/project-previews/fleur-patisserie/garden-fleur.png'
 import aboutPageFleur from '@/assets/project-previews/fleur-patisserie/about-fleur.png'
@@ -84,6 +86,7 @@ export const caseStudyContent = {
     sections: {
       overview: {
         imgHeader: overviewMoodImg,
+        imgPreview: previewMoodImg,
         subtitle: 'Mood Tracking App for Mobile',
         tags: [`Mobile`, 'Accesability', 'Design System', 'Illustration System', 'Brand Design'],
         prototype: 'link',
@@ -494,7 +497,8 @@ export const caseStudyContent = {
       overview: {
         imgHeader: overviewFleurImg,
         subtitle: 'Botanical inspired French Cafe',
-        tags: [`UX/UI Design`, 'Web App', 'Accesability', 'Design System', 'Brand Design'],
+        imgPreview: overviewPreviewFleurImg,
+        tags: [`UX/UI Design`, 'Web App', `Mobile`, 'Accesability', 'Design System', 'Brand Design'],
         prototype: 'link',
         text: `Fleur Patisserie is a high-end, botanical-inspired cafe that blends nature, French pastries, and signature coffee blends. Reflecting the connection with nature by combining French pastry traditions and seasonal ingredient.`,
         text2: ``,
