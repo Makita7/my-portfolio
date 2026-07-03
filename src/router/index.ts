@@ -25,6 +25,11 @@ const router = createRouter({
           name: 'UxUiCases',
           component: () => import('../views/UxUiCases.vue'),
         },
+        {
+          path: '/projects/:slug',
+          name: 'FrontView',
+          component: () => import('../views/FrontView.vue'),
+        },
       ]
     },
   ],

@@ -39,7 +39,7 @@ defineOptions({ inheritAttrs: false })
       <p>{{ props.data.description }}</p>
       <div class="d-flex align-center flex-wrap mt-1">
         <div class="font-weight-bold d-flex align-center">
-          <p v-if="props.data.type === 'front'" class="mr-2">Link:</p>
+          <p v-if="props.data.type === 'front'" class="mr-2">Live Link:</p>
           <div v-if="props.data.type === 'front'" class="d-flex align-center">
             <g href="https://github.com/Makita7" class="filter github">
               <img src="@/assets/icons/github.svg" alt="github link" class="ml-2 pt-1" />

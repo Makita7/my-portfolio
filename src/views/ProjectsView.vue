@@ -7,7 +7,7 @@ const projectType = ref(true)
 const toggleType = () => (projectType.value = !projectType.value)
 
 const colors = ref<string[]>(['#F55D3E', '#F6AC42', '#7EBC89', '#0069a2'])
-const colorsFront = ref<string[]>(['#FF9883', '#C1DBB3', '#F2C078', '#a5dfff'])
+// const colorsFront = ref<string[]>(['#FF9883', '#C1DBB3', '#F2C078', '#a5dfff'])
 const display = useDisplay()
 
 const amountCards = ref(6)
@@ -34,42 +34,15 @@ onMounted(() => {
 import SpaceImg from '@/assets/project-previews/space-tourism.jpg'
 import StepFormImg from '@/assets/project-previews/step-form.jpg'
 import TipCalculatorImg from '@/assets/project-previews/tip-calculator.jpg'
-import ShoeECommerce from '@/assets/project-previews/shoe-e-commerce.jpg'
-import CountdownDate from '@/assets/project-previews/countdownDate.jpg'
-import TomaatImg from '@/assets/project-previews/tomaat.jpg'
 import MoodGardenImg from '@/assets/project-previews/mood-garden.png'
 import DailyGroundImg from '@/assets/project-previews/daily-ground.png'
 import FleurPatiserieImg from '@/assets/project-previews/fleur-patisserie.png'
-import { RouterLink } from 'vue-router'
 
 // Date format: YYYY-MM-DD
 const listProjectsFront = ref([
-  // {
-  //   title: 'Date Countdown App',
-  //   description:
-  //     "It's a basic countdown app where you can add, edit or delete the dates you want to countdown, I also used VueUse and custom vue Directives",
-  //   link: 'https://makita7.github.io/date-countdown/',
-  //   type: 'front',
-  //   program: 'vue',
-  //   img: CountdownDate,
-  //   year: '2025-07-18',
-  //   frontendMentor: false,
-  //   tech: ['html', 'css', 'vue'],
-  // },
-  {
-    title: 'Shoe E-Commerce',
-    description:
-      'Basic e-commerce site for a fictional shoe store, with cart and checkout functionality',
-    link: 'https://makita7.github.io/ecommerce-product-react/',
-    type: 'front',
-    program: 'react',
-    img: ShoeECommerce,
-    year: '2025-05-27',
-    frontendMentor: true,
-    tech: ['html', 'css', 'react'],
-  },
   {
     title: 'Step Form',
+    to: 'step-form',
     description: 'Sign Up form for with steps and diferent preferences for user',
     link: 'https://makita7.github.io/stepForm/',
     type: 'front',
@@ -81,6 +54,7 @@ const listProjectsFront = ref([
   },
   {
     title: 'Space Tourism',
+    to: 'space-tourism',
     description: 'Landing page for a fictional page about space tourism',
     link: 'https://makita7.github.io/space-tourism-site/',
     type: 'front',
@@ -93,6 +67,7 @@ const listProjectsFront = ref([
 
   {
     title: 'Tip Calculator',
+    to: 'tip-calculator',
     description:
       'Calculator to help split tips depending on percentage of bill that wants to be given',
     link: 'https://makita7.github.io/Tip-Calculator/',
@@ -251,8 +226,7 @@ const listProjectsUxUi = ref([
           v-if="!projectType"
           v-for="(i, index) in listProjectsFront"
           :data="i"
-          :href="i.link"
-          target="_blank"
+          :to="{ name: 'FrontView', params: { slug: i.to } }"
           :key="index"
           :color="cardColors[index]"
           class="card"

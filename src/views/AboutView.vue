@@ -29,6 +29,13 @@ const TechList = [
       <h2 class="mt-4">Tech</h2>
       <div class="d-flex justify-md-start justify-sm-center flex-wrap">
         <div class="icon">
+          <v-tooltip text="Figma" location="bottom">
+            <template v-slot:activator="{ props }">
+              <img v-bind="props" src="@/assets/icons/figma.svg" alt="figma icon" class="pr-4" style="height: 32px" />
+            </template>
+          </v-tooltip>
+        </div>
+        <div class="icon">
           <v-tooltip text="Photoshop" location="bottom">
             <template v-slot:activator="{ props }">
               <img v-bind="props" src="@/assets/icons/photoshop.svg" alt="photoshop icon" class="pr-4" />
@@ -46,13 +53,6 @@ const TechList = [
           <v-tooltip text="After Effects" location="bottom">
             <template v-slot:activator="{ props }">
               <img v-bind="props" src="@/assets/icons/after-effects.svg" alt="after effects icon" class="pr-4" />
-            </template>
-          </v-tooltip>
-        </div>
-        <div class="icon">
-          <v-tooltip text="Figma" location="bottom">
-            <template v-slot:activator="{ props }">
-              <img v-bind="props" src="@/assets/icons/figma.svg" alt="figma icon" class="pr-4" style="height: 32px" />
             </template>
           </v-tooltip>
         </div>
