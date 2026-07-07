@@ -48,6 +48,23 @@ import colorFleur from '@/assets/project-previews/fleur-patisserie/color-palette
 import bottomFleur from '@/assets/project-previews/fleur-patisserie/bottom-fleur.png'
 import logoFleur from '@/assets/project-previews/fleur-patisserie/logo-fleur.png'
 
+//The Edition
+import overviewHeaderEdition from '@/assets/project-previews/the-edition/edition-header.jpg'
+import overviewPreviewEdition from '@/assets/project-previews/the-edition/edition-header-preview.jpg'
+import headerEdition from '@/assets/project-previews/the-edition/edition-header.png'
+import studioPageEdition from '@/assets/project-previews/the-edition/edition-studio-page.jpg'
+import servicesPageEdition from '@/assets/project-previews/the-edition/edition-services-page.jpg'
+import storiesPageEdition from '@/assets/project-previews/the-edition/edition-stories-page.jpg'
+import bookingPageEdition from '@/assets/project-previews/the-edition/edition-booking-page.jpg'
+import profilePageEdition from '@/assets/project-previews/the-edition/edition-profile-page.jpg'
+import timelineEdition from '@/assets/project-previews/the-edition/edition-timeline-deliverables-page.jpg'
+import sessionsPageEdition from '@/assets/project-previews/the-edition/edition-sessions-page.jpg'
+import invoicesPageEdition from '@/assets/project-previews/the-edition/edition-invoices-contracts-page.jpg'
+import colorEdition from '@/assets/project-previews/the-edition/edition-color-palette.jpg'
+import FontEdition from '@/assets/project-previews/the-edition/edition-fonts.jpg'
+import LogoEdition from '@/assets/project-previews/the-edition/edition-logo.jpg'
+
+
 import type { CaseStudyBlock } from '@/data/caseStudyTypes'
 
 export type CaseStudyOverview = {
@@ -696,6 +713,291 @@ export const caseStudyContent = {
             'This is not a café designed for movement or noise, but for those seeking a quiet escape from daily life. A small, peaceful space to pause and rest.',
         },
         { type: 'img', img: bottomFleur },
+      ],
+    },
+  },
+  'the-edition': {
+    title: 'The Edition',
+    color: '#5E214E',
+    links: '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/m0FYAJ1USxZr0ccXJKmUtl/The-Edition?page-id=0%3A1&node-id=1-2&p=f&viewport=79%2C-941%2C0.31&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&show-proto-sidebar=1&embed-host=share" allowfullscreen></iframe>',
+    sections: {
+      overview: {
+        imgHeader: overviewHeaderEdition,
+        subtitle: 'Photography studio website and client portal for reservation and gallery delivery',
+        imgPreview: overviewPreviewEdition,
+        tags: [`UX/UI Design`, 'Web App', 'Accesability', 'Design System', 'Brand Design'],
+        prototype: 'link',
+        text: `The Edition is a conceptual photography studio website and client portal designed to simplify the journey from reservation to gallery delivery. The platform combines an editorial-inspired visual identity with a user-centered booking experience, allowing clients to explore services, customize photography packages, manage projects, and access their delivered galleries from a single place.`,
+        text2: `The project focuses on creating a premium digital experience that reflects the artistic nature of photography while maintaining clarity, accessibility, and ease of use.`,
+        text3: ``,
+      },
+      problem: [
+        {
+          type: 'text',
+          content: `Many photographers or agencies don't have automated systems for the services they provide, this causes many painpoints for both the client and the photographer. The idea of this app is to both automate and communicate efficiently what stage of service is at, what payments are due and when they will receive their products whether they be physical or digital.`,
+        },
+        {
+          type: 'text',
+          content: `By defragmenting the experience it lowers the stress for both parties, efficient service tracking without having to ask questions repeatedly.`,
+        },
+        {
+          type: 'text',
+          content: `The challenge is for the design to respond as many posible questions for the client as posible while still being intuitive to navigate and interact with.`,
+        },
+      ],
+      goals: [
+        {
+          type: 'list',
+          title: '',
+          items: [
+            'Discover photography services through an engaging editorial interface',
+            'Compare service packages with confidence',
+            'Book sessions through a guided, low-friction process',
+            'Track upcoming projects and deliveries from a personalized client portal',
+            'Track payments and due dates',
+            'Reinforce trust through transparency, organization, and thoughtful communication',
+          ],
+        },
+      ],
+      'UX-decisions': [
+        {
+          type: 'text',
+          content:
+            'Because the site is for a photography agency the site was intended to be clean, minimalistic and editorial. This was maintained thought the webapp for consistency.',
+        },
+        {
+          type: 'img',
+          img: headerEdition,
+          alt: 'page navigation, with navigation drawer open',
+        },
+        {
+          type: 'rich-text',
+          content: `Header and Navigation:`,
+        },
+        {
+          type: 'text',
+          content: 'The header is composed of the button to open the navigation drawer, the logo of the studio in the center, a language icon to change language if needed and user icon for the person to go to their profile to see detail of their services, payments and deliveries.',
+        },
+        {
+          type: 'text',
+          content: 'The navigation drawer is simple with four links: Studio, Services, Stories, and Booking.',
+        },
+        {
+          type: 'text',
+          content: 'Some of the pages like profile have sub navigations, but it was separated into sections for clarity and in order to not unnecessarily over populate the navigation in the header. For this same purpose the Language and Profile icons are outside of the drawer to help the user avoid unnecessary clicks and therefor less friction.',
+        },
+        {
+          type: 'rich-text',
+          content: `Studio:`,
+        },
+        {
+          type: 'text',
+          content: 'Studio is the equivalent of Home for the page, but the user can also navigate here by pressing on the logo in the header.',
+        },
+        {
+          type: 'text',
+          content: 'In this page an overview of the studio to respond to basic questions of the user. For example: What we Do? Who are we? What is our work process? And other details that could inspire the user to want to book with the studio. ',
+        },
+        {
+          type: 'img',
+          img: studioPageEdition,
+        },
+        {
+          type: 'rich-text',
+          content: `Services:`,
+        },
+        {
+          type: 'text',
+          content: `Shows posible services the studio can provide separated into different sections depending on types of clients or specific services. At the end of the page their is a CTA button so that the client doesn't need to go into the Navigation Drawer in case they want to book directly from here.`,
+        },
+        {
+          type: 'img',
+          img: servicesPageEdition,
+        },
+        {
+          type: 'rich-text',
+          content: `Stories:`,
+        },
+        {
+          type: 'text',
+          content: 'This page works as a testimonial of past clients specifying service, client and a short summary of how their experience was with a polished photo of said service. ',
+        },
+        {
+          type: 'text',
+          content: 'It is designed as a scrollable to the side as a virtual album. Buttons were also added to respect WCAG standards, so people with disability can also scroll with a simple click.',
+        },
+        {
+          type: 'img',
+          img: storiesPageEdition,
+          alt: 'horizontal gallery of photoshoots',
+        },
+        {
+          type: 'rich-text',
+          content: `Booking:`,
+        },
+        {
+          type: 'text',
+          content: `It's a step form designed to ask specific data to the client in order to make a booking, it was separated into sections or steps to make it cleaner and avoid infinite scrolling on the page. this helps the user to review the data they input with ease and less stress because less inputs are posible per section. `,
+        },
+        {
+          type: 'text',
+          content: 'Clearer information and less stress in the process helps the user follow through with actually booking.',
+        },
+        {
+          type: 'img',
+          img: bookingPageEdition,
+        },
+        {
+          type: 'rich-text',
+          content: `Profile:`,
+        },
+        {
+          type: 'text',
+          content: `Here the user can see their personal information, booking and settings.
+Here is where the side Navigation is used with nested navigation for clarity and speed when navigating already active bookings or customization.`,
+        },
+        {
+          type: 'img',
+          img: profilePageEdition,
+        },
+        {
+          type: 'text',
+          content: 'Profile has simple contact information, name, email, phone, country and preferred contact method. ',
+        },
+        {
+          type: 'text',
+          content: 'This concept is carried on into Setting where they can manage their notification, as to not get notifications they do not want or need, but offer them in case they prefer them on. Notifications are a very person to person preference so the options are their for them to customize.',
+        },
+        {
+          type: 'text',
+          content: 'Here other preferences are found like privacy, download preferences so it is automated for all download, language & region, and communication preferences. ',
+        },
+        {
+          type: 'text',
+          content: `The last one is particularly important because it's not the intention to bother the user, rather communicate in the most effective way so they don't feel stressed. That's why they can choose their preferred channel, frequency and quiet hours. The idea is that this combined with notification customization will give the user the best experience while getting updated with information about their booking and delivery.`,
+        },
+        {
+          type: 'text',
+          content: 'Too much is annoying and causes the user to turn off all notifications, but too little can leave a bad taste for the user because they can miss important deadlines or deliveries generating annoyance that can cause them to not contract a service again. Since neither are desired outcomes these precautions were taken.',
+        },
+        {
+          type: 'rich-text',
+          content: `My Booking:`,
+        },
+        {
+          type: 'text',
+          content: `This nested section in profile is very important, it's the reason the user is here in the first place, their booking and follow-through of their product.`,
+        },
+        {
+          type: 'text',
+          content: 'The information is separated into 3 sections based on related information and also to limit the scrolling, for this reason all element lists inside each section page a 4 element pagination.',
+        },
+        {
+          type: 'img',
+          img: bookingPageEdition,
+        },
+        {
+          type: 'rich-text',
+          content: `Sessions:`,
+        },
+        {
+          type: 'text',
+          content: 'This section shows the relevant information for upcoming services. Showing cards with contract, deposit and final payment statuses. Also important actions that should be done for the booking to take place. A completion bar is at the top so the user can know how complete or uncomplete their overall process is in regards to the next booking.',
+        },
+        {
+          type: 'text',
+          content: `Bellow that two lists appear, one with the upcoming sessions and a CTA to make new bookings if needed, and another with past sessions and specific information of when, where they occurred, was the involved in the session and how many photos the gallery has. They can also press the button to go directly to that specific gallery from the list. It helps so that the user doesn't need to go into deliverables, avoiding unnecessary clicks. `,
+        },
+        {
+          type: 'img',
+          img: sessionsPageEdition,
+        },
+        {
+          type: 'rich-text',
+          content: `Timeline & Process:`,
+        },
+        {
+          type: 'text',
+          content: 'This section shows the timeline of any active product and the top, shows steps that have been taken and what will be next with due dates, reservation dates and dates of when certain actions were taken. This helps transparency for both sides.',
+        },
+        {
+          type: 'text',
+          content: `After that it shows galleries of future and past services. It shows galleries of past and future services and their status. It's clear which have expired, which will be available soon and which will expire with their due date. Also gives a small detail of how many photos each gallery has. Inside the user will be able to download a single photo or video, view them or batch download if wanted.`,
+        },
+        {
+          type: 'text',
+          content: `Finally deliverables, shows the status of each service deliverable. If printed or a physical element it'll show a tracking button to follow the package or it'll appear delivered. In case of digital products a download button with be enabled if it's ready.`,
+        },
+        {
+          type: 'img',
+          img: timelineEdition,
+        },
+        {
+          type: 'rich-text',
+          content: `Invoices & Contracts:`,
+        },
+        {
+          type: 'text',
+          content: 'Here you can see the invoices and contracts. In case of the invoices you have three cards showing total, paid and outstanding. Below these cards their is a table that shows: element title, due date if aplicable, payment status and a button for payment if needed or a button to download receipt if already paid.',
+        },
+        {
+          type: 'text',
+          content: `In the case of contracts their is a similar table with the corresponding contracts for the different services that were requested with the agency, a title of the service, contract status and a button that will change depending on the status. If it's already signed the user will be able to download, if not it'll be a button that takes the user to e-sign the contract.`,
+        },
+        {
+          type: 'img',
+          img: invoicesPageEdition,
+        },
+      ],
+      design: [
+        {
+          type: 'subtitle',
+          subtitle: 'Color Palette:',
+        },
+        { type: 'img', img: colorEdition },
+        {
+          type: 'text',
+          content: `The Color palette was built around dark colors to emphasize photography as the primary visual element, as not to distract from the colors in them and making the photos colors pop more.`,
+        },
+        {
+          type: 'text',
+          content: `For type the color black for texts, and a deep purple for titles, white is used sparingly in footer or on top of specific dark photos. To help keep enough contrast for it to be legible.`,
+        },
+        {
+          type: 'subtitle',
+          subtitle: 'Fonts:',
+        },
+        {
+          type: 'text',
+          content:
+          `For the fonts I selected a elegant serif font for the titles called "GFS Didot" this helps keep the editorial visual aesthetic, then for subtitles and general text I used "Hanken Grotesk" a sans serif that contrast enough with titles font to generate contrast and hierarchy while maintaining a serious clean aesthetic and high readability for the texts it's used in.`,
+        },
+        { type: 'img', img: FontEdition },
+        {
+          type: 'subtitle',
+          subtitle: 'Logo:',
+        },
+        {
+          type: 'text',
+          content: `The logo was designed to reflect the studio's editorial identity. Inspired by magazine mastheads, it uses a minimal typographic treatment that communicates elegance, professionalism, and timelessness.`,
+        },
+        {
+          type: 'text',
+          content: `Its simplicity allows it to adapt seamlessly across digital interfaces while reinforcing the brand's focus on storytelling through photography.`,
+        },
+        { type: 'img', img: LogoEdition },
+        {
+          type: 'subtitle',
+          subtitle: 'Animation:',
+        },
+        {
+          type: 'text',
+          content: `The animations are fade in frames, the direction of the fade into view will depend on the location of the element on the screen.`,
+        },
+        {
+          type: 'text',
+          content: `Soft fade ins are used to maintain the editorial aesthetic, also all buttons and links have hover animations to help communicate that actions can be taken.`,
+        },
       ],
     },
   },

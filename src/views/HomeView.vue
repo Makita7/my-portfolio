@@ -30,7 +30,7 @@ onMounted(() => {
           UX/UI Designer building thoughtful, <br />
           accessible digital experiences
         </p>
-        <div class="flex justify-center md:justify-end pt-4 md:mr-3">
+        <div class="flex justify-end pt-4 md:mr-3">
           <RouterLink :to="{ path:'/', hash:'#projects'}" class="">
             <button class="btnCTA text-white px-4 py-2 rounded-lg block">
               Explore My Work
