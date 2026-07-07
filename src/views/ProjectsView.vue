@@ -37,6 +37,7 @@ import TipCalculatorImg from '@/assets/project-previews/tip-calculator.jpg'
 import MoodGardenImg from '@/assets/project-previews/mood-garden.png'
 import DailyGroundImg from '@/assets/project-previews/daily-ground.png'
 import FleurPatiserieImg from '@/assets/project-previews/fleur-patisserie.png'
+import TheEditionImg from '@/assets/project-previews/the-edition.jpg';
 
 // Date format: YYYY-MM-DD
 const listProjectsFront = ref([
@@ -81,72 +82,53 @@ const listProjectsFront = ref([
 ])
 
 const listProjectsUxUi = ref([
-  // {
-  //   title: "Tomaat.",
-  //   description: "Pomodoro method study app with accomodations for ADHD and Autism",
-  //   links: {
-  //     mobile: "sdfsdf",
-  //   },
-  //   type: "ux",
-  //   program: "figma",
-  //   img: TomaatImg,
-  //   year: "2025-05-12",
-  //   frontendMentor: false,
-  //   tech: ["figma", "photoshop", "illustrator"],
-  //   caseStudy: "sasa",
-  // },
-    {
+  {
+    title: 'The Edition',
+    to: 'the-edition',
+    description:
+      'Photography studio website and client portal for reservation and gallery delivery.',
+    type: 'ux',
+    program: 'figma',
+    img: TheEditionImg,
+    year: '2026-06-30',
+    frontendMentor: false,
+    tech: ['figma', 'photoshop'],
+  },
+  {
     title: 'Fleur Patisserie',
     to: 'fleur-patisserie',
     description:
       'App for a high end Botanical inspired French Cafe, virtual menu and cafe institutional information.',
-    links: {
-      web: 'sdfsdf',
-      mobile: 'sdfsdf',
-    },
     type: 'ux',
     program: 'figma',
     img: FleurPatiserieImg,
-    year: '2025-05-12',
+    year: '2026-05-12',
     frontendMentor: false,
     tech: ['figma', 'photoshop', 'illustrator'],
-    caseStudy:
-      'https://docs.google.com/document/d/1x8RcqWXGkLA2D9070pZotmHrXXgNQzHhf0D-WOGhCQ8/edit?usp=sharing',
   },
   {
     title: 'DailyGround.',
     to: 'daily-ground',
     description:
       'App for booking or ordering from coffee shops and choosing how to get order. Similar to UberEats or PedidosYa',
-    links: {
-      web: 'sdfsdf',
-      mobile: 'sdfsdf',
-    },
     type: 'ux',
     program: 'figma',
     img: DailyGroundImg,
-    year: '2025-05-12',
+    year: '2026-03-24',
     frontendMentor: false,
     tech: ['figma', 'photoshop', 'illustrator'],
-    caseStudy:
-      'https://docs.google.com/document/d/1x8RcqWXGkLA2D9070pZotmHrXXgNQzHhf0D-WOGhCQ8/edit?usp=sharing',
   },
   {
     title: 'MoodGarden',
     to: 'mood-garden',
     description:
       'Colorful app for tracking emotions, triggers and glimmers. Using small animations to lighten users interactions',
-    links: {
-      mobile: 'sdfsdf',
-    },
     type: 'ux',
     program: 'figma',
     img: MoodGardenImg,
-    year: '2025-05-12',
+    year: '2026-01-18',
     frontendMentor: false,
     tech: ['figma', 'photoshop', 'illustrator'],
-    caseStudy:
-      'https://docs.google.com/document/d/1s2UR2-gRqk0CPmRPLaOBuz2Qk3kZpemmAzTvQouyElI/edit?usp=sharing',
   },
 
 
