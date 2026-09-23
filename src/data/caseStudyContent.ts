@@ -734,7 +734,7 @@ export const caseStudyContent = {
       problem: [
         {
           type: 'text',
-          content: `Many photographers or agencies don't have automated systems for the services they provide, this causes many painpoints for both the client and the photographer. The idea of this app is to both automate and communicate efficiently what stage of service is at, what payments are due and when they will receive their products whether they be physical or digital.`,
+          content: `Many photographers or agencies don't have automated systems for the services they provide, this causes many painpoints for both the client and the photographer. The idea of this app is to both automate and communicate efficiently what stage the service is at, what payments are due and when they will receive their products whether they be physical or digital.`,
         },
         {
           type: 'text',
@@ -742,7 +742,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `The challenge is for the design to respond as many possible questions for the client as possible while still being intuitive to navigate and interact with.`,
+          content: `The challenge is for the design to respond as many questions as possible for the client as possible while still being intuitive to navigate and interact with.`,
         },
       ],
       goals: [
@@ -763,7 +763,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'Because the site is for a photography agency the site was intended to be clean, minimalistic and editorial. This was maintained thought the webapp for consistency.',
+            'Because the site is for a photography agency the site was intended to be clean, minimalistic and editorial. This was maintained throughout the web app for consistency.',
         },
         {
           type: 'img',
@@ -866,7 +866,7 @@ Here is where the side Navigation is used with nested navigation for clarity and
         },
         {
           type: 'text',
-          content: 'This concept is carried on into Setting where they can manage their notification, as to not get notifications they do not want or need, but offer them in case they prefer them on. Notifications are a very person to person preference so the options are their for them to customize.',
+          content: 'This concept is carried on into Setting where they can manage their notification, as to not get notifications they do not want or need, but offer them in case they prefer them on. Notifications are a very person to person preference so the options are there for them to customize.',
         },
         {
           type: 'text',
@@ -926,7 +926,7 @@ Here is where the side Navigation is used with nested navigation for clarity and
         },
         {
           type: 'text',
-          content: `Finally deliverables, shows the status of each service deliverable. If printed or a physical element it'll show a tracking button to follow the package or it'll appear delivered. In case of digital products a download button with be enabled if it's ready.`,
+          content: `Finally deliverables, shows the status of each service deliverable. If printed or a physical element it'll show a tracking button to follow the package or it'll appear delivered. In case of digital products a download button will be enabled if it's ready.`,
         },
         {
           type: 'img',
