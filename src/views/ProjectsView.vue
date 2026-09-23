@@ -116,7 +116,7 @@ const listProjectsUxUi = ref([
     img: DailyGroundImg,
     year: '2026-03-24',
     frontendMentor: false,
-    tech: ['figma', 'photoshop', 'illustrator'],
+    tech: ['figma', 'photoshop', 'illustrator', 'procreate'],
   },
   {
     title: 'MoodGarden',
@@ -128,7 +128,7 @@ const listProjectsUxUi = ref([
     img: MoodGardenImg,
     year: '2026-01-18',
     frontendMentor: false,
-    tech: ['figma', 'photoshop', 'illustrator'],
+    tech: ['figma', 'photoshop', 'illustrator', 'procreate'],
   },
 
 

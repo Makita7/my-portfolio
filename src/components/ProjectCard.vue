@@ -110,6 +110,12 @@ defineOptions({ inheritAttrs: false })
             alt="tech after-effects icon"
             class="px-1"
           />
+          <img
+            v-if="props.data?.tech.includes('procreate')"
+            src="@/assets/icons/procreate.svg"
+            alt="tech procreate icon"
+            class="px-1"
+          />
         </div>
       </div>
     </v-col>

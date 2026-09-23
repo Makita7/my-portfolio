@@ -1,12 +1,5 @@
 <script setup lang="ts">
-import PhotoshopImg from "@/assets/icons/photoshop.svg";
 
-const TechList = [
-  {
-    name: "Photoshop",
-    img: PhotoshopImg,
-  },
-];
 </script>
 
 <template>
@@ -18,14 +11,10 @@ const TechList = [
     <v-col class="fadeInLeft">
       <h2>About Me</h2>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam iaculis consequat
-        odio, quis venenatis ligula semper mattis. Aliquam tristique ante sed elit
-        posuere, et pretium urna interdum. Duis et nisi erat. Phasellus tincidunt quis
-        ligula nec lobortis. Aenean bibendum tristique dui, eget dapibus eros ullamcorper
-        ut. Nullam at pharetra libero. Integer ac augue velit. Pellentesque placerat eu
-        massa sed malesuada. Aliquam a porttitor lectus, sit amet faucibus lorem. Sed ac
-        posuere tellus. Etiam non malesuada ligula.
+        UX/UI Designer with 5 years of experience designing user-centered digital products across web and mobile. I work end-to-end: research, problem definition, wireframing, prototyping and UI delivery, collaborating closely with PMs and developers. Strong visual foundations and a frontend background allow me to design scalable, feasible solutions aligned with business goals.
       </p>
+      <p class="mt-2">Based in Argentina</p>
+      <p class="mt-2">Bilingual: English and Spanish</p>
       <h2 class="mt-4">Tech</h2>
       <div class="d-flex justify-md-start justify-sm-center flex-wrap">
         <div class="icon">
@@ -39,6 +28,13 @@ const TechList = [
           <v-tooltip text="Photoshop" location="bottom">
             <template v-slot:activator="{ props }">
               <img v-bind="props" src="@/assets/icons/photoshop.svg" alt="photoshop icon" class="pr-4" />
+            </template>
+          </v-tooltip>
+        </div>
+        <div class="icon">
+          <v-tooltip text="Procreate" location="bottom">
+            <template v-slot:activator="{ props }">
+              <img v-bind="props" src="@/assets/icons/procreate.svg" alt="procreate icon" class="pr-4" />
             </template>
           </v-tooltip>
         </div>

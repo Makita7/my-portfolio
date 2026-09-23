@@ -105,9 +105,9 @@ export const caseStudyContent = {
         imgHeader: overviewMoodImg,
         imgPreview: previewMoodImg,
         subtitle: 'Mood Tracking App for Mobile',
-        tags: [`Mobile`, 'Accesability', 'Design System', 'Illustration System', 'Brand Design'],
+        tags: [`Mobile`, 'accessibility', 'Design System', 'Illustration System', 'Brand Design'],
         prototype: 'link',
-        text: `Mood garden is designed to help users visualize, understand and reflect on their emotions over time. Traditional mood tracking charts can be rigid and boring at times, many people struggle to stay consistent, specially in an era where everything is stimulating. That's why in this app the emotions are represented by colorful flowers to help the user connect with them instead of it being just some letters on a page.`,
+        text: `Mood Garden is designed to help users visualize, understand and reflect on their emotions over time. Traditional mood tracking charts can be rigid and boring at times, many people struggle to stay consistent, especially in an era where everything is stimulating. That's why in this app the emotions are represented by colorful flowers to help the user connect with them instead of it being just some letters on a page.`,
         text2: ``,
         text3: ``,
       },
@@ -148,7 +148,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'The idea was to make this app gentle for it to be more inclusive. Many people who struggle with mental illness, or have some level of neurodivergence are more sensitive to stimulus. So this was a big consideration in the design, it was also meant to be for all ages and in general people that enjoy colorful designs.',
+            'The idea was to make this app gentle for it to be more inclusive. Some users who struggle with mental illness, or have some level of neurodivergence may be more sensitive to stimulus. So this was a big consideration in the design, it was also meant to be for all ages and in general people that enjoy colorful designs.',
         },
         {
           type: 'text',
@@ -159,12 +159,12 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            "Initially their won't be any flowers, but that doesn't last long as soon as they input their first emotion the screen will change into a flower in a vase, representing the emotion.",
+            "Initially there won't be any flowers, but that doesn't last long as soon as they input their first emotion the screen will change into a flower in a vase, representing the emotion.",
         },
         {
           type: 'text',
           content:
-            "To add their emotions they press the button and go straight into another screen where multiple cards are shown each with a flower and a label, after that depending if the emotion is positive of negative another page will fade in and they will be able to fill out the reason for their emotion, either a Glimmer if it's positive and Trigger if negative.",
+            "To add their emotions they press the button and go straight into another screen where multiple cards are shown each with a flower and a label, after that depending if the emotion is positive or negative another page will fade in and they will be able to fill out the reason for their emotion, either a Glimmer if it's positive and Trigger if negative.",
         },
         {
           type: 'description-list',
@@ -197,7 +197,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            "It's we're as the name says only the emotions of today can be seen, by pressing the vase a log will all the daily emotions will pop up with all the details: flower, emotion label, and the glimmer or trigger if the user wrote something, here they can choose to modify their description but not the emotion.",
+            "It's where, as the name suggests, only the emotions of today can be seen, by pressing the vase a log will all the daily emotions will pop up with all the details: flower, emotion label, and the glimmer or trigger if the user wrote something, here they can choose to modify their description but not the emotion.",
         },
         { type: 'img', img: daily },
         {
@@ -207,7 +207,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'Here the flowers selected through out the month can be seen in two ways. One is in a beautiful bouquet, where the prominent flower of each day is visible and the other  way is a calendar format seeing which day each flower belong to. In the calendar option the user will be able to click on any specific day and see the log with the details of each emotion and the description. This will allow them to be able to see an overlook of the whole month without losing the detailed information that was written.',
+            'Here the flowers selected throughout the month can be seen in two ways. One is in a beautiful bouquet, where the prominent flower of each day is visible and the other  way is a calendar format seeing which day each flower belongs to. In the calendar option the user will be able to click on any specific day and see the log with the details of each emotion and the description. This will allow them to be able to see an overlook of the whole month without losing the detailed information that was written.',
         },
         { type: 'img', img: month },
         {
@@ -227,7 +227,7 @@ export const caseStudyContent = {
         { type: 'img', img: insight },
         {
           type: 'text',
-          content: 'This generates a cycle of Awareness, Visualization, Reflection and Regulation.',
+          content: 'The design aims to support a cycle of awareness, visualization, reflection, and regulation.',
         },
         { type: 'img', img: moodCycle },
         {
@@ -243,7 +243,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            "One of the key features is that note of the flowers are ugly, it's not meant to shame the user just identify and therefor reward them for doing so. That way they are incentivized to continue logging their emotions. Logging itself is growth",
+            "One of the key features is that none of the flowers are ugly, it's not meant to shame the user just identify and therefor reward them for doing so. That way they are incentivized to continue logging their emotions. Logging itself is growth",
         },
         { type: 'img', img: moodReflection },
         {
@@ -254,7 +254,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            "This helps the interaction with the app calmer and more relaxed, in setting their is the option to add a notification but the user isn't pressured into it.",
+            "This helps the interaction with the app calmer and more relaxed, in Settings, there is the option to add a notification but the user isn't pressured into it.",
         },
       ],
       design: [
@@ -271,7 +271,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            "two logos we're made for different screen, for the header the logotype is used alone, but for more decorative screens the combination mark, which makes the app more identifiable if you only see the logo on it's own. Following the idea that the emotions are flowers I decided to make the logomark a flower.",
+            "two logos were made for different screen, for the header the logotype is used alone, but for more decorative screens the combination mark, which makes the app more identifiable if you only see the logo on it's own. Following the idea that the emotions are flowers I decided to make the logomark a flower.",
         },
         { type: 'img', img: diffLogosMood },
         {
@@ -281,7 +281,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            "The pallete is meant to be vibrant and cheery, and with a lot of contrast with the white background. This helps it look cleaner and more cheerful, because the flowers are of many colors I decided to choose a slightly darker less saturated color for primary, this way the interface and the background don't oversaturate the design.",
+            "The palette is meant to be vibrant and cheery, and with a lot of contrast with the white background. This helps it look cleaner and more cheerful, because the flowers are of many colors I decided to choose a slightly darker less saturated color for primary, this way the interface and the background don't oversaturate the design.",
         },
         { type: 'img', img: colorsMood },
         {
@@ -301,7 +301,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'Noto Sans for general texts and labels because of it not being formal but very legible, this helps with readability. I choose a font sans serif so it would match better with Sour Gummy giving a general calm and fun aesthetic to the design.',
+            'Noto Sans for general texts and labels because of it not being formal but very legible, this helps with readability. I chose a sans-serif font so it would match better with Sour Gummy giving a general calm and fun aesthetic to the design.',
         },
         { type: 'img', img: fontsMood },
         {
@@ -325,7 +325,7 @@ export const caseStudyContent = {
           type: 'list',
           title: 'In the future the app could grow in the following ways:',
           items: [
-            'More personation availability, like dark mode or more muted colors',
+            'More personalization options, like dark mode or more muted colors',
             'Sharing options for therapists ',
             'Parent-child co-reflection spaces',
             'Shared gardens for couples, so both parties know how the other is doing',
@@ -346,7 +346,7 @@ export const caseStudyContent = {
         prototype: 'link',
         imgPreview: overviewPreviewDailyImg,
         text: `DailyGround is a mobile app designed to simplify how customers order coffee whether they’re picking up on the go, dining in, or ordering delivery.`,
-        text2: `This project is designed to show how thoughtful UX design can help user by lowering friction when ordering on an app, by adapting to different situations that the client might have. From ordering as someone with allergies or just a busy person that needs something on the go or even simplifying reservations for groups.`,
+        text2: `This project is designed to show how thoughtful UX design can help users by lowering friction when ordering on an app, by adapting to different situations that the client might have. From ordering as someone with allergies or just a busy person that needs something on the go or even simplifying reservations for groups.`,
         text3: `A key differentiator of the product is its approach to dietary filtering. Many food ordering apps treat dietary restrictions as an afterthought, making it difficult for users with allergies or preferences to confidently navigate menus. DailyGround integrates dietary filters directly into the browsing experience, allowing users to quickly identify suitable options without needing to check every product manually or ask the waiter multiple times.`,
       },
       problem: [
@@ -386,7 +386,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            "As a person with celiac disease it is very difficult to find clear information online if a product is or isn't gluten free. I've talked with other people that have other eating restrictions and they also face difficulty when eating out or ordering from apps. That's why the filtering in this app is very important and intentional, cute icons we're designed for each restriction accompanied by a clear label so that people can know what they each mean. It makes it clear and easy to understand.",
+            "As a person with celiac disease it is very difficult to find clear information online if a product is or isn't gluten free. I've talked with other people that have other eating restrictions and they also face difficulty when eating out or ordering from apps. That's why the filtering in this app is very important and intentional, cute icons were designed for each restriction accompanied by a clear label so that people can know what they each mean. It makes it clear and easy to understand.",
         },
         {
           type: 'text',
@@ -402,25 +402,25 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'The menu is divided into separate pages that the clients can navigate using the the tabs with clear descriptive labels so clients can get quickly to the products they actually want to purchase.',
+            'The menu is divided into separate pages that the clients can navigate using the tabs with clear descriptive labels so clients can get quickly to the products they actually want to purchase.',
         },
         { type: 'img', img: menuDailyGround },
         {
           type: 'text',
           content:
-            'At the blow the tabs are the active filters and also the button to select or unselect filters, this makes it easy and less stressful.',
+            'Below the tabs are the active filters and also the button to select or unselect filters, this makes it easy and less stressful.',
         },
         { type: 'img', img: menufilteredDailyGround },
         {
           type: 'text',
           content:
-            "The product cards display a photo of said product, the name and the price, once you click on one of them  you will navigate to another page where the product detail can be seen, here is where client can see add-ons, dietary restriction labels, and other customizations that related to the specific product. One the product is customized they can add it on to their order, and if they don't want it or were just curious then they can press the back button at the top left corner to go back to the menu.",
+            "The product cards display a photo of said product, the name and the price, once you click on one of them  you will navigate to another page where the product detail can be seen, here is where client can see add-ons, dietary restriction labels, and other customizations that related to the specific product. Once the product is customized they can add it on to their order, and if they don't want it or were just curious then they can press the back button at the top left corner to go back to the menu.",
         },
         { type: 'img', img: menuDetailsDailyGround },
         {
           type: 'text',
           content:
-            'This helps the clients navigate quickly and without stress trough the menu items until they find what they want to order.',
+            'This helps the clients navigate quickly and without stress through the menu items until they find what they want to order.',
         },
         {
           type: 'text',
@@ -456,12 +456,12 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'For this design I was inspired by coffee shops aesthetic from Korea, they usually use a simplified cartoons with the logo written besides it. Color palletes tend to be vibrant primary colors accompanied with white or very light background.',
+            'For this design I was inspired by coffee shops aesthetic from Korea, they usually use a simplified cartoons with the logo written besides it. Color palettes tend to be vibrant primary colors accompanied with white or very light background.',
         },
         { type: 'img', img: referencesDailyGround },
         {
           type: 'text',
-          content: `Following this inspiration I designed a cute fox mascot inspired on a barista, the target clients are coffee shops, cafes or ice créame shops. For this reason the mascot aligns with it's target stores.`,
+          content: `Following this inspiration I designed a cute fox mascot inspired on a barista, the target clients are coffee shops, cafes or ice cream shops. For this reason the mascot aligns with it's target stores.`,
         },
         { type: 'img', img: mascotDailyGround },
         {
@@ -470,7 +470,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `For this logo I went for a combination mark, I wanted to combine a illustration with a name for the app. Because the target stores are coffee shops and cafes I decided to choose a coffee bean as the Logomark, following the same idea for the Logotype I chose the name "DailyGround.", on of the nice things of going to a coffee shop is being to drink freshly grounded coffee, it's less acidic more aromatic it gives a better experience specially if made by a barista.`,
+          content: `For this logo I went for a combination mark, I wanted to combine a illustration with a name for the app. Because the target stores are coffee shops and cafes I decided to choose a coffee bean as the Logomark, following the same idea for the Logotype I chose the name "DailyGround.", one of the nice things of going to a coffee shop is being to drink freshly grounded coffee, it's less acidic more aromatic it gives a better experience specially if made by a barista.`,
         },
         { type: 'img', img: logoDailyGround },
         {
@@ -479,7 +479,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `The color palette is meant to be vibrant, but calming at the same time, so I stayed away from warm colors like reds, oranges and pinks. Soft greens and blues we're chosen with a more vibrant blue as the primary for Mascot lineart, Titles and important details. but paired with the more pastel colors to make the design more robust and not look empty but still within minimalism.`,
+          content: `The color palette is meant to be vibrant, but calming at the same time, so I stayed away from warm colors like reds, oranges and pinks. Soft greens and blues were chosen with a more vibrant blue as the primary for Mascot lineart, Titles and important details. but paired with the more pastel colors to make the design more robust and not look empty but still within minimalism.`,
         },
         { type: 'img', img: colorsDailyGround},
         {
@@ -488,7 +488,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `I choose Nunito for Headers; Manrope for regular text, labels, buttons, etc. ; and Merriweather for special titles that are only located on more animated screens that needed a more decorative title.`,
+          content: `I chose Nunito for Headers; Manrope for regular text, labels, buttons, etc. ; and Merriweather for special titles that are only located on more animated screens that needed a more decorative title.`,
         },
         {
           type: 'text',
@@ -515,7 +515,7 @@ export const caseStudyContent = {
         imgHeader: overviewFleurImg,
         subtitle: 'Botanical inspired French Cafe',
         imgPreview: overviewPreviewFleurImg,
-        tags: [`UX/UI Design`, 'Web App', `Mobile`, 'Accesability', 'Design System', 'Brand Design'],
+        tags: [`UX/UI Design`, 'Web App', `Mobile`, 'accessibility', 'Design System', 'Brand Design'],
         prototype: 'link',
         text: `Fleur Patisserie is a high-end, botanical-inspired cafe that blends nature, French pastries, and signature coffee blends. Reflecting the connection with nature by combining French pastry traditions and seasonal ingredient.`,
         text2: ``,
@@ -524,7 +524,7 @@ export const caseStudyContent = {
       problem: [
         {
           type: 'text',
-          content: `Most cafe sites are either to complex and hard to navigate, are missing crucial information or have clutter where more information isn't needed, in other words not easy to use. This leaves clients confused and annoyed.`,
+          content: `Most cafe sites are either too complex and hard to navigate, are missing crucial information or have clutter where more information isn't needed, in other words not easy to use. This leaves clients confused and annoyed.`,
         },
         {
           type: 'text',
@@ -532,7 +532,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `In this design I wanted to break away from cluttered sites or making in look overly commercial, that's why the color pallete for the design is selected to be calming and harmonious.`,
+          content: `In this design I wanted to break away from cluttered sites or making in look overly commercial, that's why the color palette for the design is selected to be calming and harmonious.`,
         },
         {
           type: 'text',
@@ -664,15 +664,15 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `I choose Playfair for the titles because it's a more formal font that looks fancy on it's own. This connected with the idea of French tradition and pastries. Still a very legible font but too formal if used on paragraphs`,
+          content: `I chose Playfair for the titles because it's a more formal font that looks fancy on it's own. This connected with the idea of French tradition and pastries. Still a very legible font but too formal if used on paragraphs`,
         },
         {
           type: 'text',
-          content: `For page texts and paragraphs I choose Inter, because it's easy to read gives a more calm and less structured mood because of it being sans serif. But still very delicate when paired with Playfair, it makes Playfair less formal and Playfair makes inter less informal. This really helps because it gives a less rigid feel to the design `,
+          content: `For page texts and paragraphs I chose Inter, because it's easy to read gives a more calm and less structured mood because of it being sans serif. But still very delicate when paired with Playfair, it makes Playfair less formal and Playfair makes inter less informal. This really helps because it gives a less rigid feel to the design `,
         },
         {
           type: 'text',
-          content: `Finally, I choose Inconsolata for numbers and links, specially with the purpose of making them stand out. That's why I adjusted the letter spacing to make ir more different form the other two fonts. But because of this it can't be used for paragraphs.`,
+          content: `Finally, I chose Inconsolata for numbers and links, specially with the purpose of making them stand out. That's why I adjusted the letter spacing to make ir more different form the other two fonts. But because of this it can't be used for paragraphs.`,
         },
         { type: 'img', img: fontsFleur },
         {
@@ -691,7 +691,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `For the color palette I choose muted colors with high contrast against an off white color background. This color was selected for the background to give off a warmer feeling to make the page for welcoming, and the muted color palette made the site more lively with ought loosing legibility of texts and titles.`,
+          content: `For the color palette I chose muted colors with high contrast against an off white color background. This color was selected for the background to give off a warmer feeling to make the page for welcoming, and the muted color palette made the site more lively with ought loosing legibility of texts and titles.`,
         },
         {
           type: 'text',
@@ -725,7 +725,7 @@ export const caseStudyContent = {
         imgHeader: overviewHeaderEdition,
         subtitle: 'Photography studio website and client portal for reservation and gallery delivery',
         imgPreview: overviewPreviewEdition,
-        tags: [`UX/UI Design`, 'Web App', 'Accesability', 'Design System', 'Brand Design'],
+        tags: [`UX/UI Design`, 'Web App', 'accessibility', 'Design System', 'Brand Design'],
         prototype: 'link',
         text: `The Edition is a conceptual photography studio website and client portal designed to simplify the journey from reservation to gallery delivery. The platform combines an editorial-inspired visual identity with a user-centered booking experience, allowing clients to explore services, customize photography packages, manage projects, and access their delivered galleries from a single place.`,
         text2: `The project focuses on creating a premium digital experience that reflects the artistic nature of photography while maintaining clarity, accessibility, and ease of use.`,
@@ -742,7 +742,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `The challenge is for the design to respond as many posible questions for the client as posible while still being intuitive to navigate and interact with.`,
+          content: `The challenge is for the design to respond as many possible questions for the client as possible while still being intuitive to navigate and interact with.`,
         },
       ],
       goals: [
@@ -808,7 +808,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `Shows posible services the studio can provide separated into different sections depending on types of clients or specific services. At the end of the page their is a CTA button so that the client doesn't need to go into the Navigation Drawer in case they want to book directly from here.`,
+          content: `Shows possible services the studio can provide separated into different sections depending on types of clients or specific services. At the end of the page their is a CTA button so that the client doesn't need to go into the Navigation Drawer in case they want to book directly from here.`,
         },
         {
           type: 'img',
@@ -837,7 +837,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `It's a step form designed to ask specific data to the client in order to make a booking, it was separated into sections or steps to make it cleaner and avoid infinite scrolling on the page. this helps the user to review the data they input with ease and less stress because less inputs are posible per section. `,
+          content: `It's a step form designed to ask specific data to the client in order to make a booking, it was separated into sections or steps to make it cleaner and avoid infinite scrolling on the page. this helps the user to review the data they input with ease and less stress because less inputs are possible per section. `,
         },
         {
           type: 'text',
