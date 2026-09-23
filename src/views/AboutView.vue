@@ -11,11 +11,13 @@
     <v-col class="fadeInLeft">
       <h2>About Me</h2>
       <p>
-        UX/UI Designer with 5 years of experience designing user-centered digital products across web and mobile. I work end-to-end: research, problem definition, wireframing, prototyping and UI delivery, collaborating closely with PMs and developers. Strong visual foundations and a frontend background allow me to design scalable, feasible solutions aligned with business goals.
+        UX/UI Designer with 5 years of experience designing user-centered digital products for web and mobile. I work end-to-end: research, problem definition, wireframing, prototyping and UI delivery, collaborating closely with PMs and developers.
+        <br/>
+        My strong visual foundations and frontend background help me design scalable, feasible solutions aligned with user needs and business goals.
       </p>
-      <p class="mt-2">Based in Argentina</p>
+      <p class="mt-2">Based in Mendoza, Argentina</p>
       <p class="mt-2">Bilingual: English and Spanish</p>
-      <h2 class="mt-4">Tech</h2>
+      <h2 class="mt-4">Tools & Tech</h2>
       <div class="d-flex justify-md-start justify-sm-center flex-wrap">
         <div class="icon">
           <v-tooltip text="Figma" location="bottom">
