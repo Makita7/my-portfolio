@@ -8,12 +8,21 @@
     <!-- <a href="https://www.behance.net/sophiamak" class="filter behance" target="_blank">
       <img src="@/assets/icons/behance.svg" alt="behance link" class="pl-4" />
     </a> -->
-    <a href="https://github.com/Makita7" class="filter github" target="_blank">
+    <!-- <a href="https://github.com/Makita7" class="filter github" target="_blank">
       <img src="@/assets/icons/github.svg" alt="github link" class="pl-4" />
-    </a>
+    </a> -->
     <!-- <a href="https://dribbble.com/SofiMakita" class="filter dribble" target="_blank">
       <img type="svg" src="@/assets/icons/dribble.svg" alt="dribble link" class="pl-4" />
     </a> -->
+    <a
+      href="https://wa.me/5492617516812"
+      class="filter whatsapp"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat with Sofi on WhatsApp"
+    >
+      <img src="@/assets/icons/whatsapp.svg" alt="" class="pl-4" />
+    </a>
     <a href="https://www.linkedin.com/in/sofia-makita-348a29172/" class="filter linkedin" target="_blank">
       <img type="svg" src="@/assets/icons/linkedin.svg" alt="linkedin link" class="pl-4" />
     </a>
