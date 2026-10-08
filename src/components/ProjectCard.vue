@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { getTagColor } from '@/data/tagCategoryColors'
 
 interface ProjectData {
   img: string
@@ -9,7 +10,7 @@ interface ProjectData {
   link?: string
   caseStudy?: string
   to?: string
-  tech?: string[]
+  tags?: string[]
 }
 
 const props = defineProps({
@@ -21,6 +22,7 @@ const props = defineProps({
 })
 
 defineOptions({ inheritAttrs: false })
+
 </script>
 
 <template>
@@ -34,7 +36,7 @@ defineOptions({ inheritAttrs: false })
     <v-col class="pa-0 ma-0 overflow-hidden rounded-l-2xl">
       <img :src="props.data.img" alt="project cover" class="cover" />
     </v-col>
-    <v-col class="cols-md-7">
+    <v-col class="cols-md-7 ml-2">
       <p class="title">{{ props.data.title }}</p>
       <p>{{ props.data.description }}</p>
       <div class="d-flex align-center flex-wrap mt-1">
@@ -57,65 +59,15 @@ defineOptions({ inheritAttrs: false })
             </div>
           </div>
         </div>
-        <div v-if="Array.isArray(props.data?.tech)" class="d-flex flex-wrap ml-4 align-center">
-          <p class="font-weight-bold d-flex mr-1">Tech:</p>
-          <img
-            v-if="props.data?.tech.includes('html')"
-            src="@/assets/icons/html.svg"
-            alt="tech html icon"
-            class="px-1"
-          />
-          <img
-            v-if="props.data?.tech.includes('css')"
-            src="@/assets/icons/css.svg"
-            alt="tech css icon"
-            class="px-1"
-          />
-          <img
-            v-if="props.data?.tech.includes('vue')"
-            src="@/assets/icons/vue.svg"
-            alt="tech vue icon"
-            class="px-1"
-          />
-          <img
-            v-if="props.data?.tech.includes('react')"
-            src="@/assets/icons/react.svg"
-            alt="tech react icon"
-            class="px-1"
-          />
-          <img
-            v-if="props.data?.tech.includes('figma')"
-            src="@/assets/icons/figma.svg"
-            alt="tech figma icon"
-            class="px-1"
-            style="height: 32px"
-          />
-          <img
-            v-if="props.data?.tech.includes('photoshop')"
-            src="@/assets/icons/photoshop.svg"
-            alt="tech photoshop icon"
-            class="px-1"
-            style="height: 32px"
-          />
-          <img
-            v-if="props.data?.tech.includes('illustrator')"
-            src="@/assets/icons/illustrator.svg"
-            alt="tech illustrator icon"
-            class="px-1"
-            style="height: 32px"
-          />
-          <img
-            v-if="props.data?.tech.includes('after-effects')"
-            src="@/assets/icons/after-effects.svg"
-            alt="tech after-effects icon"
-            class="px-1"
-          />
-          <img
-            v-if="props.data?.tech.includes('procreate')"
-            src="@/assets/icons/procreate.svg"
-            alt="tech procreate icon"
-            class="px-1"
-          />
+        <div v-if="Array.isArray(props.data?.tags)" class="d-flex flex-wrap ml-4 align-center mt-2">
+          <p
+            v-for="tag in props.data?.tags"
+            :key="tag"
+            class="py-1 px-4 mr-4 mb-2 rounded-xl tag whitespace-nowrap capitalize"
+            :class="getTagColor(tag)"
+          >
+            {{ tag }}
+          </p>
         </div>
       </div>
     </v-col>

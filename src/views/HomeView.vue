@@ -32,7 +32,8 @@ onMounted(() => {
         </p>
         <div class="flex justify-end pt-4 md:mr-3">
           <RouterLink :to="{ path:'/', hash:'#projects'}" class="">
-            <button class="btnCTA text-white px-4 py-2 rounded-lg block">
+            <button class="btnCTA text-white px-4 py-2 rounded-lg flex align-center">
+              <img src="@/assets/icons/search.svg" alt="" class="w-5 h-5 mr-2 invert" />
               Explore My Work
             </button>
           </RouterLink>

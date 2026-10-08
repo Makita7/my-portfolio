@@ -38,37 +38,37 @@ const listProjectsUxUi = ref([
     title: 'The Edittion',
     to: 'the-edittion',
     description:
-      'Photography studio website and client portal for reservation and gallery delivery.',
+      'A booking and gallery delivery portal that gives a photography studio and its clients a place to schedule and receive photos.',
     type: 'ux',
     program: 'figma',
     img: TheEditionImg,
     year: '2026-06-30',
     frontendMentor: false,
-    tech: ['figma', 'photoshop'],
+    tags: ['UX/UI', 'Web', 'Client Portal'],
   },
   {
     title: 'Fleur Patisserie',
     to: 'fleur-patisserie',
     description:
-      'App for a high end Botanical inspired French Cafe, virtual menu and cafe institutional information.',
+      'A virtual menu and café app that lets guests browse, choose, and learn about a French-inspired botanical café before they arrive.',
     type: 'ux',
     program: 'figma',
     img: FleurPatiserieImg,
     year: '2026-05-12',
     frontendMentor: false,
-    tech: ['figma', 'photoshop', 'illustrator'],
+    tags: ['UI', 'Brand Design', 'Landing Page'],
   },
   {
     title: 'DailyGround.',
     to: 'daily-ground',
     description:
-      'App for booking or ordering from coffee shops and choosing how to get order. Similar to UberEats or PedidosYa',
+      'An app for booking a table or ordering ahead from local coffee shops, with a clear choice between pickup and delivery.',
     type: 'ux',
     program: 'figma',
     img: DailyGroundImg,
     year: '2026-03-24',
     frontendMentor: false,
-    tech: ['figma', 'photoshop', 'illustrator', 'procreate'],
+    tags: ['UX/UI', 'Ordering Flow'],
   },
   {
     title: 'MoodGarden',
@@ -80,18 +80,16 @@ const listProjectsUxUi = ref([
     img: MoodGardenImg,
     year: '2026-01-18',
     frontendMentor: false,
-    tech: ['figma', 'photoshop', 'illustrator', 'procreate'],
+    tags: ['UX/UI', 'Mobile'],
   },
-
-
 ])
 </script>
 
 <template>
   <div id="projects" class="mt-4">
     <div v-if="!$route.params.slug" class="projects">
-      <div v-if="display.xs" class="d-flex align-center justify-center fade">
-        <div id="ux-ui-title" class="d-flex fadeTitles">
+      <div class="d-flex align-center justify-center fade">
+        <div id="ux-ui-title" class="d-flex fadeTitles mb-4">
           <img
             src="@/assets/icons/line-md_pencil.svg"
             alt="ux ui icon for title"

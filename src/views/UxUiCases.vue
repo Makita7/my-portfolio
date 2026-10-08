@@ -4,6 +4,7 @@ import { useRoute } from 'vue-router'
 import { caseStudyContent } from '@/data/caseStudyContent'
 import type { CaseStudy } from '@/data/caseStudyContent'
 import { useDisplay } from 'vuetify'
+import { getTagColor } from '@/data/tagCategoryColors'
 
 const route = useRoute()
 const display = useDisplay()
@@ -18,37 +19,6 @@ const caseStudyData = computed<CaseStudy | null>(() => {
 
   return null
 })
-
-const getTagColor = (tag: string) => {
-  switch (tag) {
-    case "UX/UI Design":
-      return "bg-[var(--paleOrange)] font-semibold"
-
-    case "Mobile":
-      return "bg-[var(--paleGreen)] font-semibold"
-
-    case "Web App":
-      return "bg-[var(--paleBlue)] font-semibold"
-
-    case "IOs":
-      return "bg-[var(--blackish)] text-white font-semibold"
-
-    case "Accessibility":
-      return "bg-[var(--orange)] font-semibold"
-
-    case "Design System":
-      return "bg-[var(--brightGreenDark)] text-[var(--greenDark)] font-semibold"
-
-    case "Illustration System":
-      return "bg-[var(--paleLightRed)] font-semibold"
-
-    case "Brand Design":
-      return "bg-[var(--paleBlue)] font-semibold"
-
-    default:
-      return "bg-gray-300 font-semibold"
-  }
-}
 
 </script>
 
