@@ -3,9 +3,6 @@ import { ref, onMounted } from 'vue'
 import ProjectCard from '@/components/ProjectCard.vue'
 import { useDisplay } from 'vuetify'
 
-const projectType = ref(true)
-const toggleType = () => (projectType.value = !projectType.value)
-
 const colors = ref<string[]>(['#F55D3E', '#F6AC42', '#7EBC89', '#0069a2'])
 // const colorsFront = ref<string[]>(['#FF9883', '#C1DBB3', '#F2C078', '#a5dfff'])
 const display = useDisplay()
@@ -31,60 +28,15 @@ onMounted(() => {
   selectNum()
 })
 
-import SpaceImg from '@/assets/project-previews/space-tourism.jpg'
-import StepFormImg from '@/assets/project-previews/step-form.jpg'
-import TipCalculatorImg from '@/assets/project-previews/tip-calculator.jpg'
 import MoodGardenImg from '@/assets/project-previews/mood-garden.png'
 import DailyGroundImg from '@/assets/project-previews/daily-ground.png'
 import FleurPatiserieImg from '@/assets/project-previews/fleur-patisserie.png'
 import TheEditionImg from '@/assets/project-previews/the-edition.jpg';
 
-// Date format: YYYY-MM-DD
-const listProjectsFront = ref([
-  {
-    title: 'Step Form',
-    to: 'step-form',
-    description: 'Sign Up form for with steps and diferent preferences for user',
-    link: 'https://makita7.github.io/stepForm/',
-    type: 'front',
-    program: 'vue',
-    img: StepFormImg,
-    year: '2024-02-17',
-    frontendMentor: true,
-    tech: ['html', 'css', 'vue'],
-  },
-  {
-    title: 'Space Tourism',
-    to: 'space-tourism',
-    description: 'Landing page for a fictional page about space tourism',
-    link: 'https://makita7.github.io/space-tourism-site/',
-    type: 'front',
-    program: 'vue',
-    img: SpaceImg,
-    year: '2023-08-12',
-    frontendMentor: true,
-    tech: ['html', 'css', 'vue'],
-  },
-
-  {
-    title: 'Tip Calculator',
-    to: 'tip-calculator',
-    description:
-      'Calculator to help split tips depending on percentage of bill that wants to be given',
-    link: 'https://makita7.github.io/Tip-Calculator/',
-    type: 'front',
-    program: 'vue',
-    img: TipCalculatorImg,
-    year: '2023-06-30',
-    frontendMentor: true,
-    tech: ['html', 'css', 'vue'],
-  },
-])
-
 const listProjectsUxUi = ref([
   {
-    title: 'The Edition',
-    to: 'the-edition',
+    title: 'The Edittion',
+    to: 'the-edittion',
     description:
       'Photography studio website and client portal for reservation and gallery delivery.',
     type: 'ux',
@@ -138,85 +90,19 @@ const listProjectsUxUi = ref([
 <template>
   <div id="projects" class="mt-4">
     <div v-if="!$route.params.slug" class="projects">
-      <div v-if="!display.xs" class="d-flex align-center justify-space-between fade">
-        <v-col class="pa-0" id="ux-ui-arrow">
-          <div v-if="!projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
-            <img
-              src="@/assets/icons/plane-arrow.svg"
-              alt="go to icon"
-              class="mr-2"
-              style="transform: rotate(180deg)"
-            />
-            <p class="goto">UX/UI Design</p>
-          </div>
-        </v-col>
-        <v-col class="d-flex justify-center pa-0">
-          <div v-if="projectType" id="ux-ui-title" class="d-flex fadeTitles">
-            <img src="@/assets/icons/line-md_pencil.svg" alt="ux ui icon for title" class="mr-2" />
-            <h2 class="title text-center">UX/UI Design</h2>
-          </div>
-          <div v-if="!projectType" id="ux-ui-title" class="d-flex fadeTitles">
-            <img src="@/assets/icons/frontend.svg" alt="ux ui icon for title" class="mr-2" />
-            <h2 class="title text-center">Frontend</h2>
-          </div>
-        </v-col>
-        <v-col class="d-flex justify-end pa-0" id="front-arrow">
-          <div v-if="projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
-            <p class="goto">Frontend</p>
-            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="ml-2" />
-          </div>
-        </v-col>
-      </div>
-
       <div v-if="display.xs" class="d-flex align-center justify-center fade">
-        <div v-if="projectType" id="ux-ui-title" class="d-flex fadeTitles">
+        <div id="ux-ui-title" class="d-flex fadeTitles">
           <img
             src="@/assets/icons/line-md_pencil.svg"
             alt="ux ui icon for title"
             class="mr-2 icon"
           />
-          <h2 class="title text-center">UX/UI Design</h2>
+          <h2 class="title text-center">My Work</h2>
         </div>
-        <div v-if="!projectType" id="ux-ui-title" class="d-flex fadeTitles">
-          <img src="@/assets/icons/frontend.svg" alt="ux ui icon for title" class="mr-2 icon" />
-          <h2 class="title text-center">Frontend</h2>
-        </div>
-      </div>
-
-      <div v-if="display.xs" class="d-flex align-center justify-space-between fade mt-2">
-        <v-col class="pa-0" id="ux-ui-arrow">
-          <div v-if="!projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
-            <img
-              src="@/assets/icons/plane-arrow.svg"
-              alt="go to icon"
-              class="mr-2"
-              style="transform: rotate(180deg)"
-            />
-            <p class="goto">UX/UI Design</p>
-          </div>
-        </v-col>
-        <v-col class="d-flex justify-end pa-0" id="front-arrow">
-          <div v-if="projectType" @click="toggleType()" class="d-flex arrow fadeTitles">
-            <p class="goto">Frontend</p>
-            <img src="@/assets/icons/plane-arrow.svg" alt="go to icon" class="ml-2" />
-          </div>
-        </v-col>
       </div>
 
       <div>
         <ProjectCard
-          v-if="!projectType"
-          v-for="(i, index) in listProjectsFront"
-          :data="i"
-          :to="{ name: 'FrontView', params: { slug: i.to } }"
-          :key="index"
-          :color="cardColors[index]"
-          class="card"
-          :style="getDelay(index)"
-        />
-
-        <ProjectCard
-          v-if="projectType"
           v-for="(i, index) in listProjectsUxUi"
           :data="i"
           :to="{ name: 'UxUiCases', params: { slug: i.to } }"

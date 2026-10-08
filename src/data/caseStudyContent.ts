@@ -243,7 +243,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            "One of the key features is that none of the flowers are ugly, it's not meant to shame the user just identify and therefor reward them for doing so. That way they are incentivized to continue logging their emotions. Logging itself is growth",
+            "One of the key features is that none of the flowers are ugly, it's not meant to shame the user just identify and therefore reward them for doing so. That way they are incentivized to continue logging their emotions. Logging itself is growth",
         },
         { type: 'img', img: moodReflection },
         {
@@ -513,30 +513,30 @@ export const caseStudyContent = {
     sections: {
       overview: {
         imgHeader: overviewFleurImg,
-        subtitle: 'Botanical inspired French Cafe',
+        subtitle: 'Botanical-Inspired French Cafe',
         imgPreview: overviewPreviewFleurImg,
         tags: [`UX/UI Design`, 'Web App', `Mobile`, 'accessibility', 'Design System', 'Brand Design'],
         prototype: 'link',
-        text: `Fleur Patisserie is a high-end, botanical-inspired cafe that blends nature, French pastries, and signature coffee blends. Reflecting the connection with nature by combining French pastry traditions and seasonal ingredient.`,
+        text: `Fleur Patisserie is a high-end, botanical-inspired cafe that blends nature, French pastries, and signature coffee blends. It reflects a connection with nature by combining French pastry traditions with seasonal ingredients.`,
         text2: ``,
         text3: ``,
       },
       problem: [
         {
           type: 'text',
-          content: `Most cafe sites are either too complex and hard to navigate, are missing crucial information or have clutter where more information isn't needed, in other words not easy to use. This leaves clients confused and annoyed.`,
+          content: `Most cafe sites are either too complex and hard to navigate, are missing crucial information, or are cluttered where more information isn't needed. In other words, they are not easy to use, which leaves clients confused and annoyed.`,
         },
         {
           type: 'text',
-          content: `The idea specially in this cafe because of what the identity is for the clients to have  a pleasant and relaxing experience from start to finish. That will make them want to engage with the space more and become regulars. Which for any business is an ideal circumstance.`,
+          content: `This matters especially for this café because its identity is built around giving clients a pleasant and relaxing experience from start to finish. That experience will make them want to engage with the space more and become regulars, which is an ideal circumstance for any business.`,
         },
         {
           type: 'text',
-          content: `In this design I wanted to break away from cluttered sites or making in look overly commercial, that's why the color palette for the design is selected to be calming and harmonious.`,
+          content: `In this design, I wanted to break away from cluttered sites and avoid making it look overly commercial. That's why the color palette was selected to be calming and harmonious.`,
         },
         {
           type: 'text',
-          content: `Clear navigation and clean sections help the clients to understand where they are and how to navigate to other areas of the Site.`,
+          content: `Clear navigation and clean sections help clients understand where they are and how to get to other areas of the site.`,
         },
       ],
       goals: [
@@ -545,9 +545,9 @@ export const caseStudyContent = {
           title: '',
           items: [
             'The site is meant to be primarily the menu',
-            'Make a site design that reflected the identity of the cafe, a calm space with fresh seasonal ingredients',
-            `Have an easy navigation to that clients don't have pain points while finding what they want, but allowing them to freely explore`,
-            `Contact information for interested parties`,
+            'Make a site design that reflects the identity of the café: calm space with fresh, seasonal ingredients',
+            `Make navigation easy so that clients don't have pain points while finding what they want, while still allowing them to explore freely`,
+            `Provide contact information for interested parties`,
             `Display other activities carried out at the cafe`,
           ],
         },
@@ -556,7 +556,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'I wanted the design to be an editorial style site, so I decided that the sections of the page would be divided into two',
+            'I wanted the design to be an editorial-style site, so I decided to divide the sections of the page into two',
         },
         {
           type: 'img',
@@ -565,12 +565,12 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: 'This made it clean to analyze what you are looking at, zero clutter.',
+          content: 'This made it easy to understand what you are looking at, with zero clutter.',
         },
         {
           type: 'text',
           content:
-            'This also made it very easy to adapt the design for mobile, into a single column, because of it not being content heavy it is still easy to skim through. Here you can see three examples of how the content is reorganized into a single column.',
+            `It also made it very easy to adapt the design for mobile as a single column. Because the content isn't heavy, it is still easy to skim through. Here you can see three examples of how the content is reorganized into a single column.`,
         },
         {
           type: 'img',
@@ -580,11 +580,11 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'To respect the direction of an editorial design, only one photo per menu section. This helps avoid infinite scrolling or getting lost. Because the menu is limited and changes with the seasons, this is an elegant way of displaying the menu items.',
+            'To respect the direction of an editorial design, there is only one photo per menu section. This helps avoid infinite scrolling or getting lost. Because the menu is limited and changes with the seasons, this is an elegant way of displaying the menu items.',
         },
         {
           type: 'text',
-          content: `Each page of the site has a single purpose, that helps navigate to where something is with ought having to go through the whole page, most clients will just enter the menu that's why it's the landing page, keeping the navigation clean will encourage the clients to go to other pages and dig deeper into the information given in the site.`,
+          content: `Each page of the site has a single purpose, which helps clients find what they need without having to go through the whole page. Most clients will just go to the menu, which is why it's the landing page. Keeping the navigation clean will encourage clients to visit other pages and dig deeper into the information on the site.`,
         },
         {
           type: 'rich-text',
@@ -592,7 +592,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `Speaks about the botanical garden itself, it's an informative section of what is done in the garden and how the produce is used`,
+          content: `Speaks about the botanical garden itself. It's an informative section about what is done in the garden and how the produce is used`,
         },
         {
           type: 'img',
@@ -605,7 +605,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `Speaks of why the cafe was founded and what their passion is.`,
+          content: `Speaks about why the café was founded and what its passion is.`,
         },
         {
           type: 'img',
@@ -618,7 +618,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `It's exactly that how to reserve a visit with the cafe / garden and why you should visit if you haven't. It's an important part of the page, specially is the person viewing has not yet come to visit and needs to know more information before visiting or wants to know how to reserve. that's why it has a call to action with a button at the bottom saying: "Reserve a Table".`,
+          content: `This page is exactly what it sounds like: how to reserve a visit to the café and garden, and why you should visit if you haven't. It's an important part of the site, especially if the person viewing has not yet visited and needs more information before coming, or wants to know how to reserve. That's why it has a call-to-action button at the bottom that says "Reserve a Table."`,
         },
         {
           type: 'img',
@@ -631,7 +631,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `Considering that visit already talks about the cafe and why you should visit this section might sound like overkill. But it really isn't because here you have the locations, opening and closing hours of the different cafes and a call to action button to make the reservation. It's clean and short, very good for clients that are coming out of town or even the country and want to visit; with ought neglecting recurrent clients that want a reservation for a special day.`,
+          content: `Considering that the Visit page already talks about the café and why you should visit, this section might sound like overkill, but it really isn't. Here you have the locations, the opening and closing hours of the different cafés, and a call-to-action button to make the reservation. It's clean and short, which is very good for clients who are coming from out of town or even from another country, without neglecting recurrent clients who want a reservation for a special day.`,
         },
         {
           type: 'img',
@@ -644,7 +644,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `It has locations, opening and closing hours the logo and socials for anyone to be able to get quick information from any of the pages.`,
+          content: `It has the locations, opening and closing hours, logo, and socials, so anyone can get quick information from any of the pages.`,
         },
         {
           type: 'img',
@@ -664,15 +664,15 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `I chose Playfair for the titles because it's a more formal font that looks fancy on it's own. This connected with the idea of French tradition and pastries. Still a very legible font but too formal if used on paragraphs`,
+          content: `I chose Playfair for the titles because it's a more formal font that looks fancy on its own. This connected with the idea of French tradition and pastries. It is still very legible, but too formal to use for paragraphs.`,
         },
         {
           type: 'text',
-          content: `For page texts and paragraphs I chose Inter, because it's easy to read gives a more calm and less structured mood because of it being sans serif. But still very delicate when paired with Playfair, it makes Playfair less formal and Playfair makes inter less informal. This really helps because it gives a less rigid feel to the design `,
+          content: `For page text and paragraphs, I chose Inter because it's easy to read and, being sans serif, gives a calmer, less structured mood. It is still very delicate when paired with Playfair: Inter makes Playfair less formal, and Playfair makes Inter less informal. This gives the design a less rigid feel.`,
         },
         {
           type: 'text',
-          content: `Finally, I chose Inconsolata for numbers and links, specially with the purpose of making them stand out. That's why I adjusted the letter spacing to make ir more different form the other two fonts. But because of this it can't be used for paragraphs.`,
+          content: `Finally, I chose Inconsolata for numbers and links, especially to make them stand out. That's why I adjusted the letter spacing to make it more different from the other two fonts. Because of this, it can't be used for paragraphs.`,
         },
         { type: 'img', img: fontsFleur },
         {
@@ -682,7 +682,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'For the logo I chose to use Playfair because it made it simple but very elegant specially with it referencing French traditional elegance, specially s to French cooking.',
+            'For the logo, I chose Playfair because it kept the logo simple but very elegant, especially as it references traditional French elegance and French cooking.',
         },
         { type: 'img', img: logoFleur },
         {
@@ -691,11 +691,11 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: `For the color palette I chose muted colors with high contrast against an off white color background. This color was selected for the background to give off a warmer feeling to make the page for welcoming, and the muted color palette made the site more lively with ought loosing legibility of texts and titles.`,
+          content: `For the color palette I chose muted colors with high contrast against an off-white color background. The background color was selected to give off a warmer feeling and make the page more welcoming, and the muted palette made the site livelier without losing the legibility of text and titles.`,
         },
         {
           type: 'text',
-          content: `On the other hand the visuals selected for the page combine vibrant and muted photos to avoid visual saturation. So the page can continue to give lively feeling without loosing professionalism and maintaining peaceful while navigating the page.`,
+          content: `The visuals selected for the page combine vibrant and muted photos to avoid visual saturation. This way, the page continues to feel lively without losing professionalism, and it remains peaceful to navigate.`,
         },
         { type: 'img', img: colorFleur },
         {
@@ -705,19 +705,19 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'The animations are subtle, they mostly comprise of soft fade ins and outs. These animations make the site come together more and help the site feel peaceful, which is very important because this would be desirable for the target audience.',
+            'The animations are subtle and mostly consist of soft fade-ins and fade-outs. They help the site come together and feel peaceful, which is very important because this is what the target audience would want.',
         },
         {
           type: 'text',
           content:
-            'This is not a café designed for movement or noise, but for those seeking a quiet escape from daily life. A small, peaceful space to pause and rest.',
+            'This is not a café designed for movement or noise, but for those seeking a quiet escape from daily life: a small, peaceful space to pause and rest.',
         },
         { type: 'img', img: bottomFleur },
       ],
     },
   },
-  'the-edition': {
-    title: 'The Edition',
+  'the-edittion': {
+    title: 'The Edittion',
     color: '#5E214E',
     links: '<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/m0FYAJ1USxZr0ccXJKmUtl/The-Edition?page-id=0%3A1&node-id=1-2&p=f&viewport=79%2C-941%2C0.31&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1%3A2&show-proto-sidebar=1&embed-host=share" allowfullscreen></iframe>',
     sections: {
@@ -727,18 +727,18 @@ export const caseStudyContent = {
         imgPreview: overviewPreviewEdition,
         tags: [`UX/UI Design`, 'Web App', 'accessibility', 'Design System', 'Brand Design'],
         prototype: 'link',
-        text: `The Edition is a conceptual photography studio website and client portal designed to simplify the journey from reservation to gallery delivery. The platform combines an editorial-inspired visual identity with a user-centered booking experience, allowing clients to explore services, customize photography packages, manage projects, and access their delivered galleries from a single place.`,
+        text: `The Edittion is a conceptual photography studio website and client portal designed to simplify the journey from reservation to gallery delivery. The platform combines an editorial-inspired visual identity with a user-centered booking experience, allowing clients to explore services, customize photography packages, manage projects, and access their delivered galleries from a single place.`,
         text2: `The project focuses on creating a premium digital experience that reflects the artistic nature of photography while maintaining clarity, accessibility, and ease of use.`,
         text3: ``,
       },
       problem: [
         {
           type: 'text',
-          content: `Many photographers or agencies don't have automated systems for the services they provide, this causes many painpoints for both the client and the photographer. The idea of this app is to both automate and communicate efficiently what stage the service is at, what payments are due and when they will receive their products whether they be physical or digital.`,
+          content: `Many photographers or agencies don't have automated systems for the services they provide, this causes many pain points for both the client and the photographer. The idea of this app is to both automate and communicate efficiently what stage the service is at, what payments are due and when they will receive their products whether they be physical or digital.`,
         },
         {
           type: 'text',
-          content: `By defragmenting the experience it lowers the stress for both parties, efficient service tracking without having to ask questions repeatedly.`,
+          content: `By defragmenting the experience, it lowers the stress for both parties, efficient service tracking without having to ask questions repeatedly.`,
         },
         {
           type: 'text',
@@ -763,7 +763,7 @@ export const caseStudyContent = {
         {
           type: 'text',
           content:
-            'Because the site is for a photography agency the site was intended to be clean, minimalistic and editorial. This was maintained throughout the web app for consistency.',
+            'Because the site is for a photography studio the site was intended to be clean, minimalistic and editorial. This was maintained throughout the web app for consistency.',
         },
         {
           type: 'img',
@@ -784,7 +784,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: 'Some of the pages like profile have sub navigations, but it was separated into sections for clarity and in order to not unnecessarily over populate the navigation in the header. For this same purpose the Language and Profile icons are outside of the drawer to help the user avoid unnecessary clicks and therefor less friction.',
+          content: 'Some of the pages like profile have sub navigations, but it was separated into sections for clarity and in order to not unnecessarily over populate the navigation in the header. For this same purpose the Language and Profile icons are outside of the drawer to help the user avoid unnecessary clicks and therefore less friction.',
         },
         {
           type: 'rich-text',
@@ -796,7 +796,7 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: 'In this page an overview of the studio to respond to basic questions of the user. For example: What we Do? Who are we? What is our work process? And other details that could inspire the user to want to book with the studio. ',
+          content: 'This page gives an overview of the studio to respond to basic questions of the user. For example: What we Do? Who are we? What is our work process? And other details that could inspire the user to want to book with the studio. ',
         },
         {
           type: 'img',
@@ -820,11 +820,11 @@ export const caseStudyContent = {
         },
         {
           type: 'text',
-          content: 'This page works as a testimonial of past clients specifying service, client and a short summary of how their experience was with a polished photo of said service. ',
+          content: 'This page works as a testimonials of past clients specifying service, client and a short summary of how their experience was with a polished photo of said service. ',
         },
         {
           type: 'text',
-          content: 'It is designed as a scrollable to the side as a virtual album. Buttons were also added to respect WCAG standards, so people with disability can also scroll with a simple click.',
+          content: 'It scrolls horizontally like a virtual album. Buttons were also added to respect WCAG standards, so people with disabilities can also scroll with a simple click.',
         },
         {
           type: 'img',
@@ -866,11 +866,11 @@ Here is where the side Navigation is used with nested navigation for clarity and
         },
         {
           type: 'text',
-          content: 'This concept is carried on into Setting where they can manage their notification, as to not get notifications they do not want or need, but offer them in case they prefer them on. Notifications are a very person to person preference so the options are there for them to customize.',
+          content: 'This concept is carried on into Setting where they can manage their notification, as to not get notifications they do not want or need, but offer them in case they prefer them on. Notifications are a very personal preference so the options are there for them to customize.',
         },
         {
           type: 'text',
-          content: 'Here other preferences are found like privacy, download preferences so it is automated for all download, language & region, and communication preferences. ',
+          content: 'Here other preferences are found like privacy, download preferences so it is automates all download, language & region, and communication preferences. ',
         },
         {
           type: 'text',
@@ -890,7 +890,7 @@ Here is where the side Navigation is used with nested navigation for clarity and
         },
         {
           type: 'text',
-          content: 'The information is separated into 3 sections based on related information and also to limit the scrolling, for this reason all element lists inside each section page a 4 element pagination.',
+          content: 'The information is separated into 3 sections based on related information and also to limit the scrolling, for this reason each list is paginated at four items.',
         },
         {
           type: 'img',
@@ -906,7 +906,7 @@ Here is where the side Navigation is used with nested navigation for clarity and
         },
         {
           type: 'text',
-          content: `Bellow that two lists appear, one with the upcoming sessions and a CTA to make new bookings if needed, and another with past sessions and specific information of when, where they occurred, was the involved in the session and how many photos the gallery has. They can also press the button to go directly to that specific gallery from the list. It helps so that the user doesn't need to go into deliverables, avoiding unnecessary clicks. `,
+          content: `Below that, two lists appear, one with the upcoming sessions and a CTA to make new bookings if needed, and another with past sessions and specific information of when, where they occurred, was the involved in the session and how many photos the gallery has. They can also press the button to go directly to that specific gallery from the list. It helps so that the user doesn't need to go into deliverables, avoiding unnecessary clicks. `,
         },
         {
           type: 'img',
@@ -918,11 +918,11 @@ Here is where the side Navigation is used with nested navigation for clarity and
         },
         {
           type: 'text',
-          content: 'This section shows the timeline of any active product and the top, shows steps that have been taken and what will be next with due dates, reservation dates and dates of when certain actions were taken. This helps transparency for both sides.',
+          content: 'This section shows the timeline of any active product and the top, shows steps that have been taken and what will be next with due dates, reservation dates and dates of when certain actions were taken. This improves transparency for both sides.',
         },
         {
           type: 'text',
-          content: `After that it shows galleries of future and past services. It shows galleries of past and future services and their status. It's clear which have expired, which will be available soon and which will expire with their due date. Also gives a small detail of how many photos each gallery has. Inside the user will be able to download a single photo or video, view them or batch download if wanted.`,
+          content: `After that it shows galleries of future and past services. It's clear which have expired, which will be available soon and which will expire with their due date. Also gives a small detail of how many photos each gallery has. Inside the user will be able to download a single photo or video, view them or batch download if wanted.`,
         },
         {
           type: 'text',
@@ -938,11 +938,11 @@ Here is where the side Navigation is used with nested navigation for clarity and
         },
         {
           type: 'text',
-          content: 'Here you can see the invoices and contracts. In case of the invoices you have three cards showing total, paid and outstanding. Below these cards their is a table that shows: element title, due date if aplicable, payment status and a button for payment if needed or a button to download receipt if already paid.',
+          content: 'Here you can see the invoices and contracts. In case of the invoices you have three cards showing total, paid and outstanding. Below these cards their is a table that shows: element title, due date if applicable, payment status and a button for payment if needed or a button to download receipt if already paid.',
         },
         {
           type: 'text',
-          content: `In the case of contracts their is a similar table with the corresponding contracts for the different services that were requested with the agency, a title of the service, contract status and a button that will change depending on the status. If it's already signed the user will be able to download, if not it'll be a button that takes the user to e-sign the contract.`,
+          content: `In the case of contracts their is a similar table with the corresponding contracts for the different services that were requested with the studio, a title of the service, contract status and a button that will change depending on the status. If it's already signed the user will be able to download, if not it'll be a button that takes the user to e-sign the contract.`,
         },
         {
           type: 'img',
@@ -957,11 +957,11 @@ Here is where the side Navigation is used with nested navigation for clarity and
         { type: 'img', img: colorEdition },
         {
           type: 'text',
-          content: `The Color palette was built around dark colors to emphasize photography as the primary visual element, as not to distract from the colors in them and making the photos colors pop more.`,
+          content: `The Color palette was built around dark colors to emphasize photography as the primary visual element, so as not to distract from the colors in them and making the colors in the photos pop more.`,
         },
         {
           type: 'text',
-          content: `For type the color black for texts, and a deep purple for titles, white is used sparingly in footer or on top of specific dark photos. To help keep enough contrast for it to be legible.`,
+          content: `Text is black and titles are deep purple, and a deep purple for titles, white is used sparingly in footer or on top of specific dark photos. To help keep enough contrast for it to be legible.`,
         },
         {
           type: 'subtitle',
@@ -970,7 +970,7 @@ Here is where the side Navigation is used with nested navigation for clarity and
         {
           type: 'text',
           content:
-          `For the fonts I selected a elegant serif font for the titles called "GFS Didot" this helps keep the editorial visual aesthetic, then for subtitles and general text I used "Hanken Grotesk" a sans serif that contrast enough with titles font to generate contrast and hierarchy while maintaining a serious clean aesthetic and high readability for the texts it's used in.`,
+          `For the fonts an elegant serif font for the titles called "GFS Didot" this helps keep the editorial visual aesthetic, then for subtitles and general text I used "Hanken Grotesk" that contrasts enough with the title font to generate contrast and hierarchy while maintaining a serious clean aesthetic and high readability for the texts it's used in.`,
         },
         { type: 'img', img: FontEdition },
         {
@@ -992,7 +992,7 @@ Here is where the side Navigation is used with nested navigation for clarity and
         },
         {
           type: 'text',
-          content: `The animations are fade in frames, the direction of the fade into view will depend on the location of the element on the screen.`,
+          content: `Fade-in animations, the direction of the fade into view will depend on the location of the element on the screen.`,
         },
         {
           type: 'text',
