@@ -11,7 +11,7 @@
     <v-col class="fadeInLeft">
       <h2>About Me</h2>
       <p>
-        UX/UI Designer with 5 years of experience designing user-centered digital products for web and mobile. I work end-to-end: research, problem definition, wireframing, prototyping and UI delivery, collaborating closely with PMs and developers.
+        UX/UI Designer with 5+ years of experience designing user-centered digital products for web and mobile. I work end-to-end: research, problem definition, wireframing, prototyping and UI delivery, collaborating closely with PMs and developers.
         <br/>
         My strong visual foundations and frontend background help me design scalable, feasible solutions aligned with user needs and business goals.
       </p>
