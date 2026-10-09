@@ -59,11 +59,11 @@ defineOptions({ inheritAttrs: false })
             </div>
           </div>
         </div>
-        <div v-if="Array.isArray(props.data?.tags)" class="d-flex flex-wrap ml-4 align-center mt-2">
+        <div v-if="Array.isArray(props.data?.tags)" class="d-flex flex-wrap w-100  mt-2">
           <p
             v-for="tag in props.data?.tags"
             :key="tag"
-            class="py-1 px-4 mr-4 mb-2 rounded-xl tag whitespace-nowrap capitalize"
+            class="py-0.5 px-3 mr-2 rounded-xl tags whitespace-nowrap capitalize"
             :class="getTagColor(tag)"
           >
             {{ tag }}

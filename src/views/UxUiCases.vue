@@ -109,8 +109,8 @@ const caseStudyData = computed<CaseStudy | null>(() => {
         <p class="pb-2" style="width: 100%">
           <b>{{ caseStudyData?.sections.overview.subtitle }}</b>
         </p>
-        <div class="tags d-flex mb-8 flex-wrap">
-          <p v-for="(tag, index) in caseStudyData?.sections.overview.tags" :key="index" class="py-1 px-4 mr-4 mb-2 rounded-xl tag whitespace-nowrap capitalize" :class="getTagColor(tag)">{{ tag }}</p>
+        <div class="tags flex flex-wrap w-full mb-8 px-0">
+          <p v-for="(tag, index) in caseStudyData?.sections.overview.tags" :key="index" class="rounded-xl mr-2 tags whitespace-nowrap capitalize" :class="getTagColor(tag)">{{ tag }}</p>
         </div>
         <div class="mt-4">
           <p class="mr-4 mb-2"><b>Prototype:</b></p>
